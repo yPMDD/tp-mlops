@@ -1,0 +1,11 @@
+# Environnement Python isole
+.venv/
+__pycache__/
+*.pyc
+
+# Serveur MLflow : metabase et artefacts sont regeneres, jamais versionnes
+mlflow.db
+mlartifacts/
+
+# Fichiers DVC (le .csv lui-meme est gere par .dvcignore / .gitignore)
+.dvc/cache/
