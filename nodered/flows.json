@@ -1,0 +1,317 @@
+[
+    {
+        "id": "tab_resentrainement",
+        "type": "tab",
+        "label": "Réentraîner d'un clic",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "inj_retrain",
+        "type": "inject",
+        "z": "tab_resentrainement",
+        "name": "Lancer le réentraînement",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{}",
+        "payloadType": "json",
+        "x": 150,
+        "y": 120,
+        "wires": [
+            [
+                "http_prefect"
+            ]
+        ]
+    },
+    {
+        "id": "http_prefect",
+        "type": "http request",
+        "z": "tab_resentrainement",
+        "name": "Prefect : créer une exécution",
+        "method": "POST",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "http://127.0.0.1:4200/api/deployments/97155a66-31ae-4594-b53a-eb75b23446a9/create_flow_run",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 420,
+        "y": 120,
+        "wires": [
+            [
+                "chng_resume"
+            ]
+        ]
+    },
+    {
+        "id": "chng_resume",
+        "type": "change",
+        "z": "tab_resentrainement",
+        "name": "Résumé",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "'Exécution ' & payload.name & ' créée, état : ' & payload.state.name",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 650,
+        "y": 120,
+        "wires": [
+            [
+                "dbg_reponse"
+            ]
+        ]
+    },
+    {
+        "id": "dbg_reponse",
+        "type": "debug",
+        "z": "tab_resentrainement",
+        "name": "Réponse de Prefect",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 870,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "tab_surveiller",
+        "type": "tab",
+        "label": "Surveiller le modèle",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "inj_sonde",
+        "type": "inject",
+        "z": "tab_surveiller",
+        "name": "Toutes les 10 s",
+        "repeat": "10",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"dataframe_records\":[{\"montant\":8500.0,\"anciennete\":3,\"freq_24h\":9,\"nuit\":1}]}",
+        "payloadType": "json",
+        "x": 140,
+        "y": 140,
+        "wires": [
+            [
+                "http_modele"
+            ]
+        ]
+    },
+    {
+        "id": "http_modele",
+        "type": "http request",
+        "z": "tab_surveiller",
+        "name": "Modèle : /invocations",
+        "method": "POST",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "http://127.0.0.1:8101/invocations",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 380,
+        "y": 140,
+        "wires": [
+            [
+                "sw_fraude"
+            ]
+        ]
+    },
+    {
+        "id": "sw_fraude",
+        "type": "switch",
+        "z": "tab_surveiller",
+        "name": "Fraude prédite ?",
+        "property": "payload.predictions[0]",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "1",
+                "vt": "num"
+            },
+            {
+                "t": "eq",
+                "v": "0",
+                "vt": "num"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 600,
+        "y": 140,
+        "wires": [
+            [
+                "chng_alerte"
+            ],
+            [
+                "dbg_normale"
+            ]
+        ]
+    },
+    {
+        "id": "chng_alerte",
+        "type": "change",
+        "z": "tab_surveiller",
+        "name": "Message d'alerte",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "'Transaction suspecte : 8500 MAD la nuit'",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 800,
+        "y": 100,
+        "wires": [
+            [
+                "dbg_fraude"
+            ]
+        ]
+    },
+    {
+        "id": "dbg_fraude",
+        "type": "debug",
+        "z": "tab_surveiller",
+        "name": "Alerte fraude",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1010,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "dbg_normale",
+        "type": "debug",
+        "z": "tab_surveiller",
+        "name": "Transaction normale",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1010,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "catch_http",
+        "type": "catch",
+        "z": "tab_surveiller",
+        "name": "Erreur d'appel",
+        "scope": [
+            "http_modele"
+        ],
+        "uncaught": false,
+        "x": 400,
+        "y": 280,
+        "wires": [
+            [
+                "chng_incident"
+            ]
+        ]
+    },
+    {
+        "id": "chng_incident",
+        "type": "change",
+        "z": "tab_surveiller",
+        "name": "Horodater l'incident",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "$now() & ' ALERTE service du modele indisponible : ' & error.message",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 630,
+        "y": 280,
+        "wires": [
+            [
+                "dbg_service",
+                "fichier_alertes"
+            ]
+        ]
+    },
+    {
+        "id": "dbg_service",
+        "type": "debug",
+        "z": "tab_surveiller",
+        "name": "Alerte service",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 860,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "fichier_alertes",
+        "type": "file",
+        "z": "tab_surveiller",
+        "name": "alertes.log",
+        "filename": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\tp-mlops\\reports\\alertes.log",
+        "filenameType": "str",
+        "appendNewline": true,
+        "createDir": true,
+        "overwriteFile": "false",
+        "encoding": "none",
+        "x": 860,
+        "y": 320,
+        "wires": []
+    }
+]

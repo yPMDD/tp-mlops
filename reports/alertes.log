@@ -1,0 +1,10 @@
+2026-10-28T02:43:46.932Z ALERTE service du modele indisponible : RequestError: connect ECONNREFUSED 127.0.0.1:8101
+2026-10-28T02:43:56.946Z ALERTE service du modele indisponible : RequestError: connect ECONNREFUSED 127.0.0.1:8101
+2026-10-28T02:44:06.961Z ALERTE service du modele indisponible : RequestError: connect ECONNREFUSED 127.0.0.1:8101
+2026-10-28T02:44:16.969Z ALERTE service du modele indisponible : RequestError: connect ECONNREFUSED 127.0.0.1:8101
+2026-10-28T02:44:26.984Z ALERTE service du modele indisponible : RequestError: connect ECONNREFUSED 127.0.0.1:8101
+2026-10-28T02:44:36.993Z ALERTE service du modele indisponible : RequestError: connect ECONNREFUSED 127.0.0.1:8101
+2026-10-28T02:44:47.007Z ALERTE service du modele indisponible : RequestError: connect ECONNREFUSED 127.0.0.1:8101
+2026-10-28T02:44:57.009Z ALERTE service du modele indisponible : RequestError: connect ECONNREFUSED 127.0.0.1:8101
+2026-10-28T02:45:07.014Z ALERTE service du modele indisponible : RequestError: connect ECONNREFUSED 127.0.0.1:8101
+2026-10-28T02:45:17.014Z ALERTE service du modele indisponible : RequestError: connect ECONNREFUSED 127.0.0.1:8101
