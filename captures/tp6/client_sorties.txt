@@ -1,0 +1,23 @@
+TP6 — Sorties du client sur les deux ports (3 series H2O, 2 series FLAML)
+=========================================================================
+
+Port 8100 = H2O AutoML (modele StackedEnsemble_AllModels_1 via MLflow serve)
+--------------------------------------------------------------------------
+Run 1 : reponse : 200 {'predictions': [{'predict': 1, 'p0': 1.2088511188834694e-05, 'p1': 0.9999879114888112}]}
+        mediane 54.9 ms | p95 103.9 ms
+Run 2 : reponse : 200 {'predictions': [{'predict': 1, 'p0': 1.2088511188834694e-05, 'p1': 0.9999879114888112}]}
+        mediane 53.9 ms | p95 242.9 ms
+Run 3 : reponse : 200 {'predictions': [{'predict': 1, 'p0': 1.2088511188834694e-05, 'p1': 0.9999879114888112}]}
+        mediane 52.0 ms | p95 65.5 ms
+
+Le modele H2O renvoie la classe ET les deux probabilites (p0, p1).
+
+Port 8101 = FLAML (lgbm via MLflow serve)
+-----------------------------------------
+Run 1 : reponse : 200 {'predictions': [1]}
+        mediane 6.7 ms | p95 16.7 ms
+Run 2 : reponse : 200 {'predictions': [1]}
+        mediane 6.7 ms | p95 24.8 ms
+
+FLAML renvoie uniquement la classe predite. Meme decision (1 = fraude),
+environ 8 fois plus rapide que H2O sur ce poste (med. ~54 ms vs ~6.7 ms).

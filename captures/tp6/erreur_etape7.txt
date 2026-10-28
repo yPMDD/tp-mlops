@@ -1,0 +1,20 @@
+TP6 — Étape 7 : ENREGISTREMENT de l'erreur au démarrage de H2O (service 8100 encore en marche)
+==============================================================================================
+
+Contexte : H2O relance (nouveau process java, memoire vide) ; le point de terminaison
+MLflow du port 8100 n'a PAS ete relance ; appel du client :
+
+reponse : 400 {'error_code': 'BAD_REQUEST',
+ 'message': 'Encountered an unexpected error while evaluating the model. Verify that the serialized input Dataframe is compatible with the model for inference.',
+ 'sqlstate': 'KAM00', 'error_class': 'INVALID_PARAMETER_VALUE',
+ 'stack_trace': (extrait utile)
+   h2o.exceptions.H2OResponseError: Server error water.exceptions.H2OKeyNotFoundArgumentException:
+     Error: Object 'StackedEnsemble_AllModels_1_AutoML_1_20261028_22856' not found
+     in function: predict for argument: model
+   Request: POST /4/Predictions/models/StackedEnsemble_AllModels_1_AutoML_1_20261028_22856/frames/Key_Frame__upload_8ce448d97516db871bcc3c65940b4f2f.hex
+
+(mediane 44.5 ms | p95 87.8 ms — l'appel arrive jusque dans H2O avant d'echouer)
+
+Conclusion : le modele vivait dans la memoire du serveur H2O ; apres un redemarrage
+du serveur, il a disparu. La reference du modeleStregistre MLflow pointe vers une cle
+H2O seulement valide pendant la vie du serveur d'edition.
