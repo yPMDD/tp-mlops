@@ -1,0 +1,11 @@
+# LaTeX files in this coursework repository are reports, not source code.
+*.tex linguist-documentation
+
+# Ignore generated LaTeX build artifacts in GitHub's language statistics.
+*.aux linguist-generated
+*.log linguist-generated
+*.out linguist-generated
+
+# These are auxiliary Windows/shell helpers; Python is the primary codebase.
+*.ps1 linguist-detectable=false
+*.sh linguist-detectable=false
