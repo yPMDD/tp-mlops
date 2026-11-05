@@ -1,0 +1,4 @@
+Health: {"statut":"ok","version":"1.0","hote":"e83bd35ea95b"}
+Prediction: {"fraude":true,"probabilite":0.8899,"version":"1.0","hote":"e83bd35ea95b"}
+Incomplete request HTTP: 422
+Swagger HTTP: 200

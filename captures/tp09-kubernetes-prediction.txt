@@ -1,0 +1,3 @@
+Health: {"statut":"ok","version":"1.0","hote":"fraude-api-7b597b698c-4vg8p"}
+Prediction: {"fraude":true,"probabilite":0.8899,"version":"1.0","hote":"fraude-api-7b597b698c-4vg8p"}
+Port-forward PID: 21360

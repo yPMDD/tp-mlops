@@ -1,0 +1,7 @@
+17:34:57 {'v1.0': 26} pods: 2 erreurs: 0
+17:34:59 {'v1.0': 26} pods: 2 erreurs: 0
+17:35:01 {'v1.0': 25} pods: 2 erreurs: 0
+17:35:04 {'v1.0': 25} pods: 2 erreurs: 0
+17:35:06 {'v1.0': 25} pods: 2 erreurs: 0
+reponses par pod : {'fraude-api-7b597b698c-g4wkt': 64, 'fraude-api-7b597b698c-4vg8p': 63}
+pod "client" deleted from default namespace

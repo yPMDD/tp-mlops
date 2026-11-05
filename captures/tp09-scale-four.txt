@@ -1,0 +1,5 @@
+NAME                          READY   STATUS    RESTARTS   AGE   IP           NODE                     NOMINATED NODE   READINESS GATES
+fraude-api-7b597b698c-2p927   1/1     Running   0          15s   10.244.0.8   tp-mlops-control-plane   <none>           <none>
+fraude-api-7b597b698c-4vg8p   1/1     Running   0          85s   10.244.0.6   tp-mlops-control-plane   <none>           <none>
+fraude-api-7b597b698c-g4wkt   1/1     Running   0          85s   10.244.0.5   tp-mlops-control-plane   <none>           <none>
+fraude-api-7b597b698c-w5bfb   1/1     Running   0          15s   10.244.0.9   tp-mlops-control-plane   <none>           <none>

@@ -1,0 +1,6 @@
+TP9 – échec volontaire 2.1 et rollback
+Déploiement observé : pod fraude-api-5d84bf5589-wwbzb, état Error, redémarrages 2.
+Erreur de démarrage : FileNotFoundError: models/modele.pkl
+rollout status --timeout=40s : timeout attendu.
+Le client sur 50 s a reçu uniquement v2.0 ; erreurs : 0.
+rollout undo : succès ; Deployment rétabli à deux pods v2.0 prêts.

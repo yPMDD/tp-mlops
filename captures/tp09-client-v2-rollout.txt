@@ -1,0 +1,22 @@
+17:37:26 {'v1.0': 24} pods: 2 erreurs: 0
+17:37:28 {'v1.0': 25} pods: 2 erreurs: 0
+17:37:30 {'v1.0': 25} pods: 2 erreurs: 0
+17:37:32 {'v1.0': 25} pods: 2 erreurs: 0
+17:37:34 {'v1.0': 23} pods: 2 erreurs: 0
+17:37:36 {'v1.0': 23} pods: 2 erreurs: 0
+17:37:38 {'v1.0': 25} pods: 2 erreurs: 0
+17:37:40 {'v1.0': 25} pods: 2 erreurs: 0
+17:37:42 {'v1.0': 25} pods: 2 erreurs: 0
+17:37:44 {'v1.0': 25} pods: 2 erreurs: 0
+17:37:46 {'v1.0': 25} pods: 2 erreurs: 0
+17:37:48 {'v1.0': 25} pods: 2 erreurs: 0
+17:37:50 {'v1.0': 26} pods: 2 erreurs: 0
+17:37:52 {'v1.0': 23, 'v2.0': 2} pods: 3 erreurs: 0
+17:37:54 {'v1.0': 13, 'v2.0': 12} pods: 3 erreurs: 0
+17:37:56 {'v2.0': 13, 'v1.0': 12} pods: 2 erreurs: 0
+17:37:58 {'v2.0': 14, 'v1.0': 11} pods: 2 erreurs: 0
+17:38:00 {'v1.0': 14, 'v2.0': 11} pods: 2 erreurs: 0
+17:38:02 {'v2.0': 13, 'v1.0': 13} pods: 2 erreurs: 0
+17:38:04 {'v1.0': 10, 'v2.0': 15} pods: 3 erreurs: 0
+reponses par pod : {'fraude-api-7b597b698c-g4wkt': 248, 'fraude-api-7b597b698c-4vg8p': 169, 'fraude-api-5646748c6d-2m7q6': 77, 'fraude-api-5646748c6d-9ddsh': 3}
+pod "client" deleted from default namespace

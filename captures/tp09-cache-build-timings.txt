@@ -1,0 +1,4 @@
+TP9 step 9 cache timing (PowerShell Measure-Command wall seconds)
+Ordered Dockerfile rebuild fraude-api:1.1 after code-only change: 6.70 s (pip install layer cached)
+Dockerfile.mauvais first build after code-only change: 61.77 s (dependencies installed)
+Dockerfile.mauvais second build after another code-only change: 66.14 s (dependencies installed again)

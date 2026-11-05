@@ -1,0 +1,10 @@
+NAME                         READY   UP-TO-DATE   AVAILABLE   AGE   CONTAINERS   IMAGES           SELECTOR
+deployment.apps/fraude-api   2/2     2            2           36s   api          fraude-api:1.0   app=fraude-api
+
+NAME                 TYPE        CLUSTER-IP     EXTERNAL-IP   PORT(S)   AGE    SELECTOR
+service/fraude-api   ClusterIP   10.96.163.72   <none>        80/TCP    36s    app=fraude-api
+service/kubernetes   ClusterIP   10.96.0.1      <none>        443/TCP   2m2s   <none>
+
+NAME                              READY   STATUS    RESTARTS   AGE   IP           NODE                     NOMINATED NODE   READINESS GATES
+pod/fraude-api-7b597b698c-4vg8p   1/1     Running   0          36s   10.244.0.6   tp-mlops-control-plane   <none>           <none>
+pod/fraude-api-7b597b698c-g4wkt   1/1     Running   0          36s   10.244.0.5   tp-mlops-control-plane   <none>           <none>
