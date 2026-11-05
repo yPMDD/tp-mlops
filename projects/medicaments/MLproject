@@ -1,0 +1,32 @@
+name: medicament-pipeline
+
+params:
+  n_estimators:
+    desc: Nombre d'arbres dans le forêt aléatoire
+    default: 200
+  max_depth:
+    desc: Profondeur maximale des arbres
+    default: 8
+  test_size:
+    desc: Part des données réservee à l'évaluation
+    default: 0.25
+
+environments:
+  conda:
+    channels:
+      - conda-forge
+    dependencies:
+      - python=3.10
+      - scikit-learn
+      - pandas
+      - numpy
+      - mlflow
+
+commands:
+  train:
+    description: Entraîne un modèle RandomForest pour prédire si un médicament est générique
+    parameters:
+      n_estimators: {is: int}
+      max_depth: {is: int}
+      test_size: {is: float}
+    script: src/train_pipeline.py

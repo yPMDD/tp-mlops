@@ -1,0 +1,590 @@
+\documentclass[12pt,a4paper]{report}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{fourier}
+\usepackage{hyperref}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{setspace}
+\usepackage[french]{babel}
+\begin{document}
+
+\begin{titlepage}
+\begin{center}
+    \vspace{2cm}
+    
+    {\LARGE \bfseries COMPTE RENDU SYNTHÈSE \\
+    TP MLOps - Projet Médicaments}
+    
+    \vspace{1.5cm}
+    
+    {\large Travail en binôme \\
+    Module Applications Intelligentes aux MLOps}
+    
+    \vspace{1cm}
+    {\large Date : 19-20 octobre 2026}
+    
+    \vspace{2cm}
+    {\rule{0.8\textwidth}{1.5pt}}
+    \vspace{1cm}
+    {\large \textit{Projet : Prédiction de médicaments génériques vs princeps}}
+    
+    \vfill
+    
+    {\large \textbf{Rapport de synthèse complet couvrant les TP 1 à 4 \\
+    et le projet de synthèse final}}
+    
+    \vspace{1cm}
+    {\rule{0.8\textwidth}{1.5pt}}
+    \vspace{1cm}
+    {\large \textit{Remerciements : nous tenons à remercier nos enseignants}}
+    
+    \end{center}
+\end{titlepage}
+
+\chapter*{Remerciements}
+Nous tenons à remercier nos enseignants pour leurs conseils tout au long de ce module MLOps. Ce projet aura permis de mettre en pratique concrètement les concepts théoriques abordés en cours.
+
+\chapter{Introduction}
+
+Ce document représente le compte rendu complet du projet de synthèse du module Applications Intelligentes aux MLOps. Le présent projet inversait la situation des TP précédents : aucun code n'était fourni, et nous devions prendre le relais en traitant des données réelles venant du portail Open Data du Maroc (data.gov.ma), spécifiquement le référentiel des médicaments de la CNOPS (Caisse Nationale des Organismes de Prévision Sociale).
+
+L'objectif principal était de construire un modèle prédictif capable de déterminer, à partir uniquement des informations de prix, dosage et remboursement, si un médicament est un générique (classe 1) ou un princeps (classe 0), puis de le livrer selon les standards d'un produit MLOps complet : suivi des essais, pipeline reproductible, modèle enregistré avec alias, et service HTTP.
+
+\chapter{TP 1 : Découverte de la boîte à outils MLOps}
+
+\section{Installation de l'environnement}
+\begin{itemize}
+    \item Création du répertoire de travail \texttt{tp-mlops}
+    \item Initialisation de l'environnement Python isolé : \texttt{python -m venv .venv}
+    \item Activation de l'environnement PowerShell : \texttt{.venv\Scripts\Activate.ps1}
+    \item Installation des packages systèmes :
+    \begin{verbatim}
+    python -m pip install mlflow scikit-learn pandas numpy joblib
+    \end{verbatim}
+    Installation réussie dans \textit{c:\users\s44d\appdata\roaming\python\python311\site-packages}
+    \item Installation des packages dans l'environnement virtuel :
+    \begin{verbatim}
+    .venv\Scripts\pip install mlflow dvc scikit-learn pandas numpy joblib
+    \end{verbatim}
+    \item Vérification des installations :
+    \begin{itemize}
+        \item \texttt{mlflow : 3.17.1}
+        \item \texttt{sklearn : 1.9.1}
+        \item \texttt{pandas : 3.0.6}
+        \item \texttt{numpy : 2.4.6}
+        \item \texttt{joblib : disponible}
+        \item \texttt{dvc : 3.67.1}
+    \end{itemize}
+    \item Création des répertoires requis :
+    \begin{verbatim}
+    New-Item -ItemType Directory -Force data, models, src | Out-Null
+    \end{verbatim}
+\end{itemize}
+
+\section{Génération du jeu de données synthétiques}
+\begin{verbatim}
+python -c "
+import numpy as np, pandas as pd
+rng = np.random.default_rng(7)  # graine fixe : même jeu pour toute la promo
+n = 5000  # nombre de transactions
+montant = np.round(rng.lognormal(6.2, 1.1, n), 2)  # beaucoup de petits montants
+anciennete = rng.integers(0, 120, n)  # anciennete du client en mois
+freq = rng.poisson(3, n) + 1  # transactions sur 24 h
+nuit = rng.binomial(1, 0.18, n)  # paiement entre 0 h et 5 h
+score = 2
+df = pd.DataFrame({
+    'montant': montant,
+    'anciennete': anciennete,
+    'freq': freq,
+    'nuit': nuit,
+    'score': score
+})
+df.to_csv('data/transactions.csv', index=False)
+print('Dataset generated:', len(df), 'rows')
+"
+\end{verbatim}
+Résultat affiché : \textit{Dataset generated: 5000 rows}
+
+\section{Démarrage du serveur MLflow}
+\begin{verbatim}
+.venv\Scripts\mlflow.exe server --host 127.0.0.1 --port 5000
+\end{verbatim}
+Vérification : \texttt{curl http://127.0.0.1:5000/health} $\rightarrow$ OK
+
+Le serveur MLflow a tourné en arrière-plan pendant toute la durée du projet, hébergeant tous les experiments et runs.
+
+\section{Journalisation d'exécution d'entraînement}
+\begin{verbatim}
+python -c "
+import mlflow
+mlflow.set_tracking_uri('http://127.0.0.1:5000')
+mlflow.set_experiment('tp1-experiment')
+
+with mlflow.start_run(run_name='random-forest-baseline') as run:
+    import numpy as np, pandas as pd
+    from sklearn.ensemble import RandomForestClassifier
+    from sklearn.model_selection import train_test_split
+    from sklearn.metrics import f1_score
+    
+    df = pd.read_csv('data/transactions.csv')
+    X = df.drop(columns='score')
+    y = df['score']
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.25, random_state=42)
+    
+    model = RandomForestClassifier(n_estimators=100, max_depth=6, random_state=42)
+    model.fit(X_train, y_train)
+    y_pred = model.predict(X_test)
+    f1 = f1_score(y_test, y_pred, average='weighted')
+    
+    mlflow.log_param('n_estimators', 100)
+    mlflow.log_param('max_depth', 6)
+    mlflow.log_metric('f1_score', f1)
+    mlflow.log_artifact('data/transactions.csv')
+    mlflow.set_tag('experiment', 'tp1-baseline')
+    
+    print('Run ID:', run.info.run_id)
+    print('F1 Score:', f1)
+"
+\end{verbatim}
+Résultat : \textit{Run ID: 8d0fbf4280544bafac05e9ba379aca33}, \textit{F1 Score: 1.0000}
+
+\section{Enregistrement du modèle dans le registre}
+\begin{verbatim}
+python -c "
+import mlflow
+mlflow.set_tracking_uri('http://127.0.0.1:5000')
+
+model_uri = 'runs:/36898f90cd8440dfac5c72ab99e61249/model'
+reg_info = mlflow.register_model(model_uri, 'rf-tuned')
+print('Modèle enregistré : name=' + reg_info.name + ', version=' + str(reg_info.version))
+
+client = mlflow.MlflowClient()
+client.set_registered_model_alias('rf-tuned', 'production', '1')
+print('Alias production -> version 1')
+
+client.set_registered_model_alias('rf-tuned', 'staging', '1')
+print('Alias staging -> version 1')
+
+aliases = client.get_registered_model_aliases('rf-tuned')
+print('Toutes les aliases pour rf-tuned :')
+for a in aliases:
+    un = a.user_name if a.user_name else 'system'
+    print('  ' + un + ' -> ' + a.name + ' v' + str(a.version))
+\end{verbatim}
+Note : Erreurs d'encodage Unicode lors de la terminaison du run, mais l'enregistrement a réussi.
+
+\chapter{TP 2 : Mise en œuvre d'un pipeline MLOps simple}
+
+\section{Fichier de paramètres \texttt{params.yaml}}
+\begin{verbatim}
+preparation:
+test_size: 0.25 # part des données reservee à l'évaluation
+random_state: 42 # graine du découpage
+
+entrainement:
+n_estimators: 300 # nombre d'arbres
+max_depth: 12 # profondeur maximale
+
+validation:
+seuil_f1: 0.82 # sous ce seuil, le modele est refuse
+\end{verbatim}
+
+\section{Script de préparation \texttt{src/preparer.py}}
+\begin{verbatim}
+import yaml, os, pandas as pd
+from sklearn.model_selection import train_test_split
+
+p = yaml.safe_load(open('params.yaml'))['preparation'] # lit les reglages
+df = pd.read_csv('data/transactions.csv')
+tr, te = train_test_split(df, test_size=p['test_size'], # meme decoupage qu'aux TP 1 et 3
+random_state=p['random_state'])
+os.makedirs('data/prepare', exist_ok=True)
+tr.to_csv('data/prepare/train.csv', index=False) # sortie 1
+te.to_csv('data/prepare/test.csv', index=False) # sortie 2
+print('preparation :', len(tr), 'lignes train /', len(te), 'lignes test')
+\end{verbatim}
+Exécution : \texttt{python src/preparer.py}
+Résultat : \textit{preparation : 3750 lignes train / 1250 lignes test}
+
+Fichiers générés :
+\begin{itemize}
+    \item \texttt{data/prepare/train.csv} (64\,412 octets)
+    \item \texttt{data/prepare/test.csv} (21\,521 octets)
+\end{itemize}
+
+\section{Seuil de validation}
+Le F1 obtenu (0.6465) est inférieur au seuil de 0.82, ce qui signifie que selon la règle de validation du TP 2, le modèle aurait été refusé. Cela démontre le mécanisme de validation automatique avant l'enregistrement du modèle.
+
+\section{Script d'entraînement \texttt{src/train_pipeline.py}}
+\begin{verbatim}
+import mlflow
+import mlflow.sklearn
+import pandas as pd
+import numpy as np
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import f1_score, precision_score, recall_score
+
+def main(n_estimators=200, max_depth=8, test_size=0.25):
+    mlflow.set_tracking_uri('http://127.0.0.1:5000')
+    mlflow.set_experiment('synthese-medicaments')
+    
+    df = pd.read_csv('data/medicaments_clean.csv')
+    X = df[['PPV_NUM', 'DOSAGE1_NUM', 'TAUX_REMBOURSEMENT_NUM']]
+    y = df['target']
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=test_size, random_state=42)
+    
+    model = RandomForestClassifier(n_estimators=n_estimators, max_depth=max_depth, random_state=42)
+    model.fit(X_train, y_train)
+    
+    y_pred = model.predict(X_test)
+    f1 = f1_score(y_test, y_pred, average='weighted')
+    precision = precision_score(y_test, y_pred, average='weighted')
+    recall = recall_score(y_test, y_pred, average='weighted')
+    
+    with mlflow.start_run(run_name=f'pipeline-{n_estimators}-{max_depth}') as run:
+        mlflow.log_param('n_estimators', n_estimators)
+        mlflow.log_param('max_depth', max_depth)
+        mlflow.log_param('test_size', test_size)
+        mlflow.log_metric('f1_score', f1)
+        mlflow.log_metric('precision', precision)
+        mlflow.log_metric('recall', recall)
+        mlflow.sklearn.log_model(model, 'model', skops_trusted_types=['sklearn.tree._tree.Tree'])
+        mlflow.log_artifact('data/medicaments_clean.csv')
+        print('Run ID:', run.info.run_id)
+        print('F1 Score:', f1)
+        print('Precision:', precision)
+        print('Recall:', recall)
+    
+    return f1
+
+if __name__ == '__main__':
+    import sys
+    n_estimators = int(sys.argv[1]) if len(sys.argv) > 1 else 200
+    max_depth = int(sys.argv[2]) if len(sys.argv) > 2 else 8
+    test_size = float(sys.argv[3]) if len(sys.argv) > 3 else 0.25
+    f1 = main(n_estimators, max_depth, test_size)
+\end{verbatim}
+Exécution : \texttt{python src/train_pipeline.py 200 8 0.25}
+Résultat : \textit{Run ID: bb29dd5483ae4fcf921a443baee37784}, \textit{F1 Score: 0.6465}, \textit{Precision: 0.6761}, \textit{Recall: 0.6581}
+
+\section{Comparaison avec seuil de validation}
+Le F1 obtenu (0.6465) est inférieur au seuil de 0.82, ce qui signifie que selon la règle de validation du TP 2, le modèle aurait été refusé. Cela démontre le mécanisme de validation automatique avant l'enregistrement du modèle.
+
+\chapter{TP 3 : Enregistrer modèles et artefacts dans MLflow}
+
+\section{Comparaison de 4 algorithmes}
+\begin{table}[h!]
+\centering
+\begin{tabular}{lccc}
+\hline
+\textbf{Algorithme} & \textbf{F1 Score} & \textbf{Precision} & \textbf{Recall} \\
+\hline
+RandomForest & 0.6907 & 0.6913 & 0.6911 \\
+KNeighbors & 0.6398 & 0.6404 & 0.6404 \\
+LogisticRegression & 0.6066 & 0.6301 & 0.6187 \\
+SVC & 0.4154 & 0.6984 & 0.5406 \\
+\hline
+\end{tabular}
+\end{table}
+
+Meilleur algorithme : \textbf{RandomForest} avec F1 = 0.6907
+
+\section{Comparaison détaillée}
+\begin{itemize}
+    \item \textbf{RandomForest} : Obtient le meilleur F1-score (0.6907)
+    \item \textbf{KNeighbors} : F1 = 0.6398, de bonnes Precision (0.6404) et Recall (0.6404)
+    \item \textbf{LogisticRegression} : F1 = 0.6066, Precision = 0.6301, Recall = 0.6187
+    \item \textbf{SVC} : F1 = 0.4154 (pire résultat), mais Precision = 0.6984 (la meilleure), Recall = 0.5406
+\end{itemize}
+
+\section{Enregistrement dans le registre MLflow}
+\begin{verbatim}
+python -c "
+import mlflow
+mlflow.set_tracking_uri('http://127.0.0.1:5000')
+
+client = mlflow.MlflowClient()
+
+model_uri = 'runs:/3ae979f80dbb4b36921b5e1fa925dc85/model'
+reg_info = mlflow.register_model(model_uri, 'medicament-generic')
+print('Modèle enregistré : name=' + reg_info.name + ', version=' + str(reg_info.version))
+
+client.set_registered_model_alias('medicament-generic', 'production', '1')
+print('Alias production -> version 1')
+
+client.set_registered_model_alias('medicament-generic', 'staging', '1')
+print('Alias staging -> version 1')
+
+aliases = client.get_registered_model_aliases('medicament-generic')
+print('Aliases actuels :')
+for a in aliases:
+    un = a.user_name if a.user_name else 'system'
+    print('  ' + un + ' -> ' + a.name + ' v' + str(a.version))
+"
+\end{verbatim}
+Résultat : Modèle \textit{medicament-generic} créé en version 1, aliases production et staging assignés.
+
+\section{Service HTTP du modèle promu}
+Bien que l'objectif soit de servir le modèle en HTTP, cette étape a été configurée mais non testée en appel client dans ce projet. Le point de terminaison visé était : \texttt{models:/medicament-generic/production}.
+
+\chapter{TP 4 : Versionner données et expérimentations avec DVC}
+
+\section{Initialisation de DVC}
+\begin{verbatim}
+cd tp-mlops
+.venv\Scripts\Activate.ps1
+dvc init
+New-Item -ItemType Directory -Force C:\dvcstore | Out-Null
+dvc remote add -d local C:\dvcstore
+git add .dvc .dvcignore; git commit -m 'chore: initialisation DVC'
+\end{verbatim}
+Résultat : Dépôt DVC initialisé, remote local pointing to C:\dvcstore, fichiers .dvc et .dvcignore committed.
+
+\section{Test du problème Git seul avec les gros fichiers}
+\begin{verbatim}
+@'
+import pandas as pd
+df = pd.read_csv('data/transactions.csv')
+gros = pd.concat([df] * 400, ignore_index=True)
+gros.to_csv('data/gros.csv', index=False)
+'@ | python -
+\end{verbatim}
+Résultat de la taille : '{0:N1} Mo' -f ((Get-Item data/gros.csv).Length / 1MB) → 32M
+' {0:N1} Mo' -f ((Get-ChildItem .git -Recurse -File | Measure-Object Length -Sum).Sum / 1MB) → 35M
+
+Conclusion : Le fichier de 32 Mo a été ajouté à Git, faisant grossir le dépôt de 35 Mo. L'opération a été annulée : \texttt{git reset --hard HEAD~1; rm -f data/gros.csv}.
+
+\section{Mise en place du pipeline DVC}
+Bien que DVC ait été initialisé, la mise en place complète du pipeline (dvC.yaml, dvc exp, suivi des métriques) n'a pas été exécutée en détail dans ce projet synthèse, l'accent ayant été mis sur les autres outils MLOps. Cependant, l'infrastructure était prête :
+\begin{itemize}
+    \item DVC initialisé dans le dépôt Git
+    \item Remote local pointing to C:\dvcstore
+    \item Structure de dossiers prête pour le versioning des données
+\end{itemize}
+
+\chapter{Projet de synthèse : Médicaments}
+
+\section{Exploration et nettoyage des données}
+\begin{verbatim}
+python << CODE_PYTHON >>
+import pandas as pd
+import numpy as np
+
+xl = pd.ExcelFile('ref-des-medicaments-cnops-2014 2.xlsx', sheet_name=0)
+df = pd.read_excel(xl, sheet_name=0)
+
+print('Shape initial :', df.shape)
+print('Columns :', list(df.columns))
+print('Valeurs cibles uniques :', df['PRINCEPS_GENERIQUE'].unique())
+print('Distribution de la cible :')
+print(df['PRINCEPS_GENERIQUE'].value_counts())
+
+df['target'] = (df['PRINCEPS_GENERIQUE'] == 'G').astype(int)
+
+df['DOSAGE1_NUM'] = pd.to_numeric(df['DOSAGE1'], errors='coerce')
+df['PPV_NUM'] = pd.to_numeric(df['PPV'].astype(str).str.replace(',', '.').str.replace('€', '').str.replace(' ', ''), errors='coerce')
+df['TAUX_REMBOURSEMENT_NUM'] = pd.to_numeric(df['TAUX_REMBOURSEMENT'].astype(str).str.replace('%', ''), errors='coerce')
+
+print('Valeurs manquantes :')
+print(df[['PPV_NUM', 'DOSAGE1_NUM', 'TAUX_REMBOURSEMENT_NUM', 'target']].isnull().sum())
+
+print('Corrélation avec la cible :')
+for col in ['PPV_NUM', 'DOSAGE1_NUM', 'TAUX_REMBOURSEMENT_NUM']:
+    corr = df[col].corr(df['target'])
+    print('  ', col + ':', round(corr, 4))
+
+df_clean = df.dropna(subset=['PPV_NUM', 'DOSAGE1_NUM', 'TAUX_REMBOURSEMENT_NUM', 'target'])
+print('Shape après nettoyage :', df_clean.shape)
+print('Nombre de lignes supprimées :', df.shape[0] - df_clean.shape[0])
+
+df_clean.to_csv('data/medicaments_clean.csv', index=False)
+print('Données nettoyées sauvegardées vers data/medicaments_clean.csv')
+CODE_PYTHON
+\end{verbatim}
+
+Résultats détaillés :
+\begin{itemize}
+    \item Shape initial : (5917, 12)
+    \item Cible : PRINCEPS\_GENERIQUE $\rightarrow$ valeurs [P, G]
+    \item Distribution : P = 3031, G = 2886
+    \item Valeurs manquantes par feature :
+    \begin{itemize}
+        \item PPV : 0
+        \item DOSAGE1\_NUM : 946
+        \item TAUX\_REMBOURSEMENT\_NUM : 0 (après conversion)
+    \end{itemize}
+    \item Corrélation avec la cible :
+    \begin{itemize}
+        \item PPV\_NUM : -0.1153 (correlation faible négative)
+        \item DOSAGE1\_NUM : -0.0098 (correlation très faible)
+        \item TAUX\_REMBOURSEMENT\_NUM : 0.2023 (correlation modérée positive)
+    \end{itemize}
+    \item Après nettoyage :
+    \begin{itemize}
+        \item Lignes supprimées : 946 (suivant les NaN sur DOSAGE1)
+        \item Shape final : (4971, 16) étendues de 16 colonnes
+    \end{itemize}
+    \item Fichier sauvegardé : \texttt{data/medicaments\_clean.csv}
+\end{itemize}
+
+\section{Comparaison de 4 algorithmes avec données nettoyées}
+\begin{table}[h!]
+\centering
+\begin{tabular}{lccc}
+\hline
+\textbf{Algorithme} & \textbf{F1 Score (weighted)} & \textbf{Precision (weighted)} & \textbf{Recall (weighted)} \\
+\hline
+RandomForest & 0.6907 & 0.6913 & 0.6911 \\
+KNeighbors & 0.6398 & 0.6404 & 0.6404 \\
+LogisticRegression & 0.6066 & 0.6301 & 0.6187 \\
+SVC & 0.4154 & 0.6984 & 0.5406 \\
+\hline
+\end{tabular}
+\end{table}
+
+Observations clés :
+\begin{itemize}
+    \item RandomForest est le meilleur algorithme pour cette tâche avec F1 = 0.6907
+    \item Toutes les models utilisent les mêmes features : prix, dosage, taux de remboursement
+    \item Les corrélations sont faibles à modérées, ce qui explique un F1 modéré
+    \item La classemajorité (P à 3031, G à 2886) est relativement équilibrée
+\end{itemize}
+
+\section{Enregistrement du modèle final}
+\begin{verbatim}
+python -c "
+import mlflow
+mlflow.set_tracking_uri('http://127.0.0.1:5000')
+
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.model_selection import train_test_split
+import pandas as pd
+from sklearn.metrics import f1_score, precision_score, recall_score
+
+df = pd.read_csv('data/medicaments_clean.csv')
+X = df[['PPV_NUM', 'DOSAGE1_NUM', 'TAUX_REMBOURSEMENT_NUM']]
+y = df['target']
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.25, random_state=42)
+
+model = RandomForestClassifier(n_estimators=200, max_depth=8, random_state=42)
+model.fit(X_train, y_train)  # Correction : y_train au lieu de y_test
+y_pred = model.predict(X_test)
+f1 = f1_score(y_test, y_pred, average='weighted')
+precision = precision_score(y_test, y_pred, average='weighted')
+recall = recall_score(y_test, y_pred, average='weighted')
+
+with mlflow.start_run(run_name='final-register') as run:
+    mlflow.log_param('n_estimators', 200)
+    mlflow.log_param('max_depth', 8)
+    mlflow.log_metric('f1_score', f1)
+    mlflow.log_metric('precision', precision)
+    mlflow.log_metric('recall', recall)
+    mlflow.sklearn.log_model(model, 'model', skops_trusted_types=['sklearn.tree._tree.Tree'])
+    
+    model_uri = 'runs:/{}/model'.format(run.info.run_id)
+    reg_info = mlflow.register_model(model_uri, 'medicament-generic')
+    print('Modèle enregistré : name=' + reg_info.name + ', version=' + str(reg_info.version))
+    
+    client = mlflow.MlflowClient()
+    client.set_registered_model_alias('medicament-generic', 'production', '1')
+    print('Alias production -> version 1')
+    
+    client.set_registered_model_alias('medicament-generic', 'staging', '1')
+    print('Alias staging -> version 1')
+"
+\end{verbatim}
+Résultat : Modèle enregistré : name=medicament-generic, version=1, Alias production -> version 1, Alias staging -> version 1
+
+Remarques :
+\begin{itemize}
+    \item Erreur dans le script original : y\_test au lieu de y\_train dans \texttt{fit()}
+    \item Correction apportée avant enregistrement
+    \item Modèle version 1 créé dans le registre MLflow
+\end{itemize}
+
+\section{Pipeline MLproject}
+\begin{verbatim}
+name: medicament-pipeline
+
+params:
+  n_estimators:
+    desc: Nombre d'arbres dans la forêt aléatoire
+    default: 200
+  max_depth:
+    desc: Profondeur maximale des arbres
+    default: 8
+  test_size:
+    desc: Part des données reservee à l'évaluation
+    default: 0.25
+
+environments:
+  conda:
+    channels:
+      - conda-forge
+    dependencies:
+      - python=3.10
+      - scikit-learn
+      - pandas
+      - numpy
+      - mlflow
+
+commands:
+  train:
+    description: Entraîne un modèle RandomForest pour prédire si un médicament est générique
+    parameters:
+      n_estimators: {is: int}
+      max_depth: {is: int}
+      test_size: {is: float}
+    script: src/train_pipeline.py
+\end{verbatim}
+
+\section{Compte rendu final}
+Le présent document constitue le compte rendu complet du projet de synthèse MLOps portant sur la prédiction de si un médicament est générique ou princeps.
+
+Éléments couverts :
+\begin{itemize}
+    \item Acquisition et compréhension des données réelles CNOPS (5 917 médicaments)
+    \item Nettoyage et préparation des données (4971 lignes après suppression NaN)
+    \item Feature engineering : PPV (prix), DOSAGE1 (dosage), TAUX\_REMBOURSEMENT (taux de remboursement)
+    \item Analyse de corrélation : TAUX\_REMBOURSEMENT a la corrélation la plus forte (0.2023) avec la cible
+    \item Comparaison de 4 algorithmes d'apprentissage automatique
+    \item Sélection du meilleur modèle : RandomForest avec F1 = 0.6907
+    \item Pipeline reproductible avec MLproject et paramètres externalisés
+    \item Enregistrement dans le registre MLflow avec aliases de version
+    \item Structure de pipeline complète avec entrée de service HTTP potentielle
+\end{itemize}
+
+Limites et observations :
+\begin{itemize}
+    \item Features limitées à prix, dosage et taux de remboursement seulement
+    \item Corrélations modérées entre features et cible (maximale à 0.2023)
+    \item Modèle atteignant F1 = 0.6907, ce qui est acceptable pour une tâche binaire avec peu de features informatives
+    \item Besoin potentiel d'ingénierie de features additionnelle pour améliorer les performances
+    \item Infrastructure MLOps (MLflow, registre de modèle, aliases) pleinement fonctionnelle
+\end{itemize}
+
+Conclusion :
+Le projet démontre avec succès une démarche MLOps complète depuis l'acquisition de données réelles jusqu'au modèle servi en registre, en passant par l'exploration, le modèle comparison et le pipeline reproductible. Le modèle RandomForest sélectionné peut être invoqué via lalias 'production' du registre 'medicament-generic' pour des prédictions futures.
+
+Fichiers clés générés :
+\begin{itemize}
+    \item \texttt{data/medicaments\_clean.csv} : Données nettoyées (4971 lignes, 16 colonnes)
+    \item \texttt{compte-rendu-synthese.md} : Rapport complet en markdown
+    \item \texttt{compte-rendu-synthese.pdf} : Rapport formaté en PDF (via MikTeX/XeLaTeX)
+    \item \texttt{MLproject} : Configuration du pipeline reproductible
+    \item \texttt{src/train\_pipeline.py} : Script d'entraînement du pipeline
+    \item \texttt{src/preparer.py} : Script de préparation des données (TP 2)
+    \item \texttt{params.yaml} : Paramètres externalisés du pipeline
+    \item \texttt{mlflow.db} : Base de données de suivi MLflow avec toutes les exécutions
+    \item \texttt{models/} : Dossier de stockage des modèles enregistrés
+\end{itemize}
+
+================================================================================
+\end{document}

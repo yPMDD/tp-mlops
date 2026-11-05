@@ -1,0 +1,614 @@
+[
+  {
+    "source": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\analyze_data.py",
+    "destination": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\tp-mlops\\projects\\medicaments\\analyze_data.py",
+    "length": 1844,
+    "sha256": "3A9523F24B061707B48964D6FD3B6E7860B632CE7C296E5E6DE6514E32037CBA"
+  },
+  {
+    "source": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\compte-rendu-synthese-rapport.aux",
+    "destination": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\tp-mlops\\projects\\medicaments\\compte-rendu-synthese-rapport.aux",
+    "length": 656,
+    "sha256": "4F68020C88A268BD3B5E872082110D3F2A6BBC3D7EC395012BE63EFE96585ACD"
+  },
+  {
+    "source": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\compte-rendu-synthese-rapport.log",
+    "destination": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\tp-mlops\\projects\\medicaments\\compte-rendu-synthese-rapport.log",
+    "length": 69024,
+    "sha256": "3921468C5482C70B406095AD0C6310607387120645C3D3B5771E35641468D6D6"
+  },
+  {
+    "source": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\compte-rendu-synthese-rapport.out",
+    "destination": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\tp-mlops\\projects\\medicaments\\compte-rendu-synthese-rapport.out",
+    "length": 904,
+    "sha256": "9B1AA11784B50E88B44AEE276A6F32591AA1A3CA5AA8BEDB026BD33791707945"
+  },
+  {
+    "source": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\compte-rendu-synthese-rapport.tex",
+    "destination": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\tp-mlops\\projects\\medicaments\\compte-rendu-synthese-rapport.tex",
+    "length": 35033,
+    "sha256": "BC35F107CA8AC70026CB823B0B479E7560CD37CBB2B39460FF171E7DF3DD2DF9"
+  },
+  {
+    "source": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\compte-rendu-synthese.md",
+    "destination": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\tp-mlops\\projects\\medicaments\\compte-rendu-synthese.md",
+    "length": 5997,
+    "sha256": "87DB045EC28182FB1639E1E06F7A369CBEC6FD8DDC768D185F55976453035F17"
+  },
+  {
+    "source": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\compte-rendu-synthese.pdf",
+    "destination": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\tp-mlops\\projects\\medicaments\\compte-rendu-synthese.pdf",
+    "length": 34667,
+    "sha256": "021E98F04BD2CE259C2C99423C944628E1BC610AF46AD55932DC70E0C2C45F54"
+  },
+  {
+    "source": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\compte-rendu-tp5-synthese.aux",
+    "destination": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\tp-mlops\\projects\\medicaments\\compte-rendu-tp5-synthese.aux",
+    "length": 1522,
+    "sha256": "EB79E362E1E4250C9C26EE08EE38C61748AC40ECF20B26010CB530BA740C2406"
+  },
+  {
+    "source": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\compte-rendu-tp5-synthese.log",
+    "destination": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\tp-mlops\\projects\\medicaments\\compte-rendu-tp5-synthese.log",
+    "length": 35154,
+    "sha256": "BCD83A7E596F87AC3597F6B120F816ED6CF298372AB3CFB11EFEB33ED7D7A9C3"
+  },
+  {
+    "source": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\compte-rendu-tp5-synthese.out",
+    "destination": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\tp-mlops\\projects\\medicaments\\compte-rendu-tp5-synthese.out",
+    "length": 1842,
+    "sha256": "45ABE78C5F03B581D06B2596A3C5BC96961FAF32EB03F2AB92DE0C542E6A660D"
+  },
+  {
+    "source": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\compte-rendu-tp5-synthese.pdf",
+    "destination": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\tp-mlops\\projects\\medicaments\\compte-rendu-tp5-synthese.pdf",
+    "length": 108423,
+    "sha256": "A412C7A0656835F3677F1C12C784359DBC5AB756B938D3D5ADD727DFCAE86D0C"
+  },
+  {
+    "source": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\compte-rendu-tp5-synthese.tex",
+    "destination": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\tp-mlops\\projects\\medicaments\\compte-rendu-tp5-synthese.tex",
+    "length": 11369,
+    "sha256": "9C0110F0211A478214EF80F962295694758FF2668C4F0F43E62BC35B7C8BAEDF"
+  },
+  {
+    "source": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\gen_captures.py",
+    "destination": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\tp-mlops\\projects\\medicaments\\gen_captures.py",
+    "length": 10605,
+    "sha256": "98A23541A3B7DF986D2B0504B83BA18815E594695BD38521C649CA3B040EC50A"
+  },
+  {
+    "source": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\mlflow.db",
+    "destination": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\tp-mlops\\projects\\medicaments\\mlflow.db",
+    "length": 962560,
+    "sha256": "829048AA57606137A6628184DC227C132D4014735852EC8372201EA8B663392D"
+  },
+  {
+    "source": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\MLproject",
+    "destination": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\tp-mlops\\projects\\medicaments\\MLproject",
+    "length": 690,
+    "sha256": "A443B490A73C7DF44DA4C4ED52C7F02E48475C7882B52F8955AD5BB09F2F925D"
+  },
+  {
+    "source": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\rapport_synthese_final.aux",
+    "destination": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\tp-mlops\\projects\\medicaments\\rapport_synthese_final.aux",
+    "length": 706,
+    "sha256": "FACB370361600D97F41B42429074483EB5BAAF1632029AF4AEF52BE52DFFDADE"
+  },
+  {
+    "source": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\rapport_synthese_final.log",
+    "destination": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\tp-mlops\\projects\\medicaments\\rapport_synthese_final.log",
+    "length": 49638,
+    "sha256": "104BCED8558BA150FA45C8BDFB9CF23B404128C1ED9CBD73E55A4264140DBF3C"
+  },
+  {
+    "source": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\rapport_synthese_final.out",
+    "destination": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\tp-mlops\\projects\\medicaments\\rapport_synthese_final.out",
+    "length": 0,
+    "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+  },
+  {
+    "source": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\rapport_synthese_final.pdf",
+    "destination": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\tp-mlops\\projects\\medicaments\\rapport_synthese_final.pdf",
+    "length": 266783,
+    "sha256": "A4566542DF43C5AA20B8230D3214F4A09878EC286F2640E0466A85E67F92EB27"
+  },
+  {
+    "source": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\rapport_synthese_final.tex",
+    "destination": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\tp-mlops\\projects\\medicaments\\rapport_synthese_final.tex",
+    "length": 17457,
+    "sha256": "65916791DBB275C00CCDFF9F7D725FE632D7E73E835746FDAF0B051E8B95E9F0"
+  },
+  {
+    "source": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\rapport_synthese.aux",
+    "destination": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\tp-mlops\\projects\\medicaments\\rapport_synthese.aux",
+    "length": 4651,
+    "sha256": "F578F6B9597DE96BF37F029E21A937F258A98C3040FE40027EB9BA888EC366AC"
+  },
+  {
+    "source": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\rapport_synthese.log",
+    "destination": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\tp-mlops\\projects\\medicaments\\rapport_synthese.log",
+    "length": 56868,
+    "sha256": "BBAA2D961E19C0204E9045D0E82B076718928BA9D9A44FBB7B56883E1A5B921A"
+  },
+  {
+    "source": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\rapport_synthese.out",
+    "destination": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\tp-mlops\\projects\\medicaments\\rapport_synthese.out",
+    "length": 6655,
+    "sha256": "B4737FF2A59B5DB8B16F4105F9FC721D1F9AA6BA21F44E2BA79D3C936FAFC71C"
+  },
+  {
+    "source": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\rapport_synthese.pdf",
+    "destination": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\tp-mlops\\projects\\medicaments\\rapport_synthese.pdf",
+    "length": 146906,
+    "sha256": "08338FA6582EFCADF44CC1363549FD2E78C8CEEC2EDD6A6319D1706F25D80B23"
+  },
+  {
+    "source": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\rapport_synthese.tex",
+    "destination": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\tp-mlops\\projects\\medicaments\\rapport_synthese.tex",
+    "length": 23922,
+    "sha256": "ACDAC94FFFD1917205292206502E02C142BC83CF93871CBCF563D457951A551B"
+  },
+  {
+    "source": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\rapport_tp5_synthese.aux",
+    "destination": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\tp-mlops\\projects\\medicaments\\rapport_tp5_synthese.aux",
+    "length": 5656,
+    "sha256": "BF77E4BA590891F1C7DCBC3ABCB296E6D446A166B4A7C8A34533B5BA4B1F6CF3"
+  },
+  {
+    "source": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\rapport_tp5_synthese.log",
+    "destination": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\tp-mlops\\projects\\medicaments\\rapport_tp5_synthese.log",
+    "length": 28904,
+    "sha256": "8F88C349720751779925083D92E00E616896C031B9490E925BBB02A5EE296660"
+  },
+  {
+    "source": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\rapport_tp5_synthese.out",
+    "destination": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\tp-mlops\\projects\\medicaments\\rapport_tp5_synthese.out",
+    "length": 10959,
+    "sha256": "1E498E1840531722A4F6EA35FDD7D898A11107F3B191D7F07557DB87F4E48182"
+  },
+  {
+    "source": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\rapport_tp5_synthese.pdf",
+    "destination": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\tp-mlops\\projects\\medicaments\\rapport_tp5_synthese.pdf",
+    "length": 1075980,
+    "sha256": "B9EEAA17AE378DB84C905D1331B608491B560DD3B73E1CC446D9693D58CEE614"
+  },
+  {
+    "source": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\rapport_tp5_synthese.tex",
+    "destination": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\tp-mlops\\projects\\medicaments\\rapport_tp5_synthese.tex",
+    "length": 23597,
+    "sha256": "ECC5B046E561CC23AE4477F7F728D230E7024EE398FF84AB38B89FE3FF588D1B"
+  },
+  {
+    "source": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\rapport.out",
+    "destination": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\tp-mlops\\projects\\medicaments\\rapport.out",
+    "length": 0,
+    "sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+  },
+  {
+    "source": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\ref-des-medicaments-cnops-2014 2.xlsx",
+    "destination": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\tp-mlops\\projects\\medicaments\\ref-des-medicaments-cnops-2014 2.xlsx",
+    "length": 480176,
+    "sha256": "7043B48D631A6661A5B2D8559BCC3175A136B3D8FBDF704B911FB72938FD4635"
+  },
+  {
+    "source": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\test.pdf",
+    "destination": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\tp-mlops\\projects\\medicaments\\test.pdf",
+    "length": 49081,
+    "sha256": "F8E00955A803C4B0893DBB0FF2011653F826083426F8CCA04237E6B281E82DE1"
+  },
+  {
+    "source": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\TP-synthese-projet-medicaments 3.pdf",
+    "destination": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\tp-mlops\\docs\\handouts\\TP-synthese-projet-medicaments 3.pdf",
+    "length": 26047,
+    "sha256": "958A70A9E4DD1C3CCF49EEF6BEEC762034CDF2FA8A2D83D779F06BBF6E6BD199"
+  },
+  {
+    "source": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\tp01_text.txt",
+    "destination": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\tp-mlops\\docs\\handouts\\extracted-text\\tp01_text.txt",
+    "length": 13687,
+    "sha256": "7C75D57E734B9E1AFA1DAA223391ABE780E1086FA2CD715019AF422C2BEB0FCB"
+  },
+  {
+    "source": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\TP01-decouverte-boite-a-outils-MLOps-Windows.pdf",
+    "destination": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\tp-mlops\\docs\\handouts\\TP01-decouverte-boite-a-outils-MLOps-Windows.pdf",
+    "length": 18127,
+    "sha256": "4D4D0633D0AC7D1E770BA8EFB3BC1569BCAC021801E72DFB86584674454F7F44"
+  },
+  {
+    "source": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\tp02_text.txt",
+    "destination": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\tp-mlops\\docs\\handouts\\extracted-text\\tp02_text.txt",
+    "length": 20466,
+    "sha256": "3F027DF65EC36399740FBE9BA3818CC3CFDF03372CDBC5E12949FDC53F1B8AA3"
+  },
+  {
+    "source": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\TP02-pipeline-MLOps-simple-Windows -v1 1.pdf",
+    "destination": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\tp-mlops\\docs\\handouts\\TP02-pipeline-MLOps-simple-Windows -v1 1.pdf",
+    "length": 25263,
+    "sha256": "F0B8EA3EDEABD0F477C5B6BF958F85D27946FE0A12810854EE12AC147925BC62"
+  },
+  {
+    "source": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\TP03-enregistrer-modeles-et-artefacts-MLflow-Windows.pdf",
+    "destination": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\tp-mlops\\docs\\handouts\\TP03-enregistrer-modeles-et-artefacts-MLflow-Windows.pdf",
+    "length": 15887,
+    "sha256": "05268E6C14B802ACD6A679D1688B7F71101BB36DC6B47206B3B7832B4D89FFA0"
+  },
+  {
+    "source": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\tp04_text.txt",
+    "destination": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\tp-mlops\\docs\\handouts\\extracted-text\\tp04_text.txt",
+    "length": 11880,
+    "sha256": "5BFE3A5104AEB18CEC0F14CA400B809CACD2E94E91C2C54AB489284300426BB3"
+  },
+  {
+    "source": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\TP04-versioning-donnees-DVC-Windows.pdf",
+    "destination": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\tp-mlops\\docs\\handouts\\TP04-versioning-donnees-DVC-Windows.pdf",
+    "length": 15785,
+    "sha256": "81A87D0C5B66EA7BF81A2ED6C029EFB47DAB6480A035966858DBAD79CACC278E"
+  },
+  {
+    "source": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\tp06_text.txt",
+    "destination": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\tp-mlops\\docs\\handouts\\extracted-text\\tp06_text.txt",
+    "length": 23110,
+    "sha256": "C18AF589A30FF9F109DFBAC51EBEE14286B170F1966024DCC242C97BAAB0DA8C"
+  },
+  {
+    "source": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\TP06-creer-et-deployer-un-modele-AutoML-Windows_1.pdf",
+    "destination": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\tp-mlops\\docs\\handouts\\TP06-creer-et-deployer-un-modele-AutoML-Windows_1.pdf",
+    "length": 191664,
+    "sha256": "91341B59F9CA14D885286C74E43961FDFBE50F7B2369561FB8F274E9541E1189"
+  },
+  {
+    "source": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\tp07_text.txt",
+    "destination": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\tp-mlops\\docs\\handouts\\extracted-text\\tp07_text.txt",
+    "length": 21538,
+    "sha256": "9CA327BD0328B269736F9B41CE44850896B1E731EAB590355BD71FA7F5E9D2CD"
+  },
+  {
+    "source": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\TP07-automatiser-les-workflows-MLOps-Windows_1.pdf",
+    "destination": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\tp-mlops\\docs\\handouts\\TP07-automatiser-les-workflows-MLOps-Windows_1.pdf",
+    "length": 398357,
+    "sha256": "99487B6176E7400D154B1E9EE323BB6EBA753A763E6198FEDB1DFF35E5436718"
+  },
+  {
+    "source": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\TP08-techniques-XAI-Windows-v1.pdf",
+    "destination": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\tp-mlops\\docs\\handouts\\TP08-techniques-XAI-Windows-v1.pdf",
+    "length": 1129116,
+    "sha256": "4687A09BA78A8F7FA552508E955082EFCB721399D30E5FD86B0FF706932F3CEF"
+  },
+  {
+    "source": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\TP09-conteneurs-sur-Kubernetes-Windows.pdf",
+    "destination": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\tp-mlops\\docs\\handouts\\TP09-conteneurs-sur-Kubernetes-Windows.pdf",
+    "length": 47130,
+    "sha256": "C574B3E2A8BAEC70C7B7ECBE76AA88EFF01F4C224B21CBBD5B8C5C1C6C3F3BAB"
+  },
+  {
+    "source": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\captures\\capture_A1_exploration.png",
+    "destination": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\tp-mlops\\projects\\medicaments\\captures\\capture_A1_exploration.png",
+    "length": 50704,
+    "sha256": "9B9360EBE5D6D2FBAB4EE76A47152866021ECCABADFB0A1DEF77F556F5ABD2FB"
+  },
+  {
+    "source": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\captures\\capture_A2_nettoyage.png",
+    "destination": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\tp-mlops\\projects\\medicaments\\captures\\capture_A2_nettoyage.png",
+    "length": 68477,
+    "sha256": "C1927A3E900DE9A5D083122F0EC0E25A58835CB574A225411A88FF651C42993B"
+  },
+  {
+    "source": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\captures\\capture_B1_algorithmes.png",
+    "destination": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\tp-mlops\\projects\\medicaments\\captures\\capture_B1_algorithmes.png",
+    "length": 74875,
+    "sha256": "9F8AD7CB870485473DDD03A067AE236ED6E7E9BFB0CA595DA859F49D74315D30"
+  },
+  {
+    "source": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\captures\\capture_C1_pipeline.png",
+    "destination": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\tp-mlops\\projects\\medicaments\\captures\\capture_C1_pipeline.png",
+    "length": 24232,
+    "sha256": "4B75D5B3E92529B807F55EE1CFB3C85F4C5A42345088ABA4C2B4D51F5CF612F7"
+  },
+  {
+    "source": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\captures\\capture_C2_mlflow_ui.png",
+    "destination": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\tp-mlops\\projects\\medicaments\\captures\\capture_C2_mlflow_ui.png",
+    "length": 30156,
+    "sha256": "497601ED76145B83C88FBA3EB8B43B8D99A0042CE9B0CB8EC53772792D06A51B"
+  },
+  {
+    "source": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\captures\\capture_D1_registration.png",
+    "destination": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\tp-mlops\\projects\\medicaments\\captures\\capture_D1_registration.png",
+    "length": 49487,
+    "sha256": "B9A459F22E02233AC532FD9C583B09F71596DD8B3C6F63D25B537973FC7D7730"
+  },
+  {
+    "source": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\captures\\capture_D2_requests.png",
+    "destination": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\tp-mlops\\projects\\medicaments\\captures\\capture_D2_requests.png",
+    "length": 38561,
+    "sha256": "99754629E4B26E4249EA56602A23ECCFD0526752B718A1B5F1ADBD9103C9CC2E"
+  },
+  {
+    "source": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\captures\\capture_mlflow_experiment_real.png",
+    "destination": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\tp-mlops\\projects\\medicaments\\captures\\capture_mlflow_experiment_real.png",
+    "length": 237861,
+    "sha256": "3756685D895DF10BAF91CD51ED8A5F600867EDDDE5ED487725E5D3BBEF3B4B7E"
+  },
+  {
+    "source": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\captures\\capture_mlflow_run_real.png",
+    "destination": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\tp-mlops\\projects\\medicaments\\captures\\capture_mlflow_run_real.png",
+    "length": 242607,
+    "sha256": "6B4564CD61211E31EB091AC1748F34B4E1FA558DBD34C0E5C79B15961AA385BF"
+  },
+  {
+    "source": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\data\\medicaments_clean.csv",
+    "destination": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\tp-mlops\\projects\\medicaments\\data\\medicaments_clean.csv",
+    "length": 607621,
+    "sha256": "49455BC72A93D77A4E57ECAC9674092178DF9CE46D7D1A4CEEA6DD688334E488"
+  },
+  {
+    "source": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\mlartifacts\\0\\models\\m-2abe0ac28cdb410cbbfc18d383a5e24f\\artifacts\\conda.yaml",
+    "destination": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\tp-mlops\\projects\\medicaments\\mlartifacts\\0\\models\\m-2abe0ac28cdb410cbbfc18d383a5e24f\\artifacts\\conda.yaml",
+    "length": 254,
+    "sha256": "093207BED936A1A978D3F5AF49E2E5344E448EA6C1EF9380E9EFFE4D2DE06B2B"
+  },
+  {
+    "source": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\mlartifacts\\0\\models\\m-2abe0ac28cdb410cbbfc18d383a5e24f\\artifacts\\MLmodel",
+    "destination": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\tp-mlops\\projects\\medicaments\\mlartifacts\\0\\models\\m-2abe0ac28cdb410cbbfc18d383a5e24f\\artifacts\\MLmodel",
+    "length": 733,
+    "sha256": "1E6EC7A8ECBD884C697B233621B4081087C961CA141A8A6A9EC049C6E40EEB4F"
+  },
+  {
+    "source": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\mlartifacts\\0\\models\\m-2abe0ac28cdb410cbbfc18d383a5e24f\\artifacts\\model.skops",
+    "destination": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\tp-mlops\\projects\\medicaments\\mlartifacts\\0\\models\\m-2abe0ac28cdb410cbbfc18d383a5e24f\\artifacts\\model.skops",
+    "length": 3385229,
+    "sha256": "962D55E53C48CD965052B15DEAD99E21BEFF9AB574BF1B4D3C0223F8F279230B"
+  },
+  {
+    "source": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\mlartifacts\\0\\models\\m-2abe0ac28cdb410cbbfc18d383a5e24f\\artifacts\\python_env.yaml",
+    "destination": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\tp-mlops\\projects\\medicaments\\mlartifacts\\0\\models\\m-2abe0ac28cdb410cbbfc18d383a5e24f\\artifacts\\python_env.yaml",
+    "length": 119,
+    "sha256": "78D43BEBB5DD8C752877889EDCD3CD76BBBECA4584904150E868C5EED3B292E3"
+  },
+  {
+    "source": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\mlartifacts\\0\\models\\m-2abe0ac28cdb410cbbfc18d383a5e24f\\artifacts\\requirements.txt",
+    "destination": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\tp-mlops\\projects\\medicaments\\mlartifacts\\0\\models\\m-2abe0ac28cdb410cbbfc18d383a5e24f\\artifacts\\requirements.txt",
+    "length": 116,
+    "sha256": "9E7DA17CE37ED9E5F20273E3D0878CD5196C5E47D93D1FEDD4D166B702EEAA57"
+  },
+  {
+    "source": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\mlartifacts\\0\\models\\m-3d45cea92209419e9ea2521a8ed3b6fc\\artifacts\\conda.yaml",
+    "destination": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\tp-mlops\\projects\\medicaments\\mlartifacts\\0\\models\\m-3d45cea92209419e9ea2521a8ed3b6fc\\artifacts\\conda.yaml",
+    "length": 254,
+    "sha256": "093207BED936A1A978D3F5AF49E2E5344E448EA6C1EF9380E9EFFE4D2DE06B2B"
+  },
+  {
+    "source": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\mlartifacts\\0\\models\\m-3d45cea92209419e9ea2521a8ed3b6fc\\artifacts\\MLmodel",
+    "destination": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\tp-mlops\\projects\\medicaments\\mlartifacts\\0\\models\\m-3d45cea92209419e9ea2521a8ed3b6fc\\artifacts\\MLmodel",
+    "length": 731,
+    "sha256": "0F732269A1E5CFE6C32B950649DB273A13820BA7AC64C7EE753C5B4E08CED333"
+  },
+  {
+    "source": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\mlartifacts\\0\\models\\m-3d45cea92209419e9ea2521a8ed3b6fc\\artifacts\\model.skops",
+    "destination": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\tp-mlops\\projects\\medicaments\\mlartifacts\\0\\models\\m-3d45cea92209419e9ea2521a8ed3b6fc\\artifacts\\model.skops",
+    "length": 10665,
+    "sha256": "ABEE778CCF0BB283FC057F39D86504C15EED4378898FD7BA5162AFFFEF1D532E"
+  },
+  {
+    "source": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\mlartifacts\\0\\models\\m-3d45cea92209419e9ea2521a8ed3b6fc\\artifacts\\python_env.yaml",
+    "destination": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\tp-mlops\\projects\\medicaments\\mlartifacts\\0\\models\\m-3d45cea92209419e9ea2521a8ed3b6fc\\artifacts\\python_env.yaml",
+    "length": 119,
+    "sha256": "78D43BEBB5DD8C752877889EDCD3CD76BBBECA4584904150E868C5EED3B292E3"
+  },
+  {
+    "source": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\mlartifacts\\0\\models\\m-3d45cea92209419e9ea2521a8ed3b6fc\\artifacts\\requirements.txt",
+    "destination": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\tp-mlops\\projects\\medicaments\\mlartifacts\\0\\models\\m-3d45cea92209419e9ea2521a8ed3b6fc\\artifacts\\requirements.txt",
+    "length": 116,
+    "sha256": "9E7DA17CE37ED9E5F20273E3D0878CD5196C5E47D93D1FEDD4D166B702EEAA57"
+  },
+  {
+    "source": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\mlartifacts\\0\\models\\m-5ff2edc7345940df85d5ba0276c151f9\\artifacts\\conda.yaml",
+    "destination": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\tp-mlops\\projects\\medicaments\\mlartifacts\\0\\models\\m-5ff2edc7345940df85d5ba0276c151f9\\artifacts\\conda.yaml",
+    "length": 254,
+    "sha256": "093207BED936A1A978D3F5AF49E2E5344E448EA6C1EF9380E9EFFE4D2DE06B2B"
+  },
+  {
+    "source": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\mlartifacts\\0\\models\\m-5ff2edc7345940df85d5ba0276c151f9\\artifacts\\MLmodel",
+    "destination": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\tp-mlops\\projects\\medicaments\\mlartifacts\\0\\models\\m-5ff2edc7345940df85d5ba0276c151f9\\artifacts\\MLmodel",
+    "length": 733,
+    "sha256": "86320540D408AB0A0785595A18DCA49169690EBDC471DB5043C1897C660D421E"
+  },
+  {
+    "source": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\mlartifacts\\0\\models\\m-5ff2edc7345940df85d5ba0276c151f9\\artifacts\\model.skops",
+    "destination": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\tp-mlops\\projects\\medicaments\\mlartifacts\\0\\models\\m-5ff2edc7345940df85d5ba0276c151f9\\artifacts\\model.skops",
+    "length": 3385229,
+    "sha256": "5351A2D01EDD25B2E63CD005B419907E0A89BFF4B84570147AB54AF90697943E"
+  },
+  {
+    "source": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\mlartifacts\\0\\models\\m-5ff2edc7345940df85d5ba0276c151f9\\artifacts\\python_env.yaml",
+    "destination": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\tp-mlops\\projects\\medicaments\\mlartifacts\\0\\models\\m-5ff2edc7345940df85d5ba0276c151f9\\artifacts\\python_env.yaml",
+    "length": 119,
+    "sha256": "78D43BEBB5DD8C752877889EDCD3CD76BBBECA4584904150E868C5EED3B292E3"
+  },
+  {
+    "source": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\mlartifacts\\0\\models\\m-5ff2edc7345940df85d5ba0276c151f9\\artifacts\\requirements.txt",
+    "destination": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\tp-mlops\\projects\\medicaments\\mlartifacts\\0\\models\\m-5ff2edc7345940df85d5ba0276c151f9\\artifacts\\requirements.txt",
+    "length": 116,
+    "sha256": "9E7DA17CE37ED9E5F20273E3D0878CD5196C5E47D93D1FEDD4D166B702EEAA57"
+  },
+  {
+    "source": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\mlartifacts\\0\\models\\m-b04cebf0be8b4fa491a1b5e8d819804d\\artifacts\\conda.yaml",
+    "destination": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\tp-mlops\\projects\\medicaments\\mlartifacts\\0\\models\\m-b04cebf0be8b4fa491a1b5e8d819804d\\artifacts\\conda.yaml",
+    "length": 254,
+    "sha256": "093207BED936A1A978D3F5AF49E2E5344E448EA6C1EF9380E9EFFE4D2DE06B2B"
+  },
+  {
+    "source": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\mlartifacts\\0\\models\\m-b04cebf0be8b4fa491a1b5e8d819804d\\artifacts\\MLmodel",
+    "destination": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\tp-mlops\\projects\\medicaments\\mlartifacts\\0\\models\\m-b04cebf0be8b4fa491a1b5e8d819804d\\artifacts\\MLmodel",
+    "length": 732,
+    "sha256": "9FE25EF72B63A487EE16225AE362F15C81A255C4FDE49BAEEB8962234E712F33"
+  },
+  {
+    "source": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\mlartifacts\\0\\models\\m-b04cebf0be8b4fa491a1b5e8d819804d\\artifacts\\model.skops",
+    "destination": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\tp-mlops\\projects\\medicaments\\mlartifacts\\0\\models\\m-b04cebf0be8b4fa491a1b5e8d819804d\\artifacts\\model.skops",
+    "length": 174302,
+    "sha256": "E4C2FE59BC46B5DF2BFCAC1747E7CB8BB4C640CDD11CE0BBCBE066B34EEF2A98"
+  },
+  {
+    "source": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\mlartifacts\\0\\models\\m-b04cebf0be8b4fa491a1b5e8d819804d\\artifacts\\python_env.yaml",
+    "destination": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\tp-mlops\\projects\\medicaments\\mlartifacts\\0\\models\\m-b04cebf0be8b4fa491a1b5e8d819804d\\artifacts\\python_env.yaml",
+    "length": 119,
+    "sha256": "78D43BEBB5DD8C752877889EDCD3CD76BBBECA4584904150E868C5EED3B292E3"
+  },
+  {
+    "source": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\mlartifacts\\0\\models\\m-b04cebf0be8b4fa491a1b5e8d819804d\\artifacts\\requirements.txt",
+    "destination": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\tp-mlops\\projects\\medicaments\\mlartifacts\\0\\models\\m-b04cebf0be8b4fa491a1b5e8d819804d\\artifacts\\requirements.txt",
+    "length": 116,
+    "sha256": "9E7DA17CE37ED9E5F20273E3D0878CD5196C5E47D93D1FEDD4D166B702EEAA57"
+  },
+  {
+    "source": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\mlartifacts\\1\\8d0fbf4280544bafac05e9ba379aca33\\artifacts\\transactions.csv",
+    "destination": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\tp-mlops\\projects\\medicaments\\mlartifacts\\1\\8d0fbf4280544bafac05e9ba379aca33\\artifacts\\transactions.csv",
+    "length": 85897,
+    "sha256": "2BB8CCC7B234E7DE88B054731C2A34E19DFCF5B4430CDE023B4E4F86BB4F9E2D"
+  },
+  {
+    "source": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\mlartifacts\\3\\8d6f5141a77b429d841ab8a727893315\\artifacts\\test.csv",
+    "destination": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\tp-mlops\\projects\\medicaments\\mlartifacts\\3\\8d6f5141a77b429d841ab8a727893315\\artifacts\\test.csv",
+    "length": 21521,
+    "sha256": "54F372727C6EA7C3CD97FC4CE8CA25E320C73A1FDCB96DB98666F2780DD2A6DF"
+  },
+  {
+    "source": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\mlartifacts\\3\\8d6f5141a77b429d841ab8a727893315\\artifacts\\train.csv",
+    "destination": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\tp-mlops\\projects\\medicaments\\mlartifacts\\3\\8d6f5141a77b429d841ab8a727893315\\artifacts\\train.csv",
+    "length": 64412,
+    "sha256": "8FCBB855F44BDAF71EC0B32BE48CC6342189D0735E287B106B34E843BA02C600"
+  },
+  {
+    "source": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\mlartifacts\\3\\models\\m-eb28d7e50fe14148a54e8cdbab110ee6\\artifacts\\conda.yaml",
+    "destination": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\tp-mlops\\projects\\medicaments\\mlartifacts\\3\\models\\m-eb28d7e50fe14148a54e8cdbab110ee6\\artifacts\\conda.yaml",
+    "length": 254,
+    "sha256": "093207BED936A1A978D3F5AF49E2E5344E448EA6C1EF9380E9EFFE4D2DE06B2B"
+  },
+  {
+    "source": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\mlartifacts\\3\\models\\m-eb28d7e50fe14148a54e8cdbab110ee6\\artifacts\\MLmodel",
+    "destination": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\tp-mlops\\projects\\medicaments\\mlartifacts\\3\\models\\m-eb28d7e50fe14148a54e8cdbab110ee6\\artifacts\\MLmodel",
+    "length": 733,
+    "sha256": "39141BF5E4D211A4AF131C0EF6909D1A047BB7AABC940ECC7DF44519B793700C"
+  },
+  {
+    "source": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\mlartifacts\\3\\models\\m-eb28d7e50fe14148a54e8cdbab110ee6\\artifacts\\model.skops",
+    "destination": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\tp-mlops\\projects\\medicaments\\mlartifacts\\3\\models\\m-eb28d7e50fe14148a54e8cdbab110ee6\\artifacts\\model.skops",
+    "length": 5062875,
+    "sha256": "19EED6A47B00AF4D4249B8331021DD8D9F9782BBF1C49C1688FA3B6D3ACAD74A"
+  },
+  {
+    "source": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\mlartifacts\\3\\models\\m-eb28d7e50fe14148a54e8cdbab110ee6\\artifacts\\python_env.yaml",
+    "destination": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\tp-mlops\\projects\\medicaments\\mlartifacts\\3\\models\\m-eb28d7e50fe14148a54e8cdbab110ee6\\artifacts\\python_env.yaml",
+    "length": 119,
+    "sha256": "78D43BEBB5DD8C752877889EDCD3CD76BBBECA4584904150E868C5EED3B292E3"
+  },
+  {
+    "source": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\mlartifacts\\3\\models\\m-eb28d7e50fe14148a54e8cdbab110ee6\\artifacts\\requirements.txt",
+    "destination": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\tp-mlops\\projects\\medicaments\\mlartifacts\\3\\models\\m-eb28d7e50fe14148a54e8cdbab110ee6\\artifacts\\requirements.txt",
+    "length": 116,
+    "sha256": "9E7DA17CE37ED9E5F20273E3D0878CD5196C5E47D93D1FEDD4D166B702EEAA57"
+  },
+  {
+    "source": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\mlartifacts\\4\\4c6592e952124bc8b3beef679c709059\\artifacts\\medicaments_clean.csv",
+    "destination": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\tp-mlops\\projects\\medicaments\\mlartifacts\\4\\4c6592e952124bc8b3beef679c709059\\artifacts\\medicaments_clean.csv",
+    "length": 607621,
+    "sha256": "49455BC72A93D77A4E57ECAC9674092178DF9CE46D7D1A4CEEA6DD688334E488"
+  },
+  {
+    "source": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\mlartifacts\\4\\5e56d1c0ee474b92bfd6e21415f49ab0\\artifacts\\medicaments_clean.csv",
+    "destination": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\tp-mlops\\projects\\medicaments\\mlartifacts\\4\\5e56d1c0ee474b92bfd6e21415f49ab0\\artifacts\\medicaments_clean.csv",
+    "length": 607621,
+    "sha256": "49455BC72A93D77A4E57ECAC9674092178DF9CE46D7D1A4CEEA6DD688334E488"
+  },
+  {
+    "source": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\mlartifacts\\4\\bb29dd5483ae4fcf921a443baee37784\\artifacts\\medicaments_clean.csv",
+    "destination": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\tp-mlops\\projects\\medicaments\\mlartifacts\\4\\bb29dd5483ae4fcf921a443baee37784\\artifacts\\medicaments_clean.csv",
+    "length": 607621,
+    "sha256": "49455BC72A93D77A4E57ECAC9674092178DF9CE46D7D1A4CEEA6DD688334E488"
+  },
+  {
+    "source": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\mlartifacts\\4\\ce1209138c024a2eb6a5cf94eae738e4\\artifacts\\medicaments_clean.csv",
+    "destination": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\tp-mlops\\projects\\medicaments\\mlartifacts\\4\\ce1209138c024a2eb6a5cf94eae738e4\\artifacts\\medicaments_clean.csv",
+    "length": 607621,
+    "sha256": "49455BC72A93D77A4E57ECAC9674092178DF9CE46D7D1A4CEEA6DD688334E488"
+  },
+  {
+    "source": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\mlartifacts\\4\\f0da388ae41b47d4a9ea85ec58d5e02c\\artifacts\\medicaments_clean.csv",
+    "destination": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\tp-mlops\\projects\\medicaments\\mlartifacts\\4\\f0da388ae41b47d4a9ea85ec58d5e02c\\artifacts\\medicaments_clean.csv",
+    "length": 607621,
+    "sha256": "49455BC72A93D77A4E57ECAC9674092178DF9CE46D7D1A4CEEA6DD688334E488"
+  },
+  {
+    "source": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\mlartifacts\\4\\f1a10be8b9d74fa2b51d6dbc1e9c0849\\artifacts\\medicaments_clean.csv",
+    "destination": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\tp-mlops\\projects\\medicaments\\mlartifacts\\4\\f1a10be8b9d74fa2b51d6dbc1e9c0849\\artifacts\\medicaments_clean.csv",
+    "length": 607621,
+    "sha256": "49455BC72A93D77A4E57ECAC9674092178DF9CE46D7D1A4CEEA6DD688334E488"
+  },
+  {
+    "source": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\mlartifacts\\4\\models\\m-9c6ecf3db3cc4621853bad47d2a2958f\\artifacts\\conda.yaml",
+    "destination": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\tp-mlops\\projects\\medicaments\\mlartifacts\\4\\models\\m-9c6ecf3db3cc4621853bad47d2a2958f\\artifacts\\conda.yaml",
+    "length": 254,
+    "sha256": "093207BED936A1A978D3F5AF49E2E5344E448EA6C1EF9380E9EFFE4D2DE06B2B"
+  },
+  {
+    "source": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\mlartifacts\\4\\models\\m-9c6ecf3db3cc4621853bad47d2a2958f\\artifacts\\MLmodel",
+    "destination": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\tp-mlops\\projects\\medicaments\\mlartifacts\\4\\models\\m-9c6ecf3db3cc4621853bad47d2a2958f\\artifacts\\MLmodel",
+    "length": 733,
+    "sha256": "9F25DF9817915AC2FBD61D6FFE6F680220FC6D240B1CB9A52ACC466972EE0AA9"
+  },
+  {
+    "source": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\mlartifacts\\4\\models\\m-9c6ecf3db3cc4621853bad47d2a2958f\\artifacts\\model.skops",
+    "destination": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\tp-mlops\\projects\\medicaments\\mlartifacts\\4\\models\\m-9c6ecf3db3cc4621853bad47d2a2958f\\artifacts\\model.skops",
+    "length": 6669255,
+    "sha256": "FEF422A54E107F9401B747AFAA50F84FE2902F5885801A96986091E5C17657E5"
+  },
+  {
+    "source": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\mlartifacts\\4\\models\\m-9c6ecf3db3cc4621853bad47d2a2958f\\artifacts\\python_env.yaml",
+    "destination": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\tp-mlops\\projects\\medicaments\\mlartifacts\\4\\models\\m-9c6ecf3db3cc4621853bad47d2a2958f\\artifacts\\python_env.yaml",
+    "length": 119,
+    "sha256": "78D43BEBB5DD8C752877889EDCD3CD76BBBECA4584904150E868C5EED3B292E3"
+  },
+  {
+    "source": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\mlartifacts\\4\\models\\m-9c6ecf3db3cc4621853bad47d2a2958f\\artifacts\\requirements.txt",
+    "destination": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\tp-mlops\\projects\\medicaments\\mlartifacts\\4\\models\\m-9c6ecf3db3cc4621853bad47d2a2958f\\artifacts\\requirements.txt",
+    "length": 116,
+    "sha256": "9E7DA17CE37ED9E5F20273E3D0878CD5196C5E47D93D1FEDD4D166B702EEAA57"
+  },
+  {
+    "source": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\mlartifacts\\4\\models\\m-a3342b85be964643b466fd90b2eb9e5c\\artifacts\\conda.yaml",
+    "destination": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\tp-mlops\\projects\\medicaments\\mlartifacts\\4\\models\\m-a3342b85be964643b466fd90b2eb9e5c\\artifacts\\conda.yaml",
+    "length": 254,
+    "sha256": "093207BED936A1A978D3F5AF49E2E5344E448EA6C1EF9380E9EFFE4D2DE06B2B"
+  },
+  {
+    "source": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\mlartifacts\\4\\models\\m-a3342b85be964643b466fd90b2eb9e5c\\artifacts\\MLmodel",
+    "destination": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\tp-mlops\\projects\\medicaments\\mlartifacts\\4\\models\\m-a3342b85be964643b466fd90b2eb9e5c\\artifacts\\MLmodel",
+    "length": 734,
+    "sha256": "3AC7296EAD712C59411FDBCE45BE041BAD15ED70975F340CD627CD01073F2C6C"
+  },
+  {
+    "source": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\mlartifacts\\4\\models\\m-a3342b85be964643b466fd90b2eb9e5c\\artifacts\\model.skops",
+    "destination": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\tp-mlops\\projects\\medicaments\\mlartifacts\\4\\models\\m-a3342b85be964643b466fd90b2eb9e5c\\artifacts\\model.skops",
+    "length": 17597457,
+    "sha256": "18402363E7902C6B91D8CFD399DCB422C343AB3E5481B07F96A30062829B43D7"
+  },
+  {
+    "source": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\mlartifacts\\4\\models\\m-a3342b85be964643b466fd90b2eb9e5c\\artifacts\\python_env.yaml",
+    "destination": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\tp-mlops\\projects\\medicaments\\mlartifacts\\4\\models\\m-a3342b85be964643b466fd90b2eb9e5c\\artifacts\\python_env.yaml",
+    "length": 119,
+    "sha256": "78D43BEBB5DD8C752877889EDCD3CD76BBBECA4584904150E868C5EED3B292E3"
+  },
+  {
+    "source": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\mlartifacts\\4\\models\\m-a3342b85be964643b466fd90b2eb9e5c\\artifacts\\requirements.txt",
+    "destination": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\tp-mlops\\projects\\medicaments\\mlartifacts\\4\\models\\m-a3342b85be964643b466fd90b2eb9e5c\\artifacts\\requirements.txt",
+    "length": 116,
+    "sha256": "9E7DA17CE37ED9E5F20273E3D0878CD5196C5E47D93D1FEDD4D166B702EEAA57"
+  },
+  {
+    "source": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\src\\train_pipeline.py",
+    "destination": "C:\\Users\\S44D\\Documents\\5iir\\MLOps\\tp-mlops\\projects\\medicaments\\src\\train_pipeline.py",
+    "length": 2182,
+    "sha256": "0E120C3E99611E8714F9D3F4DD2E5361B31EBD74B144E8D73FF37BD0B9A933B9"
+  }
+]

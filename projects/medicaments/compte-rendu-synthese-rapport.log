@@ -1,0 +1,1795 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.10.2)  20 OCT 2026 00:20
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**./compte-rendu-synthese-rapport.tex
+(compte-rendu-synthese-rapport.tex
+LaTeX2e <2025-11-01>
+L3 programming layer <2025-12-24>
+(C:\Users\S44D\AppData\Local\Programs\MiKTeX\tex/latex/base\report.cls
+Document Class: report 2025/01/22 v1.4n Standard LaTeX document class
+(C:\Users\S44D\AppData\Local\Programs\MiKTeX\tex/latex/base\size12.clo
+File: size12.clo 2025/01/22 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count275
+\c@chapter=\count276
+\c@section=\count277
+\c@subsection=\count278
+\c@subsubsection=\count279
+\c@paragraph=\count280
+\c@subparagraph=\count281
+\c@figure=\count282
+\c@table=\count283
+\abovecaptionskip=\skip49
+\belowcaptionskip=\skip50
+\bibindent=\dimen148
+)
+(C:\Users\S44D\AppData\Local\Programs\MiKTeX\tex/latex/base\inputenc.sty
+Package: inputenc 2024/02/08 v1.3d Input encoding file
+\inpenc@prehook=\toks17
+\inpenc@posthook=\toks18
+)
+(C:\Users\S44D\AppData\Local\Programs\MiKTeX\tex/latex/base\fontenc.sty
+Package: fontenc 2025/07/18 v2.1d Standard LaTeX package
+)
+(C:\Users\S44D\AppData\Local\Programs\MiKTeX\tex/latex/fourier\fourier.sty
+Package: fourier 2024/09/08 2.4 fourier-GUTenberg package
+
+(C:\Users\S44D\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty
+Package: iftex 2024/12/12 v1.0g TeX engine tests
+)
+Now handling font encoding FML ...
+... no UTF-8 mapping file for font encoding FML
+Now handling font encoding FMS ...
+... no UTF-8 mapping file for font encoding FMS
+Now handling font encoding FMX ...
+... no UTF-8 mapping file for font encoding FMX
+
+(C:\Users\S44D\AppData\Local\Programs\MiKTeX\tex/latex/base\fontenc.sty
+Package: fontenc 2025/07/18 v2.1d Standard LaTeX package
+LaTeX Font Info:    Trying to load font information for T1+futs on input line 1
+16.
+
+(C:\Users\S44D\AppData\Local\Programs\MiKTeX\tex/latex/fourier\t1futs.fd
+File: t1futs.fd 2004/03/02 Fontinst v1.926 font definitions for T1/futs.
+))
+(C:\Users\S44D\AppData\Local\Programs\MiKTeX\tex/latex/base\textcomp.sty
+Package: textcomp 2024/04/24 v2.1b Standard LaTeX package
+)
+(C:\Users\S44D\AppData\Local\Programs\MiKTeX\tex/latex/fourier\fourier-orns.sty
+Package: fourier-orns 2024/09/08 2.4 fourier-ornaments package
+)
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 64.
+LaTeX Font Info:    Encoding `OT1' has changed to `T1' for symbol font
+(Font)              `operators' in the math version `normal' on input line 64.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/cmr/m/n --> T1/futs/m/n on input line 64.
+LaTeX Font Info:    Encoding `OT1' has changed to `T1' for symbol font
+(Font)              `operators' in the math version `bold' on input line 64.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmr/bx/n --> T1/futs/m/n on input line 64.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  T1/futs/m/n --> T1/futs/b/n on input line 65.
+LaTeX Font Info:    Redeclaring symbol font `letters' on input line 73.
+LaTeX Font Info:    Encoding `OML' has changed to `FML' for symbol font
+(Font)              `letters' in the math version `normal' on input line 73.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `normal'
+(Font)                  OML/cmm/m/it --> FML/futmi/m/it on input line 73.
+LaTeX Font Info:    Encoding `OML' has changed to `FML' for symbol font
+(Font)              `letters' in the math version `bold' on input line 73.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
+(Font)                  OML/cmm/b/it --> FML/futmi/m/it on input line 73.
+\symotherletters=\mathgroup4
+LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
+(Font)                  FML/futmi/m/it --> FML/futmi/b/it on input line 75.
+LaTeX Font Info:    Overwriting symbol font `otherletters' in version `bold'
+(Font)                  FML/futm/m/it --> FML/futm/b/it on input line 76.
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 77.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 78.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 79.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 80.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 81.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 82.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 83.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 84.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 85.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 86.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 87.
+LaTeX Font Info:    Redeclaring symbol font `symbols' on input line 127.
+LaTeX Font Info:    Encoding `OMS' has changed to `FMS' for symbol font
+(Font)              `symbols' in the math version `normal' on input line 127.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
+(Font)                  OMS/cmsy/m/n --> FMS/futm/m/n on input line 127.
+LaTeX Font Info:    Encoding `OMS' has changed to `FMS' for symbol font
+(Font)              `symbols' in the math version `bold' on input line 127.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
+(Font)                  OMS/cmsy/b/n --> FMS/futm/m/n on input line 127.
+LaTeX Font Info:    Redeclaring symbol font `largesymbols' on input line 128.
+LaTeX Font Info:    Encoding `OMX' has changed to `FMX' for symbol font
+(Font)              `largesymbols' in the math version `normal' on input line 1
+28.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
+(Font)                  OMX/cmex/m/n --> FMX/futm/m/n on input line 128.
+LaTeX Font Info:    Encoding `OMX' has changed to `FMX' for symbol font
+(Font)              `largesymbols' in the math version `bold' on input line 128
+.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  OMX/cmex/m/n --> FMX/futm/m/n on input line 128.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 129.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/cmr/bx/n --> T1/futs/bx/n on input line 129.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
+(Font)                  OT1/cmr/bx/n --> T1/futs/bx/n on input line 129.
+LaTeX Font Info:    Redeclaring math alphabet \mathrm on input line 130.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 131.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/cmr/m/it --> T1/futs/m/it on input line 131.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/cmr/bx/it --> T1/futs/m/it on input line 131.
+LaTeX Font Info:    Redeclaring math alphabet \mathcal on input line 132.
+LaTeX Font Info:    Redeclaring math symbol \parallel on input line 148.
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 162.
+LaTeX Font Info:    Redeclaring math symbol \varkappa on input line 200.
+LaTeX Font Info:    Redeclaring math symbol \varvarrho on input line 201.
+LaTeX Font Info:    Redeclaring math delimiter \Vert on input line 224.
+LaTeX Font Info:    Redeclaring math delimiter \vert on input line 229.
+LaTeX Font Info:    Redeclaring math delimiter \Downarrow on input line 239.
+LaTeX Font Info:    Redeclaring math delimiter \backslash on input line 241.
+LaTeX Font Info:    Redeclaring math delimiter \rangle on input line 243.
+LaTeX Font Info:    Redeclaring math delimiter \langle on input line 245.
+LaTeX Font Info:    Redeclaring math delimiter \rbrace on input line 247.
+LaTeX Font Info:    Redeclaring math delimiter \lbrace on input line 249.
+LaTeX Font Info:    Redeclaring math delimiter \rceil on input line 251.
+LaTeX Font Info:    Redeclaring math delimiter \lceil on input line 253.
+LaTeX Font Info:    Redeclaring math delimiter \rfloor on input line 255.
+LaTeX Font Info:    Redeclaring math delimiter \lfloor on input line 257.
+LaTeX Font Info:    Redeclaring math accent \acute on input line 261.
+LaTeX Font Info:    Redeclaring math accent \grave on input line 262.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 263.
+LaTeX Font Info:    Redeclaring math accent \tilde on input line 264.
+LaTeX Font Info:    Redeclaring math accent \bar on input line 265.
+LaTeX Font Info:    Redeclaring math accent \breve on input line 266.
+LaTeX Font Info:    Redeclaring math accent \check on input line 267.
+LaTeX Font Info:    Redeclaring math accent \hat on input line 268.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 269.
+LaTeX Font Info:    Redeclaring math accent \mathring on input line 270.
+\symUfutm=\mathgroup5
+) (C:\Users\S44D\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.sty
+Package: geometry 2026/03/07 v6.0 Page Geometry
+(C:\Users\S44D\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+\KV@toks@=\toks19
+)
+(C:\Users\S44D\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+)
+\Gm@cnth=\count284
+\Gm@cntv=\count285
+\c@Gm@tempcnt=\count286
+\Gm@bindingoffset=\dimen149
+\Gm@wd@mp=\dimen150
+\Gm@odd@mp=\dimen151
+\Gm@even@mp=\dimen152
+\Gm@layoutwidth=\dimen153
+\Gm@layoutheight=\dimen154
+\Gm@layouthoffset=\dimen155
+\Gm@layoutvoffset=\dimen156
+\Gm@dimlist=\toks20
+
+(C:\Users\S44D\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg))
+(C:\Users\S44D\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hyperref.sty
+Package: hyperref 2025-07-12 v7.01o Hypertext links for LaTeX
+
+(C:\Users\S44D\AppData\Local\Programs\MiKTeX\tex/latex/kvsetkeys\kvsetkeys.sty
+Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
+)
+(C:\Users\S44D\AppData\Local\Programs\MiKTeX\tex/generic/kvdefinekeys\kvdefinek
+eys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+)
+(C:\Users\S44D\AppData\Local\Programs\MiKTeX\tex/generic/pdfescape\pdfescape.st
+y
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+ (C:\Users\S44D\AppData\Local\Programs\MiKTeX\tex/generic/ltxcmds\ltxcmds.sty
+Package: ltxcmds 2023-12-04 v1.26 LaTeX kernel commands for general use (HO)
+)
+(C:\Users\S44D\AppData\Local\Programs\MiKTeX\tex/generic/pdftexcmds\pdftexcmds.
+sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(C:\Users\S44D\AppData\Local\Programs\MiKTeX\tex/generic/infwarerr\infwarerr.st
+y
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)) (C:\Users\S44D\AppData\Local\Programs\MiKTeX\tex/latex/hycolor\hycolor.sty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+) (C:\Users\S44D\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\nameref.sty
+Package: nameref 2025-06-21 v2.57 Cross-referencing by name of section
+
+(C:\Users\S44D\AppData\Local\Programs\MiKTeX\tex/latex/refcount\refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+)
+(C:\Users\S44D\AppData\Local\Programs\MiKTeX\tex/generic/gettitlestring\gettitl
+estring.sty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+
+(C:\Users\S44D\AppData\Local\Programs\MiKTeX\tex/latex/kvoptions\kvoptions.sty
+Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
+))
+\c@section@level=\count287
+) (C:\Users\S44D\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etoolbox.sty
+Package: etoolbox 2025/10/02 v2.5m e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count288
+)
+(C:\Users\S44D\AppData\Local\Programs\MiKTeX\tex/generic/stringenc\stringenc.st
+y
+Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO
+)
+)
+\@linkdim=\dimen157
+\Hy@linkcounter=\count289
+\Hy@pagecounter=\count290
+ (C:\Users\S44D\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\pd1enc.def
+File: pd1enc.def 2025-07-12 v7.01o Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+)
+(C:\Users\S44D\AppData\Local\Programs\MiKTeX\tex/generic/intcalc\intcalc.sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+)
+\Hy@SavedSpaceFactor=\count291
+
+(C:\Users\S44D\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\puenc.def
+File: puenc.def 2025-07-12 v7.01o Hyperref: PDF Unicode definition (HO)
+Now handling font encoding PU ...
+... no UTF-8 mapping file for font encoding PU
+)
+Package hyperref Info: Hyper figures OFF on input line 4195.
+Package hyperref Info: Link nesting OFF on input line 4200.
+Package hyperref Info: Hyper index ON on input line 4203.
+Package hyperref Info: Plain pages OFF on input line 4210.
+Package hyperref Info: Backreferencing OFF on input line 4215.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4462.
+\c@Hy@tempcnt=\count292
+
+(C:\Users\S44D\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty
+\Urlmuskip=\muskip17
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 4801.
+\XeTeXLinkMargin=\dimen158
+
+(C:\Users\S44D\AppData\Local\Programs\MiKTeX\tex/generic/bitset\bitset.sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+
+(C:\Users\S44D\AppData\Local\Programs\MiKTeX\tex/generic/bigintcalc\bigintcalc.
+sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
+)
+))
+\Fld@menulength=\count293
+\Field@Width=\dimen159
+\Fld@charsize=\dimen160
+Package hyperref Info: Hyper figures OFF on input line 6078.
+Package hyperref Info: Link nesting OFF on input line 6083.
+Package hyperref Info: Hyper index ON on input line 6086.
+Package hyperref Info: backreferencing OFF on input line 6093.
+Package hyperref Info: Link coloring OFF on input line 6098.
+Package hyperref Info: Link coloring with OCG OFF on input line 6103.
+Package hyperref Info: PDF/A mode OFF on input line 6108.
+\Hy@abspage=\count294
+\c@Item=\count295
+\c@Hfootnote=\count296
+)
+Package hyperref Info: Driver (autodetected): hpdftex.
+
+(C:\Users\S44D\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hpdftex.def
+File: hpdftex.def 2025-07-12 v7.01o Hyperref driver for pdfTeX
+\Fld@listcount=\count297
+\c@bookmark@seq@number=\count298
+
+(C:\Users\S44D\AppData\Local\Programs\MiKTeX\tex/latex/rerunfilecheck\rerunfile
+check.sty
+Package: rerunfilecheck 2025-06-21 v1.11 Rerun checks for auxiliary files (HO)
+
+(C:\Users\S44D\AppData\Local\Programs\MiKTeX\tex/generic/uniquecounter\uniqueco
+unter.sty
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+84.
+)
+\Hy@SectionHShift=\skip51
+)
+(C:\Users\S44D\AppData\Local\Programs\MiKTeX\tex/latex/tools\longtable.sty
+Package: longtable 2025-10-13 v4.24 Multi-page Table package (DPC)
+\LTleft=\skip52
+\LTright=\skip53
+\LTpre=\skip54
+\LTpost=\skip55
+\LTchunksize=\count299
+\LTcapwidth=\dimen161
+\LT@head=\box53
+\LT@firsthead=\box54
+\LT@foot=\box55
+\LT@lastfoot=\box56
+\LT@gbox=\box57
+\LT@cols=\count300
+\LT@rows=\count301
+\c@LT@tables=\count302
+\c@LT@chunks=\count303
+\LT@p@ftn=\toks21
+)
+(C:\Users\S44D\AppData\Local\Programs\MiKTeX\tex/latex/tools\array.sty
+Package: array 2025/09/25 v2.6n Tabular extension package (FMi)
+\col@sep=\dimen162
+\ar@mcellbox=\box58
+\extrarowheight=\dimen163
+\NC@list=\toks22
+\extratabsurround=\skip56
+\backup@length=\skip57
+\ar@cellbox=\box59
+)
+(C:\Users\S44D\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
+Package: graphicx 2024/12/31 v1.2e Enhanced LaTeX Graphics (DPC,SPQR)
+
+(C:\Users\S44D\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
+Package: graphics 2024/08/06 v1.4g Standard LaTeX Graphics (DPC,SPQR)
+
+(C:\Users\S44D\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty
+Package: trig 2023/12/02 v1.11 sin cos tan (DPC)
+)
+(C:\Users\S44D\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\graphics.cf
+g
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 106.
+
+(C:\Users\S44D\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.def
+File: pdftex.def 2025/09/29 v1.2d Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen164
+\Gin@req@width=\dimen165
+) (C:\Users\S44D\AppData\Local\Programs\MiKTeX\tex/latex/booktabs\booktabs.sty
+Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
+\heavyrulewidth=\dimen166
+\lightrulewidth=\dimen167
+\cmidrulewidth=\dimen168
+\belowrulesep=\dimen169
+\belowbottomsep=\dimen170
+\aboverulesep=\dimen171
+\abovetopsep=\dimen172
+\cmidrulesep=\dimen173
+\cmidrulekern=\dimen174
+\defaultaddspace=\dimen175
+\@cmidla=\count304
+\@cmidlb=\count305
+\@aboverulesep=\dimen176
+\@belowrulesep=\dimen177
+\@thisruleclass=\count306
+\@lastruleclass=\count307
+\@thisrulewidth=\dimen178
+) (C:\Users\S44D\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsmath.sty
+Package: amsmath 2025/07/09 v2.17z AMS math features
+\@mathmargin=\skip58
+
+For additional information on amsmath, use the `?' option.
+(C:\Users\S44D\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amstext.sty
+Package: amstext 2024/11/17 v2.01 AMS text
+
+(C:\Users\S44D\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks23
+\ex@=\dimen179
+))
+(C:\Users\S44D\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen180
+)
+(C:\Users\S44D\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsopn.sty
+Package: amsopn 2022/04/08 v2.04 operator names
+)
+\inf@bad=\count308
+LaTeX Info: Redefining \frac on input line 233.
+\uproot@=\count309
+\leftroot@=\count310
+LaTeX Info: Redefining \overline on input line 398.
+LaTeX Info: Redefining \colon on input line 409.
+\classnum@=\count311
+\DOTSCASE@=\count312
+LaTeX Info: Redefining \ldots on input line 495.
+LaTeX Info: Redefining \dots on input line 498.
+LaTeX Info: Redefining \cdots on input line 619.
+\Mathstrutbox@=\box60
+\strutbox@=\box61
+LaTeX Info: Redefining \big on input line 721.
+LaTeX Info: Redefining \Big on input line 722.
+LaTeX Info: Redefining \bigg on input line 723.
+LaTeX Info: Redefining \Bigg on input line 724.
+\big@size=\dimen181
+LaTeX Font Info:    Redeclaring font encoding OML on input line 742.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 743.
+\macc@depth=\count313
+LaTeX Info: Redefining \bmod on input line 904.
+LaTeX Info: Redefining \pmod on input line 909.
+LaTeX Info: Redefining \smash on input line 939.
+LaTeX Info: Redefining \relbar on input line 969.
+LaTeX Info: Redefining \Relbar on input line 970.
+\c@MaxMatrixCols=\count314
+\dotsspace@=\muskip18
+\c@parentequation=\count315
+\dspbrk@lvl=\count316
+\tag@help=\toks24
+\row@=\count317
+\column@=\count318
+\maxfields@=\count319
+\andhelp@=\toks25
+\eqnshift@=\dimen182
+\alignsep@=\dimen183
+\tagshift@=\dimen184
+\tagwidth@=\dimen185
+\totwidth@=\dimen186
+\lineht@=\dimen187
+\@envbody=\toks26
+\multlinegap=\skip59
+\multlinetaggap=\skip60
+\mathdisplay@stack=\toks27
+LaTeX Info: Redefining \[ on input line 2950.
+LaTeX Info: Redefining \] on input line 2951.
+)
+(C:\Users\S44D\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup6
+\symAMSb=\mathgroup7
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+LaTeX Font Info:    Redeclaring math symbol \square on input line 141.
+)
+(C:\Users\S44D\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+LaTeX Font Info:    Redeclaring math symbol \blacksquare on input line 48.
+LaTeX Font Info:    Redeclaring math symbol \vDash on input line 60.
+LaTeX Font Info:    Redeclaring math symbol \leftleftarrows on input line 63.
+LaTeX Font Info:    Redeclaring math symbol \rightrightarrows on input line 64.
+
+LaTeX Font Info:    Redeclaring math symbol \leqslant on input line 101.
+LaTeX Font Info:    Redeclaring math symbol \geqslant on input line 108.
+LaTeX Font Info:    Redeclaring math symbol \blacktriangleright on input line 1
+20.
+LaTeX Font Info:    Redeclaring math symbol \blacktriangleleft on input line 12
+1.
+LaTeX Font Info:    Redeclaring math symbol \complement on input line 165.
+LaTeX Font Info:    Redeclaring math symbol \intercal on input line 166.
+LaTeX Font Info:    Redeclaring math symbol \nleqslant on input line 181.
+LaTeX Font Info:    Redeclaring math symbol \ngeqslant on input line 182.
+LaTeX Font Info:    Redeclaring math symbol \varsubsetneq on input line 203.
+LaTeX Font Info:    Redeclaring math symbol \subsetneqq on input line 207.
+LaTeX Font Info:    Redeclaring math symbol \nparallel on input line 215.
+LaTeX Font Info:    Redeclaring math symbol \nvDash on input line 221.
+LaTeX Font Info:    Redeclaring math symbol \nexists on input line 235.
+LaTeX Font Info:    Redeclaring math symbol \smallsetminus on input line 251.
+LaTeX Font Info:    Redeclaring math symbol \curvearrowleft on input line 257.
+LaTeX Font Info:    Redeclaring math symbol \curvearrowright on input line 258.
+
+LaTeX Font Info:    Redeclaring math symbol \varkappa on input line 260.
+LaTeX Font Info:    Redeclaring math symbol \hslash on input line 262.
+)
+(C:\Users\S44D\AppData\Local\Programs\MiKTeX\tex/latex/setspace\setspace.sty
+Package: setspace 2022/12/04 v6.7b set line spacing
+)
+(C:\Users\S44D\AppData\Local\Programs\MiKTeX\tex/latex/fancyhdr\fancyhdr.sty
+Package: fancyhdr 2025/02/07 v5.2 Extensive control of page headers and footers
+
+\f@nch@headwidth=\skip61
+\f@nch@offset@elh=\skip62
+\f@nch@offset@erh=\skip63
+\f@nch@offset@olh=\skip64
+\f@nch@offset@orh=\skip65
+\f@nch@offset@elf=\skip66
+\f@nch@offset@erf=\skip67
+\f@nch@offset@olf=\skip68
+\f@nch@offset@orf=\skip69
+\f@nch@height=\skip70
+\f@nch@footalignment=\skip71
+\f@nch@widthL=\skip72
+\f@nch@widthC=\skip73
+\f@nch@widthR=\skip74
+\@temptokenb=\toks28
+)
+(C:\Users\S44D\AppData\Local\Programs\MiKTeX\tex/latex/lastpage\lastpage.sty
+Package: lastpage 2025/08/14 v2.1h lastpage: 2.09 or 2e? (HMM)
+
+(C:\Users\S44D\AppData\Local\Programs\MiKTeX\tex/latex/lastpage\lastpage2e.sty
+Package: lastpage2e 2025/08/14 v2.1h Decide which 2e lastpage version to use (H
+MM)
+
+(C:\Users\S44D\AppData\Local\Programs\MiKTeX\tex/latex/lastpage\lastpagemodern.
+sty
+Package: lastpagemodern 2025-08-14 v2.1h Refers to last page's name (HMM; JPG)
+\c@lastpagecount=\count320
+) 
+)) (C:\Users\S44D\AppData\Local\Programs\MiKTeX\tex/latex/fp\fp.sty
+Package: fp 1995/04/02
+
+`Fixed Point Package', Version 0.8, April 2, 1995 (C) Michael Mehlich
+(C:\Users\S44D\AppData\Local\Programs\MiKTeX\tex/latex/fp\defpattern.sty
+Package: defpattern 1994/10/12
+\actioncount=\count321
+)
+(C:\Users\S44D\AppData\Local\Programs\MiKTeX\tex/latex/fp\fp-basic.sty
+Package: fp-basic 1996/05/13
+\FP@xs=\count322
+\FP@xia=\count323
+\FP@xib=\count324
+\FP@xfa=\count325
+\FP@xfb=\count326
+\FP@rega=\count327
+\FP@regb=\count328
+\FP@regs=\count329
+\FP@times=\count330
+)
+(C:\Users\S44D\AppData\Local\Programs\MiKTeX\tex/latex/fp\fp-addons.sty
+Package: fp-addons 1995/03/15
+)
+(C:\Users\S44D\AppData\Local\Programs\MiKTeX\tex/latex/fp\fp-snap.sty
+Package: fp-snap 1995/04/05
+)
+(C:\Users\S44D\AppData\Local\Programs\MiKTeX\tex/latex/fp\fp-exp.sty
+Package: fp-exp 1995/04/03
+)
+(C:\Users\S44D\AppData\Local\Programs\MiKTeX\tex/latex/fp\fp-trigo.sty
+Package: fp-trigo 1995/04/14
+)
+(C:\Users\S44D\AppData\Local\Programs\MiKTeX\tex/latex/fp\fp-pas.sty
+Package: fp-pas 1994/08/29
+)
+(C:\Users\S44D\AppData\Local\Programs\MiKTeX\tex/latex/fp\fp-random.sty
+Package: fp-random 1995/02/23
+\FPseed=\count331
+)
+(C:\Users\S44D\AppData\Local\Programs\MiKTeX\tex/latex/fp\fp-eqn.sty
+Package: fp-eqn 1995/04/03
+)
+(C:\Users\S44D\AppData\Local\Programs\MiKTeX\tex/latex/fp\fp-upn.sty
+Package: fp-upn 1996/10/21
+)
+(C:\Users\S44D\AppData\Local\Programs\MiKTeX\tex/latex/fp\fp-eval.sty
+Package: fp-eval 1995/04/03
+))
+(C:\Users\S44D\AppData\Local\Programs\MiKTeX\tex/latex/siunitx\siunitx.sty
+Package: siunitx 2026-10-12 v3.6.4 A comprehensive (SI) units package
+\l__siunitx_number_uncert_offset_int=\count332
+\l__siunitx_number_exponent_fixed_int=\count333
+\l__siunitx_number_min_decimal_int=\count334
+\l__siunitx_number_min_integer_int=\count335
+\l__siunitx_number_round_precision_int=\count336
+\l__siunitx_number_lower_threshold_int=\count337
+\l__siunitx_number_upper_threshold_int=\count338
+\l__siunitx_number_group_first_int=\count339
+\l__siunitx_number_group_size_int=\count340
+\l__siunitx_number_group_min_int=\count341
+\l__siunitx_number_group_minimum_int=\count342
+\l__siunitx_compound_count_int=\count343
+
+(C:\Users\S44D\AppData\Local\Programs\MiKTeX\tex/latex/translations\translation
+s.sty
+Package: translations 2022/02/05 v1.12 internationalization of LaTeX2e packages
+ (CN)
+)
+Include code introduced on 2026-09-12
+\l__siunitx_table_tmp_box=\box62
+\l__siunitx_table_tmp_dim=\dimen188
+\l__siunitx_table_column_width_dim=\dimen189
+\l__siunitx_table_integer_box=\box63
+\l__siunitx_table_decimal_box=\box64
+\l__siunitx_table_uncert_box=\box65
+\l__siunitx_table_before_box=\box66
+\l__siunitx_table_after_box=\box67
+\l__siunitx_table_before_dim=\dimen190
+\l__siunitx_table_carry_dim=\dimen191
+\l__siunitx_unit_tmp_int=\count344
+\l__siunitx_unit_position_int=\count345
+\l__siunitx_unit_total_int=\count346
+\l__siunitx_sexagesimal_tmp_dim=\dimen192
+\l__siunitx_sexagesimal_marker_box=\box68
+\l__siunitx_sexagesimal_unit_box=\box69
+)
+Package hyperref Info: Option `colorlinks' set `true' on input line 29.
+Package translations Info: No language package found. I am going to use `englis
+h' as default language. on input line 36.
+ (C:\Users\S44D\AppData\Local\Programs\MiKTeX\tex/latex/graphics\color.sty
+Package: color 2025/01/14 v1.3e Standard LaTeX Color (DPC)
+
+(C:\Users\S44D\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package color Info: Driver file: pdftex.def on input line 149.
+
+(C:\Users\S44D\AppData\Local\Programs\MiKTeX\tex/latex/graphics\mathcolor.ltx))
+
+(C:\Users\S44D\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdft
+ex.def
+File: l3backend-pdftex.def 2025-10-09 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count347
+) (compte-rendu-synthese-rapport.aux)
+\openout1 = `compte-rendu-synthese-rapport.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for FML/futm/m/it on input line 36.
+LaTeX Font Info:    Trying to load font information for FML+futm on input line 
+36.
+
+(C:\Users\S44D\AppData\Local\Programs\MiKTeX\tex/latex/fourier\fmlfutm.fd
+File: fmlfutm.fd 2004/10/30 Fontinst v1.926 font definitions for FML/futm.
+)
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for FMS/futm/m/n on input line 36.
+LaTeX Font Info:    Trying to load font information for FMS+futm on input line 
+36.
+
+(C:\Users\S44D\AppData\Local\Programs\MiKTeX\tex/latex/fourier\fmsfutm.fd
+File: fmsfutm.fd 2004/10/30 Fontinst v1.926 font definitions for FMS/futm.
+)
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for FMX/futm/m/n on input line 36.
+LaTeX Font Info:    Trying to load font information for FMX+futm on input line 
+36.
+
+(C:\Users\S44D\AppData\Local\Programs\MiKTeX\tex/latex/fourier\fmxfutm.fd
+File: fmxfutm.fd futm-extension
+)
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 36.
+LaTeX Font Info:    ... okay on input line 36.
+LaTeX Font Info:    Redeclaring math accent \widehat on input line 36.
+LaTeX Font Info:    Redeclaring math accent \widetilde on input line 36.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(71.13188pt, 455.24411pt, 71.13188pt)
+* v-part:(T,H,B)=(71.13188pt, 702.78308pt, 71.13188pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=455.24411pt
+* \textheight=702.78308pt
+* \oddsidemargin=-1.1381pt
+* \evensidemargin=-1.1381pt
+* \topmargin=-38.1381pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=12.0pt
+* \footskip=30.0pt
+* \marginparwidth=35.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+Package hyperref Info: Link coloring ON on input line 36.
+(compte-rendu-synthese-rapport.out) (compte-rendu-synthese-rapport.out)
+\@outlinefile=\write3
+\openout3 = `compte-rendu-synthese-rapport.out'.
+
+
+(C:\Users\S44D\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mki
+i
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count348
+\scratchdimen=\dimen193
+\scratchbox=\box70
+\nofMPsegments=\count349
+\nofMParguments=\count350
+\everyMPshowfont=\toks29
+\MPscratchCnt=\count351
+\MPscratchDim=\dimen194
+\MPnumerator=\count352
+\makeMPintoPDFobject=\count353
+\everyMPtoPDFconversion=\toks30
+)
+(C:\Users\S44D\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-ba
+se.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+
+(C:\Users\S44D\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.cf
+g
+File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
+))
+(C:\Users\S44D\AppData\Local\Programs\MiKTeX\tex/latex/translations/dicts\trans
+lations-basic-dictionary-english.trsl
+File: translations-basic-dictionary-english.trsl (english translation file `tra
+nslations-basic-dictionary')
+)
+Package translations Info: loading dictionary `translations-basic-dictionary' f
+or `english'. on input line 36.
+
+
+! LaTeX Error: Unicode character   (U+202F)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.45     {\large Projet MLOps « 
+                                   Médicaments »} \\
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character   (U+202F)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.45     {\large Projet MLOps « Médicaments 
+                                                  »} \\
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+LaTeX Font Info:    Trying to load font information for FML+futmi on input line
+ 57.
+(C:\Users\S44D\AppData\Local\Programs\MiKTeX\tex/latex/fourier\fmlfutmi.fd
+File: fmlfutmi.fd 2004/10/30 Fontinst v1.926 font definitions for FML/futmi.
+)
+LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
+(Font)              scaled to size 11.03998pt on input line 57.
+LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
+(Font)              scaled to size 8.27998pt on input line 57.
+LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
+(Font)              scaled to size 6.43999pt on input line 57.
+LaTeX Font Info:    Font shape `U/futm/m/n' will be
+(Font)              scaled to size 11.03998pt on input line 57.
+LaTeX Font Info:    Font shape `U/futm/m/n' will be
+(Font)              scaled to size 8.27998pt on input line 57.
+LaTeX Font Info:    Font shape `U/futm/m/n' will be
+(Font)              scaled to size 6.43999pt on input line 57.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 57.
+
+
+(C:\Users\S44D\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 57.
+
+
+(C:\Users\S44D\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+
+! LaTeX Error: Unicode character   (U+202F)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.65 ...port de synthèse couvrant les phases A 
+                                                  → D du projet} \\
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+LaTeX Info: Symbol \textrightarrow not provided by
+            font family futs in TS1 encoding.
+            Default family used instead on input line 65.
+
+! LaTeX Error: Unicode character   (U+202F)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.65 ...e synthèse couvrant les phases A → 
+                                                  D du projet} \\
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+[1
+
+{C:/Users/S44D/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/S44D/
+AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}]
+
+! LaTeX Error: Unicode character   (U+202F)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.82 ...se-projet-medicaments (3ème PDF), soit 
+                                                  :
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+Overfull \hbox (11.28342pt too wide) in paragraph at lines 82--83
+\T1/futs/m/n/12 ou prin-ceps. Le pr�sent rap-port re-specte scrupuleuse-ment le
+s ex-i-gences d�finies dans l'�nonc�
+ []
+
+LaTeX Font Info:    Trying to load font information for TS1+futs on input line 
+85.
+(C:\Users\S44D\AppData\Local\Programs\MiKTeX\tex/latex/fourier\ts1futs.fd
+File: ts1futs.fd 2003/09/14 Fontinst v1.801 font definitions for TS1/futs.
+)
+
+! LaTeX Error: Unicode character   (U+202F)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.85     \item Un document PDF unique de 10 
+                                              à 15 pages.
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character   (U+202F)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.85 ...\item Un document PDF unique de 10 à 
+                                                  15 pages.
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character   (U+202F)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.85 ... Un document PDF unique de 10 à 15 
+                                                  pages.
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character   (U+202F)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.87 ...illée des données, de chaque phase (A 
+                                                  → D), des algorithmes ...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+LaTeX Info: Symbol \textrightarrow not provided by
+            font family futs in TS1 encoding.
+            Default family used instead on input line 87.
+
+! LaTeX Error: Unicode character   (U+202F)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.87 ... des données, de chaque phase (A → 
+                                                  D), des algorithmes compar...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.95 \chapter
+             *{Phase A : Exploration et préparation des données} [1
+
+]
+Overfull \hbox (5.15482pt too wide) in paragraph at lines 100--101
+[]\T1/futs/m/n/12 Portail Open Data du Maroc ([][]$\T1/cmtt/m/n/12 data . gov .
+ ma$[][]\T1/futs/m/n/12 ), r�f�rence ``ref-des-medicaments-cnops-
+ []
+
+! Undefined control sequence.
+l.103     \format
+                 {Lignes : 5917 ; Colonnes : 12 par présentation de médica...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! LaTeX Error: Unicode character   (U+202F)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.107 ...s colonnes suivantes (ordre d'origine) 
+                                                  : CODE, NOM, DCI1, DOSAGE1...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.107 ...ine) : CODE, NOM, DCI1, DOSAGE1, UNITE_
+                                                  DOSAGE1, FORME, PRESENTATI...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.108 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (21.26334pt too wide) in paragraph at lines 107--108
+\T1/futs/m/n/12 Le fichier Ex-cel con-te-nait les colonnes suiv-antes (or-dre d
+'origine): CODE, NOM, DCI1, DOSAGE1,
+ []
+
+
+Overfull \hbox (165.46194pt too wide) in paragraph at lines 107--108
+\T1/futs/m/n/12 UNITE$[]\FML/futmi/m/it/12 OSAGE\T1/futs/m/n/12 1\FML/futmi/m/i
+t/12 ; FORME; PRESENTATION; PPV; PH; PRIX[]R; PRINCEPS[]ENERIQUE; TAUX[]EMBOURS
+EMENT:$ 
+ []
+
+
+! LaTeX Error: Unicode character   (U+202F)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.109 ...tion sous Python, nous avons constaté 
+                                                  :
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character   (U+202F)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.111     \item 5 
+                    917 lignes et 12 colonnesinitiales.
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.112 ...ariable cible \texttt{PRINCEPS_GENERIQUE}
+                                                   prenant les valeurs ``P``...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Extra }, or forgotten $.
+<recently read> \egroup 
+                        
+l.112 ...ariable cible \texttt{PRINCEPS_GENERIQUE}
+                                                   prenant les valeurs ``P``...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+
+LaTeX Warning: Command \` invalid in math mode on input line 112.
+
+
+LaTeX Warning: Command \' invalid in math mode on input line 112.
+
+
+LaTeX Warning: Command \' invalid in math mode on input line 112.
+
+
+LaTeX Warning: Command \` invalid in math mode on input line 112.
+
+
+! LaTeX Error: Command \item invalid in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.113     \item
+                Trois features numériques potentielles : PPV (prix de ven...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.113     \item T
+                 rois features numériques potentielles : PPV (prix de ven...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (234.42744pt too wide) in paragraph at lines 112--113
+[]\T1/futs/m/n/12 Variable cible \T1/cmtt/m/n/12 PRINCEPS$[]\FML/futmi/m/it/12 
+ENERIQUEprenantlesvaleurs\T1/futs/m/n/12 ^^P\FML/futmi/m/it/12 P\T1/futs/m/n/12
+ ^^P(\FML/futmi/m/it/12 princeps\T1/futs/m/n/12 )�3031\FML/futmi/m/it/12 occurr
+enceset\T1/futs/m/n/12 ^^P\FML/futmi/m/it/12 G\T1/futs/m/n/12 ^^P(\FML/futmi/m/
+it/12 g\T1/futs/m/n/12 �\FML/futmi/m/it/12 n\T1/futs/m/n/12 �\FML/futmi/m/it/12
+ rique\T1/futs/m/n/12 )�2886\FML/futmi/m/it/12 occurrences:
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 112--113
+
+ []
+
+
+! LaTeX Error: Unicode character   (U+202F)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.113 ...rois features numériques potentielles 
+                                                  : PPV (prix de vente), DOS...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.113 ... (prix de vente), DOSAGE1 (dosage), TAUX_
+                                                  REMBOURSEMENT (taux de rem...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+! LaTeX Error: Command \item invalid in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.114     \item
+                946 valeurs manquantes sur la colonne DOSAGE1 (supprimées l...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.114     \item 9
+                 46 valeurs manquantes sur la colonne DOSAGE1 (supprimées l...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (0.10156pt too wide) in paragraph at lines 113--114
+[]\T1/cmtt/m/n/12 Trois features num�riques potentielles: PPV (prix de vente), 
+DOSAGE1
+ []
+
+
+Overfull \hbox (49.4895pt too wide) in paragraph at lines 114--115
+[]\T1/cmtt/m/n/12 946 valeurs manquantes sur la colonne DOSAGE1 (supprim�es lor
+s du nettoyage). 
+ []
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.115 \end{itemize}
+                   
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.118 ...PRINCEPS_GENERIQUE == \"G\").astype(int)}
+                                                  ), nous avons effectué le...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+LaTeX Warning: Command \" invalid in math mode on input line 118.
+
+! Please use \mathaccent for accents in math mode.
+\add@accent ... \let \ignorespaces \relax \accent 
+                                                  #1 #2\egroup \ifmmode \els...
+l.118 ...PRINCEPS_GENERIQUE == \"G\").astype(int)}
+                                                  ), nous avons effectué le...
+I'm changing \accent to \mathaccent here; wish me luck.
+(Accents are not the same in formulas as they are in text.)
+
+
+LaTeX Warning: Command \" invalid in math mode on input line 118.
+
+! Please use \mathaccent for accents in math mode.
+\add@accent ... \let \ignorespaces \relax \accent 
+                                                  #1 #2\egroup \ifmmode \els...
+l.118 ...PRINCEPS_GENERIQUE == \"G\").astype(int)}
+                                                  ), nous avons effectué le...
+I'm changing \accent to \mathaccent here; wish me luck.
+(Accents are not the same in formulas as they are in text.)
+
+! Extra }, or forgotten $.
+<recently read> \egroup 
+                        
+l.118 ...PRINCEPS_GENERIQUE == \"G\").astype(int)}
+                                                  ), nous avons effectué le...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+
+LaTeX Warning: Command \' invalid in math mode on input line 118.
+
+
+LaTeX Warning: Command \' invalid in math mode on input line 118.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.119 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (37.4068pt too wide) in paragraph at lines 118--119
+\T1/cmtt/m/n/12 = (PRINCEPS$[]\FML/futmi/m/it/12 ENERIQUE \FMS/futm/m/n/12 �� [
+][]\FML/futmi/m/it/12 :astype\T1/futs/m/n/12 (\FML/futmi/m/it/12 int\T1/futs/m/
+n/12 ))\FML/futmi/m/it/12 ; nousavonseffectu\T1/futs/m/n/12 �\FML/futmi/m/it/12
+ lesop\T1/futs/m/n/12 �\FML/futmi/m/it/12 rationssuivantes \T1/futs/m/n/12 :$ 
+ []
+
+
+Overfull \hbox (365.83038pt too wide) in paragraph at lines 130--130
+[]\T1/cmtt/m/n/12 df['PPV_NUM'] = pd.to_numeric(df['PPV'].astype(str).str.repla
+ce(',', '.').str.replace('\TS1/cmtt/m/n/12 �\T1/cmtt/m/n/12 ', '').str.replace(
+' ', ''), errors='coerce')[] 
+ []
+
+
+Overfull \hbox (285.57498pt too wide) in paragraph at lines 130--130
+[]\T1/cmtt/m/n/12 df['TAUX_REMBOURSEMENT_NUM'] = pd.to_numeric(df['TAUX_REMBOUR
+SEMENT'].astype(str).str.replace('%', ''), errors='coerce')[] 
+ []
+
+
+Overfull \hbox (106.5437pt too wide) in paragraph at lines 130--130
+[]\T1/cmtt/m/n/12 df_clean = df.dropna(subset=['PPV_NUM', 'DOSAGE1_NUM', 'TAUX_
+REMBOURSEMENT_NUM', 'target'])[] 
+ []
+
+[2
+
+]
+
+! LaTeX Error: Unicode character   (U+202F)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.132 **Interprétation** 
+                            : Le taux de remboursement montre la correlation...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ρ (U+03C1)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.132 ...rrelation la plus forte avec la cible (ρ
+                                                   ≈ 0.20), bien que toute...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character ≈ (U+2248)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.132 ...ation la plus forte avec la cible (ρ ≈
+                                                   0.20), bien que toutes le...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character   (U+202F)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.132 ...qui a réduit le jeu de données de 16 
+                                                  % mais assuré sa qualité.
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+Overfull \hbox (25.39264pt too wide) in paragraph at lines 132--133
+[]\T1/cmtt/m/n/12 **Interpr�tation**: Le taux de remboursement montre la correl
+ation la plus
+ []
+
+
+Overfull \hbox (32.46179pt too wide) in paragraph at lines 132--133
+\T1/cmtt/m/n/12 forte avec la cible (  0.20), bien que toutes les correlations 
+soient modestes.
+ []
+
+
+Overfull \hbox (32.46179pt too wide) in paragraph at lines 132--133
+\T1/cmtt/m/n/12 La suppression des 946 lignes comportant des NaN sur le dosage 
+a �t� n�cessaire
+ []
+
+
+Overfull \hbox (1.59433pt too wide) in paragraph at lines 132--133
+\T1/cmtt/m/n/12 pour entra�ner des mod�les sans valeurs manquantes, ce qui a r�
+duit le jeu
+ []
+
+! Argument of \@xverbatim has an extra }.
+<inserted text> 
+                \par 
+l.172         \end{minipage}}
+                             
+I've run across a `}' that doesn't seem to match anything.
+For example, `\def\a#1{...}' and `\a}' would produce
+this error. If you simply proceed now, the `\par' that
+I've just inserted will cause me to report a runaway
+argument that might be the root of the problem. But if
+your `}' was spurious, just type `2' and it will go away.
+
+Runaway argument?
+ python3 << 'EOF' import pandas as pd import numpy as np xl = pd.Exce\ETC.
+! Paragraph ended before \@xverbatim was complete.
+<to be read again> 
+                   \par 
+l.172         \end{minipage}}
+                             
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+! Extra }, or forgotten \endgroup.
+<recently read> }
+                 
+l.172         \end{minipage}}
+                             
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Extra }, or forgotten \endgroup.
+\fbox  ...sep {#1}\kern \fboxsep \color@endgroup }
+                                                  \@frameb@x \relax 
+l.172         \end{minipage}}
+                             
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.174 \end{center}
+                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Not allowed in LR mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.174 \end{center}
+                  
+You've lost some text.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Not allowed in LR mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.174 \end{center}
+                  
+You've lost some text.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.174 \end{center}
+                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing \endgroup inserted.
+<inserted text> 
+                \endgroup 
+l.174 \end{center}
+                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.174 \end{center}
+                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
+! LaTeX Error: \begin{minipage} on input line 136 ended by \end{center}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.174 \end{center}
+                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Argument of \@xverbatim has an extra }.
+<inserted text> 
+                \par 
+l.184 ...+ ':', round(corr, 4))\n\"\n            }
+                                                  \end{minipage}}
+I've run across a `}' that doesn't seem to match anything.
+For example, `\def\a#1{...}' and `\a}' would produce
+this error. If you simply proceed now, the `\par' that
+I've just inserted will cause me to report a runaway
+argument that might be the root of the problem. But if
+your `}' was spurious, just type `2' and it will go away.
+
+Runaway argument?
+ python3 -c "\nimport pandas as pd\ndf = pd.read_csv('data/medicament\ETC.
+! Paragraph ended before \@xverbatim was complete.
+<to be read again> 
+                   \par 
+l.184 ...+ ':', round(corr, 4))\n\"\n            }
+                                                  \end{minipage}}
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+! Extra }, or forgotten \endgroup.
+<recently read> }
+                 
+l.184 ...+ ':', round(corr, 4))\n\"\n            }
+                                                  \end{minipage}}
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Extra }, or forgotten \endgroup.
+\fbox  ...sep {#1}\kern \fboxsep \color@endgroup }
+                                                  \@frameb@x \relax 
+l.184 ...+ ':', round(corr, 4))\n\"\n            }
+                                                  \end{minipage}}
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Incompatible list can't be unboxed.
+<argument> ... \@parboxrestore \unvbox \@tempboxa 
+                                                  \@@par 
+l.185     \end{minipage}
+                        
+Sorry, Pandora. (You sneaky devil.)
+I refuse to unbox an \hbox in vertical mode or vice versa.
+And I can't open any boxes in math mode.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.186 \end{center}
+                  
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: \begin{minipage} on input line 179 ended by \end{center}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.186 \end{center}
+                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.186 \end{center}
+                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.187 ...MBOURSEMENT\_NUM (0.2023) avec la cible.}
+                                                  
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Extra }, or forgotten $.
+<recently read> \egroup 
+                        
+l.187 ...MBOURSEMENT\_NUM (0.2023) avec la cible.}
+                                                  
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.188 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.188 
+      
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
+! LaTeX Error: Unicode character   (U+202F)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.194 ...es principales familles de classifiers 
+                                                  :
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <12> not available
+(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 196.
+
+Overfull \hbox (0.10156pt too wide) in paragraph at lines 196--197
+[]\T1/cmtt/m/n/12 RandomForestClassifier (for�t al�atoire) ^^U m�thode � base d
+'arbres de
+ []
+
+
+Overfull \hbox (55.663pt too wide) in paragraph at lines 197--198
+[]\T1/cmtt/m/n/12 KNeighborsClassifier (k[]plus proches voisins) ^^U m�thode ba
+s�e sur la distance. 
+ []
+
+
+Overfull \hbox (68.00998pt too wide) in paragraph at lines 198--199
+[]\T1/cmtt/m/n/12 LogisticRegression (r�gression logistique) ^^U m�thode lin�ai
+re de classification. 
+ []
+
+
+Overfull \hbox (12.44855pt too wide) in paragraph at lines 199--200
+[]\T1/cmtt/m/n/12 SVC (Support Vector Classification) ^^U m�thode par machine �
+ vecteurs de
+ []
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.202 ...is features PPV\_NUM, DOSAGE1\_NUM, TAUX_
+                                                  REMBOURSEMENT\_NUM, en sé...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+LaTeX Warning: Command \' invalid in math mode on input line 202.
+
+
+LaTeX Warning: Command \^ invalid in math mode on input line 202.
+
+
+LaTeX Warning: Command \' invalid in math mode on input line 202.
+
+
+LaTeX Warning: Command \' invalid in math mode on input line 202.
+
+
+LaTeX Warning: Command \' invalid in math mode on input line 202.
+
+
+LaTeX Warning: Command \' invalid in math mode on input line 202.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.203 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.203 
+      
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
+Overfull \hbox (404.7098pt too wide) in paragraph at lines 202--203
+ \T1/cmtt/m/n/12 TAUX$[]\FML/futmi/m/it/12 EMBOURSEMENT[]NUM; ens\T1/futs/m/n/1
+2 �\FML/futmi/m/it/12 parationentra\T1/futs/m/n/12 �\FML/futmi/m/it/12 nement\T
+1/futs/m/n/12 /\FML/futmi/m/it/12 test\T1/futs/m/n/12 75/25\FML/futmi/m/it/12 a
+vecgrainefixe\T1/futs/m/n/12 42\FML/futmi/m/it/12 :Lam\T1/futs/m/n/12 �\FML/fut
+mi/m/it/12 triqueprincipale\T1/futs/m/n/12 �\FML/futmi/m/it/12 taitleF\T1/futs/
+m/n/12 1[]\FML/futmi/m/it/12 scorepond\T1/futs/m/n/12 �\FML/futmi/m/it/12 r\T1/
+futs/m/n/12 �(\FML/futmi/m/it/12 weightedaverage\T1/futs/m/n/12 )\FML/futmi/m/i
+t/12 :[]$ 
+ []
+
+! Extra }, or forgotten \endgroup.
+\@par ... \@noitemerr {\@@par }\fi \else {\@@par }
+                                                  \fi 
+l.203 
+      
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+
+! LaTeX Error: Not in outer par mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.205 \begin{table}[h!]
+                       
+You've lost some text.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+! Undefined control sequence.
+\latex@xfloat ...vf \fi \global \setbox \@currbox 
+                                                  \color@vbox \normalcolor \...
+l.205 \begin{table}[h!]
+                       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   \vbox 
+l.205 \begin{table}[h!]
+                       
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+
+! LaTeX Error: Unicode character   (U+202F)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.222 ...ur ce type de variables (voir question 
+                                                  1), RandomForest capte les...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character   (U+202F)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.222 ...d'entraînement reste raisonnable (2.3 
+                                                  s) par rapport à SVC (3.9...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character   (U+202F)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.222 ...able (2.3 s) par rapport à SVC (3.9 
+                                                  s) pour un gain de perform...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+Runaway argument?
+ python3 << 'PYEOF' import mlflow mlflow.set_tracking_uri('http://127\ETC.
+! Paragraph ended before \@xverbatim was complete.
+<to be read again> 
+                   \par 
+l.281         \end{minipage}}
+                             
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.281         \end{minipage}}
+                             
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
+(Font)              scaled to size 10.07397pt on input line 281.
+LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
+(Font)              scaled to size 7.63599pt on input line 281.
+LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
+(Font)              scaled to size 5.51999pt on input line 281.
+LaTeX Font Info:    Font shape `U/futm/m/n' will be
+(Font)              scaled to size 10.07397pt on input line 281.
+LaTeX Font Info:    Font shape `U/futm/m/n' will be
+(Font)              scaled to size 7.63599pt on input line 281.
+LaTeX Font Info:    Font shape `U/futm/m/n' will be
+(Font)              scaled to size 5.51999pt on input line 281.
+! TeX capacity exceeded, sorry [main memory size=5000000].
+'->\leavevmode \kern \z@ 
+                         \char `\'
+l.281         \end{minipage}}
+                             
+If you really absolutely need more capacity,
+you can ask a wizard to enlarge me.
+
+ 
+Here is how much of TeX's memory you used:
+ 16502 strings out of 467871
+ 318895 string characters out of 5418860
+ 5000000 words of memory out of 5000000
+ 45088 multiletter control sequences out of 15000+600000
+ 724394 words of font info for 135 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 75i,11n,79p,1268b,1266s stack positions out of 10000i,1000n,20000p,200000b,200000s
+!  ==> Fatal error occurred, no output PDF file produced!

@@ -1,0 +1,158 @@
+\documentclass[12pt,a4paper]{report}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{fourier}
+\usepackage{hyperref}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{setspace}
+\usepackage[french]{babel}
+\usepackage{titlesec}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,
+    urlcolor=cyan,
+    pdfmetalink=false,
+    pdftitle={Compte Rendu TP5 - Synthèse Projet Médicaments},
+    pdfpagemode=UseNone,
+}
+
+% Minimal section formatting
+\titleformat{\chapter}[display]
+  {\normalfont\huge\bfseries\centering}{\chaptername\ \thechapter}{20pt}{\Huge}
+\titleformat{\section}
+  {\normalfont\Large\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}
+  {\normalfont\large\bfseries}{\thesubsection}{1em}{}
+
+\begin{document}
+
+\pagenumbering{gobble}
+\begin{titlepage}
+\begin{center}
+    \vspace{2cm}
+    
+    {\LARGE \bfseries COMPTE RENDU SYNTHÈSE \\}
+    \vspace{0.5cm}
+    {\large TP5 - Projet Médicaments}\\[2cm]
+    
+    {\large Travail en binôme \\}
+    {\large Module Applications Intelligentes aux MLOps}\\[0.5cm]
+    {\large Date : 19-20 octobre 2026}\\[2cm]
+    {\rule{0.8\textwidth}{1.5pt}\\[0.5cm]}
+    {\large \textit{Projet : Prédiction de médicaments génériques vs princeps}}\\[2cm]
+    {\large Rapport de synthèse du projet complet}\\[2cm]
+    
+    \vfill
+    {\large Réalisation du rapport final incluant comparaison d'algorithmes, inscription du modèle et génération du document PDF.}
+    
+    \vspace{1cm}
+    {\rule{0.8\textwidth}{0.5pt}\\[1cm]}
+    {\large \textbf{Références du projet :}\\
+    \textit{Fichier Excel :} \texttt{ref-des-medicaments-cnops-2014 2.xlsx}\\
+    \textit{Base MLflow :} \texttt{mlflow.db}\\
+    \textit{Métrique retenue :} F1-score pondéré}
+    
+\end{center}
+\end{titlepage}
+\pagenumbering{arabic}
+
+\chapter*{Avant-propos}
+Ce document constitue le compte rendu détaillé de la phase~5 (synthèse) du module Applications Intelligentes aux MLOps. L'objectif de cette dernière étape était de regrouper tout le travail effectué sur le projet des médicaments, depuis la manipulation des données réelles jusqu'à la production d'un rapport formel. Les étapes précédentes (TP1~à~TP4) ont fourni les briques fondamentales : installation de l'outil~MLOps, création d'un pipeline d'entraînement, enregistrement de modèle dans le registre MLflow et versionnage des données avec DVC. Dans cette synthèse, nous avons consolidé ces éléments, ajouté l'analyse approfondie du jeu de données CNOPS et généré le présent rapport au format PDF via MikTeX.
+
+\section{Acquisition et exploration du jeu de données}
+Le point de départ a été le fichier Excel \texttt{ref-des-medicaments-cnops-2014 2.xlsx} téléchargé depuis le portail Open Data du Maroc (data.gov.ma). Ce fichier contient 5917 lignes, chacune représentant une présentation de médicament, et 12 colonnes incluant le code, le nom, la substance active (DCI), le dosage, l'unité de dosage, la forme galénique, la présentation, le prix de vente PPV, le prix de base PH, le prix de remboursement, le taux de remboursement et une variable cible indiquant si le médicament est un princeps (P) ou un générique (G). 
+
+Lors de l'exploration initiale, nous avons constaté une répartition presque équilibrée entre les deux classes : 3031 médicaments de type princeps et 2886 de type générique. Les variables numériques ont été identifiées comme étant le prix PPV, le dosage et le taux de remboursement, lesquelles vont servir de features au modèle prédictif. Un premier aperçu a permis de repérer 946 valeurs manquantes sur la colonne dosage, qui ont nécessité un nettoyage avant toute modélisation.
+
+\section{Nettoyage et préparation des données}
+Le nettoyage a consisté en plusieurs opérations clés :
+\begin{itemize}
+    \item Conversion de la variable cible \texttt{PRINCEPS\_GENERIQUE} en variable binaire \texttt{target} (1 pour générique, 0 pour princeps).
+    \item Transformation des champs texte en nombres : extraction numérique du prix PPV (en enlevant le symbole \texteuro{} et les séparateurs), conversion du dosage en nombre, et retrait du symbole \% du taux de remboursement.
+    \item Gestion des valeurs manquantes : suppression de lignes comportant des NaN sur les features essentielles (dosage, prix, taux de remboursement). Cela a entraîné la suppression de 946 lignes sur les 5917 initialement présentes.
+    \item Sauvegarde du jeu de données nettoyé sous le nom \texttt{data/medicaments\_clean.csv}, contenant 4971 lignes et 16 colonnes (features + cible).
+\end{itemize}
+Ces opérations ont permis d'obtenir un jeu de données cohérent sans valeurs manquantes sur les prédicteurs, ce qui est essentiel pour l'entraînement fiable des modèles de classification.
+
+\section{Ingénierie des features}
+Nous avons retenu trois features principales pour entraîner les modèles de classification :
+\begin{itemize}
+    \item \textbf{PPV\_NUM} : prix de vente au public, conservé sous forme numérique après nettoyage des chaînes de caractères.
+    \item \textbf{DOSAGE1\_NUM} : dosage du médicament, exprimé en nombre après conversion numérique.
+    \item \textbf{TAUX\_REMBOURSEMENT\_NUM} : taux de remboursement en pourcentage, converti en valeur numérique comprise entre 0 et 100.
+\end{itemize}
+Une analyse de corrélation simple a montré que le taux de remboursement possède la correlation la plus forte avec la variable cible (environ 0.20), bien que toutes les correlations soient modérées, ce qui explique la limite de performance du modèle. Aucune feature additionnelle n'a été ajoutée dans cette étape ; l'accent a été mis sur l'utilisation exclusive des informations de prix, dosage et remboursement, conformément à l'énoncé du projet.
+
+\section{Comparaison de quatre algorithmes de classification}
+Avec le jeu de données nettoyé (4971 observations), nous avons entraîné et comparé quatre algorithmes classiques de classification binaire, en utilisant une séparation entraînement/test en proportion 75/25 et en évaluant la performance avec le F1-score pondéré (weighted average). Les résultats obtenus sont résumés ci-après :
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{lccc}
+\toprule
+\textbf{Algorithme} & \textbf{F1 Score} & \textbf{Precision} & \textbf{Recall} \\
+\midrule
+RandomForest & 0.6907 & 0.6913 & 0.6911 \\
+KNeighbors & 0.6398 & 0.6404 & 0.6404 \\
+LogisticRegression & 0.6066 & 0.6301 & 0.6187 \\
+SVC & 0.4154 & 0.6984 & 0.5406 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\noindent Remarques :
+\begin{itemize}
+    \item Le modèle \textbf{RandomForest} affiche le meilleur F1-score (0.6907), ce qui en fait le modèle retenu pour la suite du projet.
+    \item Le modèle \textbf{SVC} obtient la meilleure précision (0.6984), mais son F1-score reste inférieur en raison d'un recall plus faible.
+    \item Les trois autres algorithmes offrent des performances intermédiaires, avec des valeurs de F1 comprises entre 0.4154 et 0.6398.
+\end{itemize}
+
+\section{Enregistrement du modèle dans le registre MLflow}
+Après avoir identifié RandomForest comme modèle performant, nous l'avons enregistré dans le registre MLflow en cours d'exécution sur l'URL \texttt{http://127.0.0.1:5000}. Les étapes effectuées ont été les suivantes :
+\begin{enumerate}
+    \item Sélection de la meilleure exécution (run ID \texttt{3ae979f80dbb4b36921b5e1fa925dc85}) entraînant un RandomForest avec \textit{n\_estimators}=200 et \textit{max\_depth}=8.
+    \item Enregistrement du modèle sous le nom ``medicament-generic`` (première version).
+    \item Attribution d'alias de version : les alias ``production`` et ``staging`` ont été définis tous deux pointant vers la version~1 du modèle.
+    \item Transition du modèle en stade ``production`` via l'API MLflow, ce qui permet de contrôler quelle version est servie en environnement de production.
+\end{enumerate}
+Ces opérations ont permis de disposer d'un modèle traçable, versionné et prêt à être servi via une API HTTP si nécessaire.
+
+\section{Génération du rapport PDF}
+La finalité de cette synthèse était de produire un rapportwritten en format PDF, utilisable pour le rendu final du projet. En utilisant la distribution MikTeX sous Windows, nous avons composé un document LaTeX regroupant :
+\begin{itemize}
+    \item La page de titre avec métadonnées du projet.
+    \item Un résumé du contexte et des objectifs.
+    \item La description détaillée des étapes précédentes (TP1~à~TP4) sous forme synthétique.
+    \item L'analyse exploratoire des données CNOPS, le nettoyage et l'ingénierie des features.
+    \item Le tableau de comparaison des algorithmes et le commentaire des résultats.
+    \item La procédure d'enregistrement du modèle dans MLflow, incluant les aliases.
+    \item La conclusion et les limites du projet (features limitées, corrélations modérées).
+    \item La liste des fichiers générés : \texttt{data/medicaments\_clean.csv}, \texttt{compte-rendu-tp5-synthese.pdf}, \texttt{MLproject}, \texttt{src/train\_pipeline.py}, \texttt{src/preparer.py}, \texttt{params.yaml}, \texttt{mlflow.db}, dossier \texttt{models/}.
+\end{itemize}
+Le document a été compilé avec la commande \texttt{pdflatex} en mode non-stop, générant un fichier PDF contenant l'intégralité du compte rendu. Ce PDF est désormais la version officielle du rapport de synthèse remis pour l'évaluation du module.
+
+\section{Conclusion}
+La phase~5 (synthèse) du projet MLOps sur les médicaments a permis de mettre en perspective tout le travail précédent et de produire un document de référence complet. Le modèle RandomForest, bien qu'entraîné sur seulement trois features (prix, dosage, taux de remboursement), atteint un F1-score de 0.6907, ce qui est acceptable compte tenu de la simplicité du jeu de données. Les limites pointées sont principalement dues au nombre restreint d'informatiques features et aux corrélations modestes entre ces dernières et la variable cible. Pour aller plus loin, il serait envisageable d'ajouter des features supplémentaires (date de mise sur le marché, laboratoire, classe ATC, etc.) ou d'explorer des méthodes d'ingénierie de features plus avancées. Néanmoins, l'infrastructure MLOps (MLflow, registre de modèle, aliases, pipeline DVC) est pleinement opérationnelle et reproductible.
+
+\appendix
+\chapter{Fichiers générés au cours du projet}
+\begin{description}
+    \item[\texttt{data/medicaments\_clean.csv}] Jeu de données nettoyé (4971 lignes, 16 colonnes).
+    \item[\texttt{compte-rendu-tp5-synthese.pdf}] Rapport final compilé via MikTeX.
+    \item[\texttt{MLproject}] Configuration du pipeline d'entraînement réutilisable.
+    \item[\texttt{src/train\_pipeline.py}] Script d'entraînement du modèle RandomForest.
+    \item[\texttt{src/preparer.py}] Script de préparation des données (TP2).
+    \item[\texttt{params.yaml}] Paramètres externalisés (test\_size, n\_estimators, max\_depth, seuil\_f1).
+    \item[\texttt{mlflow.db}] Base de données de suivi MLflow contenant toutes les exécutions.
+    \item[\texttt{models/}] Dossier de stockage des modèles enregistrés dans le registre.
+\end{description}
+
+\end{document}

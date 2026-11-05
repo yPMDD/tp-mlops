@@ -2,6 +2,8 @@
 __pycache__/
 mlflow.db
 mlflow.db-journal
+mlartifacts/
+**/mlartifacts/
 .h2o_jarpath.txt
 *.bak
 dvc_store_tmp/

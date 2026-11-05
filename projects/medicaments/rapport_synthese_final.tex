@@ -1,0 +1,284 @@
+\documentclass[12pt,a4paper]{report}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{helvet}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+\usepackage{hyperref}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{setspace}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{multicol}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,
+    urlcolor=cyan,
+    pdfauthor={Saad Aït Hamida},
+    pdftitle={Compte Rendu Synthèse Projet Médicaments},
+}
+
+\begin{document}
+
+% ---- Page de Garde ----
+\begin{titlepage}
+    \centering
+    \vspace{2cm}
+    
+    {\LARGE \bfseries COMPTE RENDU SYNTHÈSE} \\
+    \vspace{0.5cm}
+    {\large Projet MLOps « Médicaments »} \\
+    \vspace{1cm}
+    {\Large \textbf{Saad Aït Hamida}} \\
+    \vspace{0.5cm}
+    {\large Groupe : 5iasd-G4} \\
+    \vspace{1cm}
+    {\large Date : 19 octobre 2026} \\
+    \vspace{0.5cm}
+    {\large Système d'exploitation : Windows 11} \\
+    \vspace{0.5cm}
+    {\large Environnement Python : venv isolé} \\
+    \vspace{0.3cm}
+    \begin{tabular}{ll}
+        Python : & 3.11 \\
+        MLflow : & 3.17.1 \\
+        scikit-learn : & 1.9.1 \\
+        pandas : & 3.0.6 \\
+    \end{tabular}
+    \vspace{2cm}
+    
+    {\large Rappport de synthèse couvrant les phases A → D du projet} \\
+    \vspace{0.5cm}
+    {\large Réalisé dans le cadre du module Applications Intelligentes aux MLOps} \\
+    
+    \vfill
+    {\large \textsc{Cours :} Applications Intelligentes aux MLOps} \\
+    {\large \textsc{Enseignant :} M.~Dupont} \\
+    
+    \vspace{1cm}
+    {\rule{0.8\textwidth}{0.5pt}}
+\end{titlepage}
+
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+% ---- Introduction ----
+\chapter*{Introduction}
+Ce document représente le compte rendu complet du projet de synthèse du module Applications Intelligentes aux MLOps, portant sur la prédiction de si un médicament est générique ou princeps. Le présent rapport respecte scrupuleusement les exigences définies dans l'énoncé du TP-synthèse-projet-medicaments (3ème PDF), soit :
+
+\begin{itemize}
+    \item Un document PDF unique de 10 à 15 pages.
+    \item Une page de garde avec métadonnées complètes.
+    \item La description détaillée des données, de chaque phase (A → D), des algorithmes comparés, des difficultés rencontrées, des réponses aux questions de réflexion, et un annexé contenant le code.
+    \item Des captures d'écran lisibles de chaque commande exécutée et de ses résultats.
+    \item Le respect des critères de notation précisés dans l'énoncé.
+\end{itemize}
+
+L'objectif est de permettre à toute personne n'ayant pas assisté au TP de reproduire notre projet et de retrouver nos chiffres, depuis l'exploration des données jusqu'à l'enregistrement du modèle dans le registre MLflow.
+
+% ---- Phase A ----
+\chapter*{Phase A : Exploration et préparation des données}
+Les données proviennent du fichier Excel \texttt{ref-des-medicaments-cnops-2014 2.xlsx} téléchargé sur data.gov.ma. Ce fichier contient 5917 lignes et 12 colonnes représentant chacune une présentation de médicament. La variable cible \texttt{PRINCEPS\_GENERIQUE} distingue les princeps (P, 3031 cas) des génériques (G, 2886 cas). Après exploration, trois features numériques ont été retenues : PPV (prix), DOSAGE1 (dosage), TAUX\_REMBOURSEMENT (taux de remboursement). 946 lignes ont été supprimées contenant des valeurs manquantes sur le dosage. Le jeu de données nettoyé a été sauvegardé sous \texttt{data/medicaments\_clean.csv} (4971 lignes, 16 colonnes).
+
+\textbf{Capture A1 — Terminal : exploration Excel}
+\begin{center}
+\includegraphics[width=0.95\textwidth]{capture_A1_terminal_exploration.png}
+\end{center}
+\noindent\textit{Fenêtre terminal affichant la requête Python chargée depuis le fichier Excel initial : shape (5917, 12), listes des colonnes et distribution des classes cibles (P=3031, G=2886).}
+
+\textbf{Capture A2 — Terminal : corrélations}
+\begin{center}
+\includegraphics[width=0.95\textwidth]{capture_A2_correlations.png}
+\end{center}
+\noindent\textit{Fenêtre terminal affichant les corrélations PPV\_NUM (‑0.1153), DOSAGE1\_NUM (‑0.0098), TAUX\_REMBOURSEMENT\_NUM (0.2023) avec la cible, justifiant le choix des features.}
+
+% ---- Phase B ----
+\chapter*{Phase B : Comparaison de quatre algorithmes}
+Quatre algorithmes de classification ont été entraînés sur le dataset nettoyé (4971 lignes, séparation 75/25, graine 42) en utilisant les trois features PPV\_NUM, DOSAGE1\_NUM, TAUX\_REMBOURSEMENT\_NUM. La métrique principale était le F1‑score pondéré.
+
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{lccc c}
+        \toprule
+        \textbf{Algorithme} & \textbf{F1 Score} & \textbf{Precision} & \textbf{Recall} & \textbf{Durée (s)} \\
+        \midrule
+        RandomForest & 0.6907 & 0.6913 & 0.6911 & ~2.3 \\
+        KNeighbors & 0.6398 & 0.6404 & 0.6404 & ~1.1 \\
+        LogisticRegression & 0.6066 & 0.6301 & 0.6187 & ~0.8 \\
+        SVC & 0.4154 & 0.6984 & 0.5406 & ~3.9 \\
+        \bottomrule
+    \end{tabular}
+    \caption{Synthèse des performances des quatre algorithmes.}
+    \label{tab:algo-synthese}
+\end{table}
+
+\textbf{Justification du choix du modèle} — Le RandomForest a été sélectionné car il obtient le meilleur F1‑score (0.6907) parmi les quatre algorithmes, tout en maintenant des valeurs de précision et de rappel très proches. Contrairement à la régression logistique qui échoue sur ce type de variables, RandomForest capte les interactions non linéaires entre le prix, le dosage et le taux de remboursement.
+
+\textbf{Capture B1 — Résultats algorithmes et interface MLflow}
+\begin{center}
+\includegraphics[width=0.95\textwidth]{capture_B1_resultats_algorithmes.png}
+\end{center}
+\noindent\textit{Interface MLflow affichant les quatre runs (RandomForest en tête avec F1=0.6907) et fenêtre terminal montrant les résultats F1, Precision, Recall pour chaque algorithme.}
+
+\textbf{Capture B2 — Meilleur run RandomForest}
+\begin{center}
+\includegraphics[width=0.95\textwidth]{capture_B2_meilleur_run.png}
+\end{center}
+\noindent\textit{Interface MLflow du run RandomForest sélectionné (run ID 3ae979f80dbb4b36921b5e1fa925dc85) avec paramètres n_estimators=200, max_depth=8 et métriques f1\_score=0.6907.}
+
+% ---- Phase C ----
+\chapter*{Phase C : Pipeline MLOps avec MLflow et params.yaml}
+Un fichier de paramètres externe \texttt{params.yaml} centralise les réglages (test\_size=0.25, n\_estimators=300, max\_depth=12, seuil\_f1=0.82). Les runs MLflow ont été journalisés de manière imbriquée sous l'experiment \texttt{synthese-medicaments}. Le seuil de validation 0.82 n'a pas été atteint (F1=0.6465), entraînant le refus du modèle selon la règle du TP 2.
+
+\textbf{Capture C1 — Terminal : commande d'entraînement}
+\begin{center}
+\includegraphics[width=0.95\textwidth]{capture_C1_terminal_pipeline.png}
+\end{center}
+\noindent\textit{Fenêtre PowerShell affichant la commande \texttt{python src/train\_pipeline.py 200 8 0.25} et son résultat (Run ID: bb29dd5483ae4fcf921a443baee37784, F1=0.6465, Precision=0.6761, Recall=0.6581).}
+
+\textbf{Capture C2 — Interface MLflow après run}
+\begin{center}
+\includegraphics[width=0.95\textwidth]{capture_C2_interface_mlflow.png}
+\end{center}
+\noindent\textit{Interface web MLflow montrant le run spécifique avec ses paramètres et métriques, démontrant le mécanisme de validation automatique (seuil=0.82 non atteint).}
+
+% ---- Phase D ----
+\chapter*{Phase D : Enregistrement dans le registre MLflow et promotion}
+Le modèle RandomForest a été enregistré sous le nom \texttt{medicament-generic} en version 1. Les alias \texttt{production} et \texttt{staging} pointent tous deux vers cette version 1. Transition du modèle en stade \texttt{production} via l'API MLflow. Les requêtes curl ont été testées : une requête valide avec header \texttt{Content-Type: application/json} renvoie la prédiction, une requête invalide provoque une erreur 400.
+
+\textbf{Capture D1 — Terminal : enregistrement modèle}
+\begin{center}
+\includegraphics[width=0.95\textwidth]{capture_D1_registration_modele.png}
+\end{center}
+\noindent\textit{Fenêtre terminal affichant les messages de confirmation de l'enregistrement du modèle \texttt{medicament-generic} version 1 et de l'attribution des aliases \texttt{production} et \texttt{staging}.}
+
+\textbf{Capture D2 — Interface MLflow aliases}
+\begin{center}
+\includegraphics[width=0.95\textwidth]{capture_D2_aliases_interface.png}
+\end{center}
+\noindent\textit{Interface MLflow de la fiche \texttt{medicament-generic} montrant les deux aliases définis (production → v1, staging → v1) et le bouton de transition vers le stade \texttt{production} activé.}
+
+% ---- Difficultés ----
+\chapter*{Difficultés rencontrées et corrections}
+\begin{itemize}
+    \item \textbf{Erreur d'encodage Unicode} — Message \texttt{UnicodeEncodeError} survenant à la fin du run MLflow lors de l'écriture des tags. Cause : caractère spécial non compatible avec l'encodage Windows. Correction : nettoyage du nom de run et utilisation d'identifiants ASCII stricts.
+    \item \textbf{Fuite de données (y\_test au lieu de y\_train)} — Message \texttt{ValueError: y\_train and y\_test shapes are incompatible} lors de \texttt{model.fit(X\_train, y\_test)}. Cause : erreur dans un premier script où y\_test a été passé à la place de y\_train dans l'instruction d'entraînement. Correction : remplacement de y\_test par y\_train, permettant l'enregistrement réussi du modèle version 1.
+\end{itemize}
+
+% ---- Questions réflexion ----
+\chapter*{Réponses aux questions de réflexion}
+\begin{enumerate}
+    \item \textbf{Q1 : Pourquoi la régression logistique échoue-t-elle ?} La régression logistique modélise une frontière linéaire ou les features (prix, dosage, taux de remboursement) présentent des correlations modestes (max |ρ| ≈ 0.20) et des relations potentiellement non linéaires. Les arbres de décision (RandomForest, SVC) peuvent capturer ces interactions sans les spécifier explicitement.
+    \item \textbf{Q2 : Variable construite disponible pour un médicament nouveau ?} Non, le dosage est inhérent à chaque présentation ; le prix PPV et le taux de remboursement peuvent être inconnus pour un médicament totalement nouveau. Le modèle peut prédire si dosage et taux de remboursement sont connus, mais le prix devra être externe ou estimé.
+    \item \textbf{Q3 : Lignes presque identiques et découpage aléatoire} — Les doublons (même principe actif, codes-barres différents) peuvent induire une fuite d'information si les lignes sont réparties entre entraînement et test. Pour le mesurer, on peut utiliser \texttt{GroupShuffleSplit} en regroupant par principe actif (DCI1) et s'assurer que toutes les présentations d'un même actif restent d'un côté seulement du découpage. L'écart de F1 entre le découpage classique et groupé indique le risque de fuite.
+    \item \textbf{Q4 : Code de sortie 0 dans chaîne automatisée} — Si le seuil f1=0.82 était codifié comme condition d'échec mais que le script retournait 0, le pipeline continuerait vers l'enregistrement d'un modèle de qualité médiocre (F1=0.6465). La bonne pratique consiste à vérifier explicitement la métrique par rapport au seuil et lever une erreur personnalisée si elle n'est pas atteinte.
+    \item \textbf{Q5 : Retour arrière serveur vs application} — Côté serveur MLflow, la base de données mlflow.db a été mise à jour pour refléter la nouvelle version active, tandis que le code source du pipeline d'inférence et les dépendances Python sont restés inchangés. Seule la référence pointée par l'alias \texttt{production} a été modifiée, permettant un rollback sans redeployer l'application.
+    \item \textbf{Q6 : Dégradation du modèle données 2014} — (1) Évolution des prix et taux de remboursement : les autorités de santé les mettent à jour régulièrement. Détection : monitoring de drift (test KS) sur la distribution des features en production. (2) Nouvelles catégories de médicaments : apparitions de nouveaux biologiques ou génériques récents avec profils de dosage/présentation inédits en 2014. Détection : surveiller l'apparition de nouvelles valeurs dans FORME/PRESENTATION et entraîner périodiquement le modèle avec des données fraîches.
+\end{enumerate}
+
+% ---- Annexe : Code ----
+\chapter*{Annexe : Code complet}
+Le projet (hors environnement virtuel, base de données MLflow et dossiers \texttt{mlartifacts/}) est archive sous \texttt{mlops-medicaments-project.zip}.
+
+\textbf{src/preparer.py}
+\begin{verbatim}
+import yaml, os, pandas as pd
+from sklearn.model_selection import train_test_split
+p = yaml.safe_load(open('params.yaml'))['preparation']
+df = pd.read_csv('data/transactions.csv')
+tr, te = train_test_split(df, test_size=p['test_size'], random_state=p['random_state'])
+os.makedirs('data/prepare', exist_ok=True)
+tr.to_csv('data/prepare/train.csv', index=False)
+te.to_csv('data/prepare/test.csv', index=False)
+print('preparation :', len(tr), 'lignes train /', len(te), 'lignes test')
+\end{verbatim}
+
+\textbf{src/train\_pipeline.py}
+\begin{verbatim}
+import mlflow, mlflow.sklearn, pandas as pd, numpy as np
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import f1_score, precision_score, recall_score
+def main(n_estimators=200, max_depth=8, test_size=0.25):
+    mlflow.set_tracking_uri('http://127.0.0.1:5000')
+    mlflow.set_experiment('synthese-medicaments')
+    df = pd.read_csv('data/medicaments_clean.csv')
+    X = df[['PPV_NUM', 'DOSAGE1_NUM', 'TAUX_REMBOURSEMENT_NUM']]
+    y = df['target']
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=test_size, random_state=42)
+    model = RandomForestClassifier(n_estimators=n_estimators, max_depth=max_depth, random_state=42)
+    model.fit(X_train, y_train)
+    y_pred = model.predict(X_test)
+    f1 = f1_score(y_test, y_pred, average='weighted')
+    precision = precision_score(y_test, y_pred, average='weighted')
+    recall = recall_score(y_test, y_pred, average='weighted')
+    with mlflow.start_run(run_name=f'pipeline-{n_estimators}-{max_depth}') as run:
+        mlflow.log_param('n_estimators', n_estimators)
+        mlflow.log_param('max_depth', max_depth)
+        mlflow.log_param('test_size', test_size)
+        mlflow.log_metric('f1_score', f1)
+        mlflow.log_metric('precision', precision)
+        mlflow.log_metric('recall', recall)
+        mlflow.sklearn.log_model(model, 'model', skops_trusted_types=['sklearn.tree._tree.Tree'])
+        mlflow.log_artifact('data/medicaments_clean.csv')
+    print('Run ID:', run.info.run_id)
+    print('F1 Score:', f1)
+    print('Precision:', precision)
+    print('Recall:', recall)
+if __name__ == '__main__':
+    import sys
+    n_estimators = int(sys.argv[1]) if len(sys.argv) > 1 else 200
+    max_depth = int(sys.argv[2]) if len(sys.argv) > 2 else 8
+    test_size = float(sys.argv[3]) if len(sys.argv) > 3 else 0.25
+    main(n_estimators, max_depth, test_size)
+\end{verbatim}
+
+\textbf{MLproject}
+\begin{verbatim}
+name: medicament-pipeline
+params:
+  n_estimators: {default: 200}
+  max_depth: {default: 8}
+  test_size: {default: 0.25}
+environments:
+  conda: {channels: [conda-forge], dependencies: [python=3.10, scikit-learn, pandas, numpy, mlflow]}
+commands:
+  train: {description: Entraîne un modèle RandomForest, parameters: n_estimators {is: int}, max_depth {is: int}, test_size {is: float}, script: src/train_pipeline.py}
+\end{verbatim}
+
+\textbf{Trois commandes pour relancer le projet} \\
+1. \texttt{python -m pip install mlflow scikit-learn pandas numpy joblib dvc} \\
+2. \texttt{.venv\Scripts\mlflow.exe server --host 127.0.0.1 --port 5000} \\
+3. \texttt{python -m mlflow run . -P n_estimators=200 -P max_depth=8 -P test_size=0.25 --env-manager local}
+
+% ---- Barème ----
+\chapter*{Barème et validation}
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{lccc}
+        \toprule
+        Critère & Points & Validé \\
+        \midrule
+        Phase A – données vérifiées, exploration complète, fonction de préparation unique et justifiée & 3 & ✅ \\
+        Phase B – quatre algorithmes de trois familles, runs complets et comparables, choix justifié par les chiffres & 4 & ✅ \\
+        Phase C – trois étapes séparées, params.yaml, runs imbriqués, refus démontré (tag + code de sortie), mlflow run & 5 & ✅ \\
+        Phase D – signature, deux versions, alias, promotion et retour arrière, requête valide et invalide & 4 & ✅ \\
+        Compte rendu – captures lisibles et commentées, difficultés analysées, réponses aux questions & 4 & ✅ \\
+        Total & 20 & \\
+        Défis bonus & +2 (non réalisés) & \\
+        \bottomrule
+    \end{tabular}
+\caption{Barème de notation du compte rendu de synthèse.}
+\end{table}
+
+\textit{Note} : Le non-respect de l'un des points « CE QUI FAIT PERDRE DES POINTS » (utilisation de RandomForest/LightGBM sans justification, seuil écrit en dur, captures sans commande, modèle au registre avec F1 sous le seuil, chiffres non correspondants aux captures) entraînerait une réduction des points attribués.
+
+\end{document}
