@@ -1,10 +1,10 @@
 # MLOps course workspace
 
-This repository is the single project workspace for the course. Keep the fraud-detection files at the repository root: their relative paths are shared across TPs 1-4 and 6-9, and TP9 packages the existing `models/model.pkl`.
+This repository is the single project workspace for the course. Keep the fraud-detection files at the repository root: their relative paths are shared across TPs 1-4 and 6-9. TP9 packages its own copy of the committed TP3 reference forest at `fraude-api/models/model.pkl`.
 
 ## Which folder to use
 
-- **Fraud-detection track — TPs 1-4 and 6-9:** work from this repository root (`tp-mlops`). The shared inputs are `data/transactions.csv` and `models/model.pkl`; code, DVC stages, reports, captures, and the TP9 `fraude-api` directory live alongside them.
+- **Fraud-detection track — TPs 1-4 and 6-9:** work from this repository root (`tp-mlops`). The shared inputs are `data/transactions.csv` and the TP3 model path `models/model.pkl`; code, DVC stages, reports, captures, and the TP9 `fraude-api` directory live alongside them. TP9's isolated model copy is the committed TP3 artifact that reproduces the handout's 0.8899 result.
 - **Medicines synthesis — TP5:** work from `projects/medicaments`. It is a separate dataset and modeling exercise, preserved there with its original relative paths and prior outputs. Do not use its model or data for the fraud track.
 - **Handouts:** the chosen outer-folder copies are in `docs/handouts`. Different TP1-TP3 copies from the former repository root are preserved under `docs/handouts/archive/repository-copies`.
 
