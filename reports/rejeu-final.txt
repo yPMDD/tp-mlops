@@ -1,0 +1,34 @@
+Clone Git propre, stockage local DVC existant.
+A       data\brut\ref-des-medicaments-cnops-2014.xlsx
+A       data\prepare\test.csv
+A       data\prepare\train.csv
+A       data\versions\ref-des-medicaments-cnops-2014-v2.xlsx
+A       models\remboursement-rf.pkl
+A       reports\metriques.json
+6 files fetched and 6 files added
+Verifying data sources in stage: 'data\versions\ref-des-medicaments-cnops-2014-v2.xlsx.dvc'
+
+Running stage 'preparer':
+> python src/valider.py
+Validation des donnees brutes : OK.
+> python src/preparer_pipeline.py
+v2 : 4281 lignes train, 1428 lignes test.
+
+Running stage 'entrainer':
+> python src/entrainer.py
+Foret entrainee : 200 arbres, profondeur 12.
+
+Running stage 'evaluer':
+> python src/evaluer.py
+Classe 1 : {'f1': 0.7686832740213523, 'precision': 0.8350515463917526, 'rappel': 0.7120879120879121}
+Registre : modele admissible (seuil lu dans params.yaml : 0.65).
+
+To track the changes with git, run:
+
+	git add 'data\versions\ref-des-medicaments-cnops-2014-v2.xlsx.dvc'
+
+To enable auto staging, run:
+
+	dvc config core.autostage true
+Use `dvc push` to send your updates to remote storage.
+F1 classe 1 V2 verifie : 0.768683274021352

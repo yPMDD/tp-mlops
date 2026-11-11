@@ -1,3 +1,30 @@
+51f24b5 Assembler le compte rendu et les outils de remise de la synthese 2
+949e1af F13 : rejeter une fuite de cible avant la promotion staging
+2142cd1 F12 : ajouter la fiche modele et les graphiques au run de production
+9be5688 F11 : comparer Orange Explain Prediction et SHAP Python
+99cc8e2 F10 : enregistrer la mesure et la preuve d audit
+26eaab9 F9 : enregistrer la mesure et la preuve d audit
+658524f F8 : enregistrer la mesure et la preuve d audit
+a5823ee F7 : enregistrer la mesure et la preuve d audit
+0184901 F6 : enregistrer la mesure et la preuve d audit
+d112d43 F5 : enregistrer la mesure et la preuve d audit
+4fe8545 F4 : enregistrer la mesure et la preuve d audit
+ed391f2 F3 : enregistrer la mesure et la preuve d audit
+7518cde F2 : enregistrer la mesure et la preuve d audit
+e0b5ce3 F1 : mesurer et comparer les importances par permutation et MDI
+2956547 E4 : documenter les etats les reessais et les alertes
+acdf2d2 E4 : exporter Node-RED et prouver la surveillance du service
+bd4667a E3 : verifier deux reessais et restaurer le classeur
+34dbb75 E2 : planifier le premier du mois a 03 h 15
+3b77a49 E1 : executer le flux Prefect et prouver le controle qualite
+d618881 D7 : comparer performance reproductibilite et tracabilite
+2f812e2 D6 : mesurer les faux negatifs du meilleur apprenant Orange
+0535a47 D5 : comparer trois apprenants avec le workflow Orange execute
+f6ba880 D4 : servir le meilleur AutoML et comparer 50 requetes par service
+9919380 D3 : mesurer H2O AutoML et conserver le classement
+9856b35 D2 : mesurer FLAML au budget impose
+9758d6d D1 : mesurer FLAML au budget impose
+a193694 C8 : conserver le journal Git du point de controle
 97a54fb C8 : actualiser la preuve historique apres verification DVC
 667b540 B5 : stabiliser les empreintes DVC entre checkouts Git
 fd32410 C8 : archiver l historique Git des phases A a C
