@@ -33,3 +33,7 @@ L'alias `production` est revenu de la version 2 (données V2) à la version 1 (d
 ## C6 — Service du modèle V1 sur le port 8000
 
 La requête complète envoyée à /invocations pour le médicament personnel renvoie HTTP 200 et $prediction. La requête privée de dosage renvoie HTTP 400 avec une erreur de schéma indiquant la colonne manquante. [Requêtes et réponses JSON](c6-reponses-http.json)
+
+## C7 — Préparer les données brutes au moment de servir
+
+Le service actuel demande les neuf variables déjà calculées. Une application qui ne dispose que du référentiel devrait sinon reproduire le calcul et risquer un écart avec l'entraînement. On peut servir un composant qui reçoit les colonnes brutes nécessaires et applique la même préparation de variables, sans exiger le taux de remboursement, qui sert à construire la cible. Le composant associe à chaque version du modèle les fréquences de DCI calculées sur son classeur de référence. Une DCI absente de ce référentiel reçoit un compte de **0**. Pour une DCI connue, le compte est celui du référentiel associé à la version du modèle. [Préparation commune](../src/preparer.py) · [Préparation de la requête personnelle](../src/medicament_personnel.py)
