@@ -1,0 +1,3 @@
+# Keep the byte content of DVC's code dependencies stable across Git checkouts.
+*.py text eol=lf
+*.yaml text eol=lf

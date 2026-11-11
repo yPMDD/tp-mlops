@@ -23,8 +23,8 @@ stages:
       size: 742
     - path: src/valider.py
       hash: md5
-      md5: f3c76ba021b8c5ba3483c77eb098739c
-      size: 1656
+      md5: 38cc1c03c21ca2e5db165573ce65e30e
+      size: 1655
     params:
       params.yaml:
         donnees:

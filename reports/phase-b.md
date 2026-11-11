@@ -43,3 +43,7 @@ La préparation vérifie la présence des 12 colonnes, la validité des prix (fi
 ## B8 — Profondeur 2
 
 L'expérience forcée réexécute validation, préparation, entraînement et évaluation. Le **F1 de classe 1 vaut 0,344948**, sous le seuil **0,65** lu dans `qualite.f1_min` de `params.yaml`. DVC conserve l'évaluation pour la preuve et le modèle est déclaré non admissible au registre. [Journal du pipeline](b8-profondeur-2.txt)
+
+### Vérification après la phase C
+
+Une réextraction Git sous Windows avait changé la fin de ligne de valider.py sans changer son contenu. Les règles de .gitattributes fixent la fin de ligne LF des scripts et fichiers YAML, de sorte que DVC conserve les mêmes empreintes pour un même code. [Deux reproductions après normalisation](b5-portabilite.txt)
