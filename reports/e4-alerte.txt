@@ -1,3 +1,4 @@
 11 Nov 03:58:39 - [info] Server now running at http://127.0.0.1:1880/
 11 Nov 03:58:39 - [info] Started flows
 11 Nov 03:58:40 - [info] [debug:Alerte remboursement] ALERTE classe 1 : SOLIAN 100 MG/ML (6118010120312)
+11 Nov 03:59:40 - [info] [debug:Alerte remboursement] ALERTE classe 1 : SOLIAN 100 MG/ML (6118010120312)
