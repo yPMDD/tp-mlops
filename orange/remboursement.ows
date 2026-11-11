@@ -10,6 +10,8 @@
     <node id="6" name="Naive Bayes" qualified_name="Orange.widgets.model.ownaivebayes.OWNaiveBayes" project_name="Orange3" version="" title="Naive Bayes" position="(540.0, 465.0)" />
     <node id="7" name="Test and Score" qualified_name="Orange.widgets.evaluate.owtestandscore.OWTestAndScore" project_name="Orange3" version="" title="Test and Score" position="(735.0, 255.0)" />
     <node id="8" name="Confusion Matrix" qualified_name="Orange.widgets.evaluate.owconfusionmatrix.OWConfusionMatrix" project_name="Orange3" version="" title="Confusion Matrix" position="(920.0, 255.0)" />
+    <node id="9" name="Python Script" qualified_name="Orange.widgets.data.owpythonscript.OWPythonScript" project_name="Orange3" version="" title="Médicament personnel" position="(415.0, 20.0)" />
+    <node id="10" name="Explain Prediction" qualified_name="orangecontrib.explain.widgets.owexplainprediction.OWExplainPrediction" project_name="Orange3-Explain" version="" title="Explain Prediction" position="(790.0, 75.0)" />
   </nodes>
   <links>
     <link id="0" source_node_id="0" sink_node_id="1" source_channel="Data" sink_channel="Data" enabled="true" />
@@ -22,6 +24,10 @@
     <link id="7" source_node_id="5" sink_node_id="7" source_channel="Learner" sink_channel="Learner" enabled="true" />
     <link id="8" source_node_id="6" sink_node_id="7" source_channel="Learner" sink_channel="Learner" enabled="true" />
     <link id="9" source_node_id="7" sink_node_id="8" source_channel="Evaluation Results" sink_channel="Evaluation Results" enabled="true" />
+    <link id="10" source_node_id="1" sink_node_id="9" source_channel="Data" sink_channel="Data" enabled="true" />
+    <link id="11" source_node_id="9" sink_node_id="10" source_channel="Data" sink_channel="Data" enabled="true" />
+    <link id="12" source_node_id="2" sink_node_id="10" source_channel="Data" sink_channel="Background Data" enabled="true" />
+    <link id="13" source_node_id="4" sink_node_id="10" source_channel="Classifier" sink_channel="Model" enabled="true" />
   </links>
   <annotations />
   <thumbnail />
@@ -32,5 +38,6 @@
     <properties node_id="3" format="pickle">gASV5AEAAAAAAAB9lCiMC19fdmVyc2lvbl9flEsCjApzY3JpcHRUZXh0lFh7AQAAaW1wb3J0IG51bXB5IGFzIG5wCmZyb20gc2tsZWFybi5tb2RlbF9zZWxlY3Rpb24gaW1wb3J0IHRyYWluX3Rlc3Rfc3BsaXQKCmRlZiByZXBhcnRpcih0YWJsZSwgZ3JhaW5lLCBwYXJ0X3Rlc3QpOgogICAgdHJhaW4sIHRlc3QgPSB0cmFpbl90ZXN0X3NwbGl0KG5wLmFyYW5nZShsZW4odGFibGUpKSwgdGVzdF9zaXplPXBhcnRfdGVzdCwKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBzdHJhdGlmeT10YWJsZS5ZLCByYW5kb21fc3RhdGU9Z3JhaW5lKQogICAgcmV0dXJuIHRhYmxlW3RyYWluXSwgdGFibGVbdGVzdF0KCm91dF9kYXRhID0gcmVwYXJ0aXIoaW5fZGF0YSwgNjQsIDAuMjUpWzFdIGlmIGluX2RhdGEgaXMgbm90IE5vbmUgZWxzZSBOb25lCpSMDXNjcmlwdExpYnJhcnmUXZR9lCiMBG5hbWWUjAlUZXN0IDI1ICWUjAZzY3JpcHSUaAOMCGZpbGVuYW1llE51YXUu</properties>
     <properties node_id="4" format="pickle">gASVRQEAAAAAAAB9lCiMC19fdmVyc2lvbl9flEsCjApzY3JpcHRUZXh0lIzQZnJvbSBPcmFuZ2UuY2xhc3NpZmljYXRpb24gaW1wb3J0IFJhbmRvbUZvcmVzdExlYXJuZXIKb3V0X2xlYXJuZXIgPSBSYW5kb21Gb3Jlc3RMZWFybmVyKG5fZXN0aW1hdG9ycz0yMDAsIG1heF9kZXB0aD0xMiwgcmFuZG9tX3N0YXRlPTY0KQpvdXRfY2xhc3NpZmllciA9IG91dF9sZWFybmVyKGluX2RhdGEpIGlmIGluX2RhdGEgaXMgbm90IE5vbmUgZWxzZSBOb25lCpSMDXNjcmlwdExpYnJhcnmUXZR9lCiMBG5hbWWUjBhGb3LDqnQgT3JhbmdlIChncmFpbmUgRymUjAZzY3JpcHSUaAOMCGZpbGVuYW1llE51YXUu</properties>
     <properties node_id="7" format="pickle">gASVJAAAAAAAAAB9lCiMC19fdmVyc2lvbl9flEsEjApyZXNhbXBsaW5nlEsFdS4=</properties>
+    <properties node_id="9" format="pickle">gASVVgEAAAAAAAB9lCiMC19fdmVyc2lvbl9flEsCjApzY3JpcHRUZXh0lIzkaW1wb3J0IG51bXB5IGFzIG5wCgpkZWYgcGVyc29ubmVsKHRhYmxlLCBncmFpbmUpOgogICAgaW5kaWNlcyA9IG5wLmZsYXRub256ZXJvKHRhYmxlLlkgPT0gMSkKICAgIHJhbmcgPSBncmFpbmUgJSBsZW4oaW5kaWNlcykKICAgIHJldHVybiB0YWJsZVtbaW5kaWNlc1tyYW5nXV1dCgpvdXRfZGF0YSA9IHBlcnNvbm5lbChpbl9kYXRhLCA2NCkgaWYgaW5fZGF0YSBpcyBub3QgTm9uZSBlbHNlIE5vbmUKlIwNc2NyaXB0TGlicmFyeZRdlH2UKIwEbmFtZZSMFU3DqWRpY2FtZW50IHBlcnNvbm5lbJSMBnNjcmlwdJRoA4wIZmlsZW5hbWWUTnVhdS4=</properties>
   </node_properties>
 </scheme>
