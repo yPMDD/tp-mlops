@@ -1,0 +1,15 @@
+donnees:
+  version: v2
+  source: data/versions/ref-des-medicaments-cnops-2014-v2.xlsx
+  graine: 64
+  part_test: 0.25
+foret:
+  arbres: 200
+  profondeur: 12
+qualite:
+  f1_min: 0.65
+sorties:
+  train: data/prepare/train.csv
+  test: data/prepare/test.csv
+  modele: models/remboursement-rf.pkl
+  metriques: reports/metriques.json

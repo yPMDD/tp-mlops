@@ -1,0 +1,44 @@
+stages:
+  preparer:
+    cmd: python src/preparer_pipeline.py
+    deps:
+      - src/configuration.py
+      - src/preparer.py
+      - src/preparer_pipeline.py
+      - ${donnees.source}
+    params:
+      - donnees
+      - sorties.train
+      - sorties.test
+    outs:
+      - ${sorties.train}
+      - ${sorties.test}
+  entrainer:
+    cmd: python src/entrainer.py
+    deps:
+      - src/configuration.py
+      - src/preparer.py
+      - src/entrainer.py
+      - ${sorties.train}
+    params:
+      - donnees.graine
+      - foret
+      - sorties.train
+      - sorties.modele
+    outs:
+      - ${sorties.modele}
+  evaluer:
+    cmd: python src/evaluer.py
+    deps:
+      - src/configuration.py
+      - src/preparer.py
+      - src/evaluer.py
+      - ${sorties.test}
+      - ${sorties.modele}
+    params:
+      - qualite
+      - sorties.test
+      - sorties.modele
+      - sorties.metriques
+    metrics:
+      - ${sorties.metriques}
