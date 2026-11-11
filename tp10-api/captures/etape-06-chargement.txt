@@ -1,0 +1,9 @@
+PS> python appel.py POST http://127.0.0.1:8001/v1/predict
+200 OK
+{"fraude":true,"probabilite":0.8899,"version_modele":"1.0.0","id_requete":"4520b5d6"}
+
+PS> python tests/charge.py http://127.0.0.1:8000/v1/predict 200 1
+200 requetes, 1 clients : 31 req/s, mediane 25.3 ms, p95 48.2 ms
+
+PS> python tests/charge.py http://127.0.0.1:8001/v1/predict 200 1
+200 requetes, 1 clients : 10 req/s, mediane 96.5 ms, p95 123.4 ms

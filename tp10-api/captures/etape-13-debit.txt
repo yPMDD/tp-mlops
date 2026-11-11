@@ -1,0 +1,12 @@
+PS> python attaques/inonder.py http://127.0.0.1:8001/v1/predict admin 100
+100 requetes en 2.3 s
+ HTTP 200 : 100
+
+PS> python attaques/inonder.py https://127.0.0.1:8443/v1/predict $CLE 100
+100 requetes en 1.5 s
+ HTTP 200 : 60
+ HTTP 429 : 40
+
+PS> python appel.py POST https://127.0.0.1:8443/v1/predict --cle $CLE
+429 Too Many Requests
+{"detail":"trop de requetes, reessayez dans une minute"}

@@ -1,0 +1,14 @@
+PS> python attaques/provoquer_erreur.py http://127.0.0.1:8001/v1/predict admin
+HTTP 500 - 5588 caracteres de reponse
+chemin et ligne du code : File "C:\Users\S44D\Documents\5iir\MLOps\.tp10-work\tp10-api\api\brouillon.py", line 21, in predict
+instruction fautive     : p = float(modele.predict_proba(X)[0, 1])
+bibliotheques visibles : anyio, fastapi, pandas, sklearn, starlette
+derniere ligne           : ValueError: could not convert string to float: 'abc'
+
+PS> python attaques/provoquer_erreur.py https://127.0.0.1:8443/v1/predict $CLE
+HTTP 422 - 151 caracteres de reponse
+reponse                  : {"detail":[{"type":"float_parsing","loc":["body","montant"],"msg":"Input should be a valid number, unable to parse string as a number","input":"abc"}]
+
+PS> python attaques/provoquer_erreur.py http://127.0.0.1:8001/v1/predict admin
+HTTP 500 - 21 caracteres de reponse
+reponse                  : Internal Server Error

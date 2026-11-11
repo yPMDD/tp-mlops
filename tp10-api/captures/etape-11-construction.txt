@@ -1,0 +1,200 @@
+PS> docker build --progress plain -f Dockerfile.mauvais -t fraude-api:mauvais .
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile.mauvais
+#1 transferring dockerfile:
+#1 transferring dockerfile: 438B 0.0s done
+#1 DONE 0.3s
+
+#2 [internal] load metadata for docker.io/library/python:3.12-slim
+#2 DONE 1.6s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 129B 0.0s done
+#3 DONE 0.2s
+
+#4 [internal] load build context
+#4 ...
+
+#5 [1/6] FROM docker.io/library/python:3.12-slim@sha256:5e2bdb1b0d542d5039cffb8181c65930093949194a65c365dfb1b0fe13a4fa5b
+#5 resolve docker.io/library/python:3.12-slim@sha256:5e2bdb1b0d542d5039cffb8181c65930093949194a65c365dfb1b0fe13a4fa5b 0.0s done
+#5 DONE 0.0s
+
+#4 [internal] load build context
+#4 transferring context: 8.16MB 0.3s done
+#4 DONE 0.4s
+
+#6 [2/6] WORKDIR /app
+#6 CACHED
+
+#7 [3/6] COPY requirements.txt .
+#7 DONE 0.3s
+
+#8 [4/6] RUN pip install --no-cache-dir -r requirements.txt
+#8 2.233 Collecting fastapi==0.162.2 (from -r requirements.txt (line 1))
+#8 2.434   Downloading fastapi-0.162.2-py3-none-any.whl.metadata (27 kB)
+#8 2.510 Collecting uvicorn==0.54.0 (from -r requirements.txt (line 2))
+#8 2.547   Downloading uvicorn-0.54.0-py3-none-any.whl.metadata (6.6 kB)
+#8 2.686 Collecting scikit-learn==1.9.1 (from -r requirements.txt (line 3))
+#8 2.723   Downloading scikit_learn-1.9.1-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (9.3 kB)
+#8 2.910 Collecting pandas==3.1.1 (from -r requirements.txt (line 4))
+#8 2.946   Downloading pandas-3.1.1-cp312-cp312-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl.metadata (16 kB)
+#8 3.010 Collecting joblib==1.6.0 (from -r requirements.txt (line 5))
+#8 3.045   Downloading joblib-1.6.0-py3-none-any.whl.metadata (6.5 kB)
+#8 3.107 Collecting starlette>=0.46.0 (from fastapi==0.162.2->-r requirements.txt (line 1))
+#8 3.141   Downloading starlette-1.10.0-py3-none-any.whl.metadata (6.6 kB)
+#8 3.284 Collecting pydantic>=2.9.0 (from fastapi==0.162.2->-r requirements.txt (line 1))
+#8 3.319   Downloading pydantic-2.14.3-py3-none-any.whl.metadata (141 kB)
+#8 3.412 Collecting typing-extensions>=4.8.0 (from fastapi==0.162.2->-r requirements.txt (line 1))
+#8 3.447   Downloading typing_extensions-4.16.0-py3-none-any.whl.metadata (3.3 kB)
+#8 3.485 Collecting typing-inspection>=0.4.2 (from fastapi==0.162.2->-r requirements.txt (line 1))
+#8 3.521   Downloading typing_inspection-0.4.5-py3-none-any.whl.metadata (2.6 kB)
+#8 3.558 Collecting annotated-doc>=0.0.2 (from fastapi==0.162.2->-r requirements.txt (line 1))
+#8 3.593   Downloading annotated_doc-0.0.6-py3-none-any.whl.metadata (6.5 kB)
+#8 3.641 Collecting opentelemetry-api>=1.44.0 (from fastapi==0.162.2->-r requirements.txt (line 1))
+#8 3.677   Downloading opentelemetry_api-1.45.2-py3-none-any.whl.metadata (1.4 kB)
+#8 3.724 Collecting click>=7.0 (from uvicorn==0.54.0->-r requirements.txt (line 2))
+#8 3.758   Downloading click-8.5.1-py3-none-any.whl.metadata (2.6 kB)
+#8 3.796 Collecting h11>=0.8 (from uvicorn==0.54.0->-r requirements.txt (line 2))
+#8 3.832   Downloading h11-0.16.0-py3-none-any.whl.metadata (8.3 kB)
+#8 4.069 Collecting numpy>=1.24.1 (from scikit-learn==1.9.1->-r requirements.txt (line 3))
+#8 4.103   Downloading numpy-2.5.4-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (6.6 kB)
+#8 4.250 Collecting scipy>=1.10.0 (from scikit-learn==1.9.1->-r requirements.txt (line 3))
+#8 4.285   Downloading scipy-1.18.1-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (62 kB)
+#8 4.377 Collecting narwhals>=2.0.1 (from scikit-learn==1.9.1->-r requirements.txt (line 3))
+#8 4.413   Downloading narwhals-2.28.0-py3-none-any.whl.metadata (15 kB)
+#8 4.460 Collecting threadpoolctl>=3.5.0 (from scikit-learn==1.9.1->-r requirements.txt (line 3))
+#8 4.497   Downloading threadpoolctl-3.8.0-py3-none-any.whl.metadata (29 kB)
+#8 4.550 Collecting python-dateutil>=2.9.0 (from pandas==3.1.1->-r requirements.txt (line 4))
+#8 4.586   Downloading python_dateutil-4.0.0-py3-none-any.whl.metadata (7.3 kB)
+#8 4.631 Collecting cloudpickle>=3.0 (from joblib==1.6.0->-r requirements.txt (line 5))
+#8 4.666   Downloading cloudpickle-3.1.2-py3-none-any.whl.metadata (7.1 kB)
+#8 4.737 Collecting annotated-types>=0.6.0 (from pydantic>=2.9.0->fastapi==0.162.2->-r requirements.txt (line 1))
+#8 4.773   Downloading annotated_types-0.8.0-py3-none-any.whl.metadata (15 kB)
+#8 5.544 Collecting pydantic-core==2.50.4 (from pydantic>=2.9.0->fastapi==0.162.2->-r requirements.txt (line 1))
+#8 5.580   Downloading pydantic_core-2.50.4-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (6.6 kB)
+#8 5.627 Collecting tzdata (from python-dateutil>=2.9.0->pandas==3.1.1->-r requirements.txt (line 4))
+#8 5.661   Downloading tzdata-2026.6-py2.py3-none-any.whl.metadata (1.4 kB)
+#8 5.720 Collecting anyio<5,>=4.0.0 (from starlette>=0.46.0->fastapi==0.162.2->-r requirements.txt (line 1))
+#8 5.753   Downloading anyio-4.16.0-py3-none-any.whl.metadata (4.7 kB)
+#8 5.805 Collecting idna>=2.8 (from anyio<5,>=4.0.0->starlette>=0.46.0->fastapi==0.162.2->-r requirements.txt (line 1))
+#8 5.839   Downloading idna-3.20-py3-none-any.whl.metadata (7.2 kB)
+#8 5.879 Downloading fastapi-0.162.2-py3-none-any.whl (151 kB)
+#8 5.924 Downloading uvicorn-0.54.0-py3-none-any.whl (87 kB)
+#8 5.966 Downloading scikit_learn-1.9.1-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (9.2 MB)
+#8 6.753    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 9.2/9.2 MB 11.8 MB/s eta 0:00:00
+#8 6.792 Downloading pandas-3.1.1-cp312-cp312-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (12.0 MB)
+#8 7.811    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.0/12.0 MB 11.8 MB/s eta 0:00:00
+#8 7.845 Downloading joblib-1.6.0-py3-none-any.whl (306 kB)
+#8 7.904 Downloading annotated_doc-0.0.6-py3-none-any.whl (5.3 kB)
+#8 7.940 Downloading click-8.5.1-py3-none-any.whl (126 kB)
+#8 7.985 Downloading cloudpickle-3.1.2-py3-none-any.whl (22 kB)
+#8 8.020 Downloading h11-0.16.0-py3-none-any.whl (37 kB)
+#8 8.058 Downloading narwhals-2.28.0-py3-none-any.whl (490 kB)
+#8 8.133 Downloading numpy-2.5.4-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.7 MB)
+#8 9.553    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.7/16.7 MB 11.8 MB/s eta 0:00:00
+#8 9.587 Downloading opentelemetry_api-1.45.2-py3-none-any.whl (60 kB)
+#8 9.627 Downloading pydantic-2.14.3-py3-none-any.whl (494 kB)
+#8 9.700 Downloading pydantic_core-2.50.4-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (2.3 MB)
+#8 9.893    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.3/2.3 MB 12.0 MB/s eta 0:00:00
+#8 9.928 Downloading python_dateutil-4.0.0-py3-none-any.whl (92 kB)
+#8 9.969 Downloading scipy-1.18.1-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (35.3 MB)
+#8 12.99    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 35.3/35.3 MB 11.7 MB/s eta 0:00:00
+#8 13.03 Downloading starlette-1.10.0-py3-none-any.whl (80 kB)
+#8 13.07 Downloading threadpoolctl-3.8.0-py3-none-any.whl (32 kB)
+#8 13.10 Downloading typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+#8 13.14 Downloading typing_inspection-0.4.5-py3-none-any.whl (14 kB)
+#8 13.18 Downloading annotated_types-0.8.0-py3-none-any.whl (13 kB)
+#8 13.22 Downloading anyio-4.16.0-py3-none-any.whl (134 kB)
+#8 13.27 Downloading tzdata-2026.6-py2.py3-none-any.whl (348 kB)
+#8 13.33 Downloading idna-3.20-py3-none-any.whl (69 kB)
+#8 13.49 Installing collected packages: tzdata, typing-extensions, threadpoolctl, numpy, narwhals, idna, h11, cloudpickle, click, annotated-types, annotated-doc, uvicorn, typing-inspection, scipy, python-dateutil, pydantic-core, opentelemetry-api, joblib, anyio, starlette, scikit-learn, pydantic, pandas, fastapi
+#8 30.71 Successfully installed annotated-doc-0.0.6 annotated-types-0.8.0 anyio-4.16.0 click-8.5.1 cloudpickle-3.1.2 fastapi-0.162.2 h11-0.16.0 idna-3.20 joblib-1.6.0 narwhals-2.28.0 numpy-2.5.4 opentelemetry-api-1.45.2 pandas-3.1.1 pydantic-2.14.3 pydantic-core-2.50.4 python-dateutil-4.0.0 scikit-learn-1.9.1 scipy-1.18.1 starlette-1.10.0 threadpoolctl-3.8.0 typing-extensions-4.16.0 typing-inspection-0.4.5 tzdata-2026.6 uvicorn-0.54.0
+#8 30.72 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager, possibly rendering your system unusable. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv. Use the --root-user-action option if you know what you are doing and want to suppress this warning.
+#8 30.89
+#8 30.89 [notice] A new release of pip is available: 25.0.1 -> 26.3
+#8 30.89 [notice] To update, run: pip install --upgrade pip
+#8 DONE 32.4s
+
+#9 [5/6] COPY api/ ./api/
+#9 DONE 0.4s
+
+#10 [6/6] COPY models/ ./models/
+#10 DONE 0.4s
+
+#11 exporting to image
+#11 exporting layers
+#11 exporting layers 13.4s done
+#11 exporting manifest sha256:ff393f232d87e67d82dfd4315bc6c07be79b61b8fba459bd34d5120b8e4b1354
+#11 exporting manifest sha256:ff393f232d87e67d82dfd4315bc6c07be79b61b8fba459bd34d5120b8e4b1354 0.1s done
+#11 exporting config sha256:f558646aff604ef0f71f12a4fd9642f9d6b5a14205a11816a679389be908b7b6
+#11 exporting config sha256:f558646aff604ef0f71f12a4fd9642f9d6b5a14205a11816a679389be908b7b6 0.3s done
+#11 exporting attestation manifest sha256:5f9efd968e16288e63ab7f02c3717aa345da32cf51d434db4007034f6184b597
+#11 exporting attestation manifest sha256:5f9efd968e16288e63ab7f02c3717aa345da32cf51d434db4007034f6184b597 0.3s done
+#11 exporting manifest list sha256:b4b794836030dfd788b307efd4cbb5a2bea1d51358fcc77de458dc8405bbdd27
+#11 exporting manifest list sha256:b4b794836030dfd788b307efd4cbb5a2bea1d51358fcc77de458dc8405bbdd27 0.2s done
+#11 naming to docker.io/library/fraude-api:mauvais
+#11 naming to docker.io/library/fraude-api:mauvais done
+#11 unpacking to docker.io/library/fraude-api:mauvais
+#11 unpacking to docker.io/library/fraude-api:mauvais 9.2s done
+#11 DONE 23.8s
+
+ [33m1 warning found (use docker --debug to expand):
+[0m - SecretsUsedInArgOrEnv: Do not use ARG or ENV instructions for sensitive data (ENV "API_KEY") (line 8)
+
+PS> docker build --progress plain -t fraude-api:securisee .
+#0 building with "desktop-linux" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 462B 0.0s done
+#1 DONE 0.1s
+
+#2 [internal] load metadata for docker.io/library/python:3.12-slim
+#2 DONE 0.5s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 129B done
+#3 DONE 0.0s
+
+#4 [1/7] FROM docker.io/library/python:3.12-slim@sha256:5e2bdb1b0d542d5039cffb8181c65930093949194a65c365dfb1b0fe13a4fa5b
+#4 resolve docker.io/library/python:3.12-slim@sha256:5e2bdb1b0d542d5039cffb8181c65930093949194a65c365dfb1b0fe13a4fa5b 0.0s done
+#4 DONE 0.0s
+
+#5 [internal] load build context
+#5 transferring context: 292B done
+#5 DONE 0.0s
+
+#6 [3/7] COPY requirements.txt .
+#6 CACHED
+
+#7 [4/7] RUN pip install --no-cache-dir -r requirements.txt
+#7 CACHED
+
+#8 [5/7] COPY api/ ./api/
+#8 CACHED
+
+#9 [2/7] WORKDIR /app
+#9 CACHED
+
+#10 [6/7] COPY models/ ./models/
+#10 CACHED
+
+#11 [7/7] RUN useradd --create-home app
+#11 DONE 2.1s
+
+#12 exporting to image
+#12 exporting layers
+#12 exporting layers 0.7s done
+#12 exporting manifest sha256:fb489724427539d9e789a5ea915cfe5666471313e553da2af8791d9414f3343e
+#12 exporting manifest sha256:fb489724427539d9e789a5ea915cfe5666471313e553da2af8791d9414f3343e 0.3s done
+#12 exporting config sha256:9e31c071362defb47b5aff55dcc0c3527f5b106c20f17a7d3430fc30367b252b
+#12 exporting config sha256:9e31c071362defb47b5aff55dcc0c3527f5b106c20f17a7d3430fc30367b252b 0.3s done
+#12 exporting attestation manifest sha256:e4f8992d71ea0e8297ccb0a4ae83c9935a5f77f6f2b4a9d6a8df85b3e8f4bc81
+#12 exporting attestation manifest sha256:e4f8992d71ea0e8297ccb0a4ae83c9935a5f77f6f2b4a9d6a8df85b3e8f4bc81 0.4s done
+#12 exporting manifest list sha256:3d6cceb4bfef24a8b5165f665165109d6202cbeadec395ce470a5d79fa90c6a6
+#12 exporting manifest list sha256:3d6cceb4bfef24a8b5165f665165109d6202cbeadec395ce470a5d79fa90c6a6 0.3s done
+#12 naming to docker.io/library/fraude-api:securisee
+#12 naming to docker.io/library/fraude-api:securisee done
+#12 unpacking to docker.io/library/fraude-api:securisee
+#12 unpacking to docker.io/library/fraude-api:securisee 0.2s done
+#12 DONE 2.6s

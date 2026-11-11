@@ -1,0 +1,11 @@
+PS> docker rm -f mauvais securisee
+75608a47a59e23bff34add31c17033db0fb96c2e2b186e85d030065dc0598f34
+1c8720e70e9b0185d7e326910702a603a3e1f75f4a5341a6e320dd5e4f733454
+
+PS> docker rmi fraude-api:mauvais
+Untagged: fraude-api:mauvais
+Deleted: sha256:b4b794836030dfd788b307efd4cbb5a2bea1d51358fcc77de458dc8405bbdd27
+
+PS> docker image ls --filter reference=fraude-api:securisee
+IMAGE                  ID             DISK USAGE   CONTENT SIZE   EXTRA
+fraude-api:securisee   3d6cceb4bfef        695MB          158MB

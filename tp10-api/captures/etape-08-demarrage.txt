@@ -1,0 +1,19 @@
+PS> python -m trustme -d certs
+Generated a certificate for 'localhost', '127.0.0.1', '::1'
+Configure your server to use the following files:
+  cert=certs\server.pem
+  key=certs\server.key
+Configure your client to use the following files:
+  cert=certs\client.pem
+
+PS> python appel.py GET https://127.0.0.1:8443/health
+200 OK
+{"statut":"ok","modele_charge":true}
+
+PS> python appel.py POST https://127.0.0.1:8443/v1/predict --cle $CLE
+200 OK
+{"fraude":true,"probabilite":0.8899,"version_modele":"1.0.0","id_requete":"b9288933"}
+
+PS> python appel.py POST http://127.0.0.1:8001/v1/predict --cle admin
+200 OK
+{"fraude":true,"probabilite":0.8899}

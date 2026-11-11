@@ -1,0 +1,8 @@
+Brouillon HTTP
+2026-11-11 16:54:31,869 INFO cle=admin donnees={'montant': 1800, 'anciennete': 30, 'freq_24h': 4, 'nuit': 7}
+
+Version securisee HTTPS
+2026-11-11 16:51:23,522 INFO prediction id=b9288933 version=1.0.0 proba=0.8899 duree_ms=37.9
+INFO:     127.0.0.1:62170 - "POST /v1/predict HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:59533 - "POST /v1/predict HTTP/1.1" 422 Unprocessable Entity
+INFO:     127.0.0.1:59551 - "POST /v1/predict HTTP/1.1" 429 Too Many Requests

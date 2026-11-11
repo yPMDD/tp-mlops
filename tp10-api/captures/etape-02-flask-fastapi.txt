@@ -1,0 +1,19 @@
+PS> python appel.py POST http://localhost:5001/predict
+200 OK
+{"fraude":true,"probabilite":0.8899}
+
+PS> python appel.py POST http://localhost:5001/predict montant=abc
+500 INTERNAL SERVER ERROR
+<!doctype html>
+<html lang=en>
+<title>500 Internal Server Error</title>
+<h1>Internal Server Error</h1>
+<p>The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.</p>
+
+PS> python appel.py POST http://localhost:8000/predict
+200 OK
+{"fraude":true,"probabilite":0.8899}
+
+PS> python appel.py POST http://localhost:8000/predict montant=abc
+422 Unprocessable Entity
+{"detail":[{"type":"float_parsing","loc":["body","montant"],"msg":"Input should be a valid number, unable to parse string as a number","input":"abc"}]}

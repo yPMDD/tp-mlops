@@ -1,0 +1,68 @@
+PS> curl.exe -sv http://localhost:8000/health
+* Host localhost:8000 was resolved.
+* IPv6: ::1
+* IPv4: 127.0.0.1
+*   Trying [::1]:8000...
+*   Trying 127.0.0.1:8000...
+* Established connection to localhost (127.0.0.1 port 8000) from 127.0.0.1 port 50459
+* using HTTP/1.x
+> GET /health HTTP/1.1
+
+> Host: localhost:8000
+
+> User-Agent: curl/8.21.0
+
+> Accept: */*
+
+>
+
+* Request completely sent off
+< HTTP/1.1 200 OK
+
+< date: Wed, 11 Nov 2026 16:48:09 GMT
+
+< server: uvicorn
+
+< content-length: 36
+
+< content-type: application/json
+
+<
+
+{ [36 bytes data]
+* Connection #0 to host localhost:8000 left intact
+{"statut":"ok","modele_charge":true}
+
+PS> python appel.py GET http://localhost:8000/health
+200 OK
+{"statut":"ok","modele_charge":true}
+
+PS> python appel.py GET http://localhost:8000/v1/model-info
+200 OK
+{"version_modele":"1.0.0","variables":["montant","anciennete","freq_24h","nuit"]}
+
+PS> python appel.py POST http://localhost:8000/v1/predict
+200 OK
+{"fraude":true,"probabilite":0.8899,"version_modele":"1.0.0","id_requete":"a1e67cee"}
+
+PS> python appel.py POST http://localhost:8000/v1/predict montant=-5
+422 Unprocessable Entity
+{"detail":[{"type":"greater_than","loc":["body","montant"],"msg":"Input should be greater than 0","input":-5,"ctx":{"gt":0.0}}]}
+
+PS> python appel.py POST http://localhost:8000/v1/predict pays=MA
+422 Unprocessable Entity
+{"detail":[{"type":"extra_forbidden","loc":["body","pays"],"msg":"Extra inputs are not permitted","input":"MA"}]}
+
+PS> python appel.py GET http://localhost:8000/v1/predict
+405 Method Not Allowed
+{"detail":"Method Not Allowed"}
+
+PS> python appel.py POST http://localhost:8000/predict
+404 Not Found
+{"detail":"Not Found"}
+
+Swagger UI > Try it out > montant=0 > HTTP 422
+{"detail":[{"type":"greater_than","loc":["body","montant"],"msg":"Input should be greater than 0","input":0,"ctx":{"gt":0.0}}]}
+
+Journal serveur
+2026-11-11 16:48:17,098 INFO prediction id=a1e67cee version=1.0.0 proba=0.8899 duree_ms=46.9

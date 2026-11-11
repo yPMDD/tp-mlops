@@ -1,0 +1,10 @@
+PS> python tests/charge.py http://127.0.0.1:8000/v1/predict 400 20
+400 requetes, 20 clients : 37 req/s, mediane 531.7 ms, p95 629.1 ms
+
+PS> python tests/charge.py http://127.0.0.1:8000/v1/predict 400 20
+400 requetes, 20 clients : 54 req/s, mediane 358.6 ms, p95 576.5 ms
+
+Demarrage des processus Uvicorn
+INFO:     Started parent process [7180]
+INFO:     Started server process [24188]
+INFO:     Started server process [23212]

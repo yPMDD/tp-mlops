@@ -1,0 +1,31 @@
+PS> docker run -d --name mauvais -p 127.0.0.1:8081:8000 fraude-api:mauvais
+75608a47a59e23bff34add31c17033db0fb96c2e2b186e85d030065dc0598f34
+
+PS> docker run -d --name securisee -p 127.0.0.1:8082:8000 --env-file .env fraude-api:securisee
+1c8720e70e9b0185d7e326910702a603a3e1f75f4a5341a6e320dd5e4f733454
+
+PS> python appel.py POST http://127.0.0.1:8082/v1/predict --cle $CLE
+200 OK
+{"fraude":true,"probabilite":0.8899,"version_modele":"1.0.0","id_requete":"2de5ca8f"}
+
+PS> docker exec mauvais whoami
+root
+
+PS> docker exec mauvais touch models/modele_pirate.pkl
+[aucune sortie]
+
+PS> docker exec mauvais ls -l models
+total 7960
+-rwxr-xr-x 1 root root 8148153 Nov 11 16:44 model.pkl
+-rw-r--r-- 1 root root       0 Nov 11 16:54 modele_pirate.pkl
+
+PS> docker exec securisee whoami
+app
+
+PS> docker exec securisee touch models/modele_pirate.pkl
+touch: cannot touch 'models/modele_pirate.pkl': Permission denied
+Code de sortie : 1
+
+PS> docker exec securisee ls -l models
+total 7960
+-rwxr-xr-x 1 root root 8148153 Nov 11 16:44 model.pkl

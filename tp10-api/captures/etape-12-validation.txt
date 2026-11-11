@@ -1,0 +1,15 @@
+PS> python attaques/entrees_piegees.py http://127.0.0.1:8001/v1/predict admin
+montant negatif      -> 200 {"fraude":false,"probabilite":0.0011}
+nuit = 7             -> 200 {"fraude":true,"probabilite":0.8899}
+montant gigantesque  -> 500 Traceback (most recent call last):   File "C:\Users\S44D
+champ en plus        -> 200 {"fraude":true,"probabilite":0.8899}
+montant texte        -> 500 Traceback (most recent call last):   File "C:\Users\S44D
+champ manquant       -> 500 Traceback (most recent call last):   File "C:\Users\S44D
+
+PS> python attaques/entrees_piegees.py https://127.0.0.1:8443/v1/predict $CLE
+montant negatif      -> 422 {"detail":[{"type":"greater_than","loc":["body","montant
+nuit = 7             -> 422 {"detail":[{"type":"less_than_equal","loc":["body","nuit
+montant gigantesque  -> 422 {"detail":[{"type":"less_than_equal","loc":["body","mont
+champ en plus        -> 422 {"detail":[{"type":"extra_forbidden","loc":["body","role
+montant texte        -> 422 {"detail":[{"type":"float_parsing","loc":["body","montan
+champ manquant       -> 422 {"detail":[{"type":"missing","loc":["body","nuit"],"msg"

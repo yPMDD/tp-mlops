@@ -1,0 +1,30 @@
+PS> python attaques/deviner_cle.py http://127.0.0.1:8001/v1/predict
+essai  1 cle=''             -> 401
+essai  2 cle='test'         -> 401
+essai  3 cle='1234'         -> 401
+essai  4 cle='123456'       -> 401
+essai  5 cle='azerty'       -> 401
+essai  6 cle='password'     -> 401
+essai  7 cle='secret'       -> 401
+essai  8 cle='api'          -> 401
+essai  9 cle='apikey'       -> 401
+essai 10 cle='cle'          -> 401
+essai 11 cle='admin'        -> 200
+CLE TROUVEE en 11 essais : 'admin'
+
+PS> python attaques/deviner_cle.py https://127.0.0.1:8443/v1/predict
+essai  1 cle=''             -> 401
+essai  2 cle='test'         -> 401
+essai  3 cle='1234'         -> 401
+essai  4 cle='123456'       -> 401
+essai  5 cle='azerty'       -> 401
+essai  6 cle='password'     -> 401
+essai  7 cle='secret'       -> 401
+essai  8 cle='api'          -> 401
+essai  9 cle='apikey'       -> 401
+essai 10 cle='cle'          -> 401
+essai 11 cle='admin'        -> 401
+essai 12 cle='root'         -> 401
+essai 13 cle='changeme'     -> 401
+essai 14 cle='cle-tp-2026'  -> 401
+echec : aucune des 14 cles n'a fonctionne

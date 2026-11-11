@@ -1,0 +1,33 @@
+PS> python appel.py POST http://127.0.0.1:9001/v1/predict --cle admin
+200 OK
+{"fraude":true,"probabilite":0.8899}
+
+Terminal 4 > python attaques/espion.py 9001 8001
+espion en ecoute sur 9001, relaie vers 8001
+--- client -> serveur : 287 octets ---
+POST /v1/predict HTTP/1.1
+Host: 127.0.0.1:9001
+User-Agent: python-requests/2.34.2
+Accept-Encoding: gzip, deflate
+Accept: */*
+Connection: keep-alive
+X-API-Key: admin
+Content-Length: 61
+Content-Type: application/json
+
+{"montant": 1800, "anciennete": 30, "freq_24h": 4, "nuit": 1}
+
+PS> python appel.py POST https://127.0.0.1:9443/v1/predict --cle $CLE
+200 OK
+{"fraude":true,"probabilite":0.8899,"version_modele":"1.0.0","id_requete":"4bd5a950"}
+
+Terminal 4 > python attaques/espion.py 9443 8443
+espion en ecoute sur 9443, relaie vers 8443
+--- client -> serveur : 517 octets ---
+16 03 01 02 00 01 00 01 fc 03 03 23 09 e0 4e 85 5e 4a 5e df 29 1e 33 11 ...
+--- client -> serveur : 80 octets ---
+14 03 03 00 01 01 17 03 03 00 45 b8 f9 17 5f b9 70 19 90 f7 3f ee c3 be ...
+--- client -> serveur : 286 octets ---
+17 03 03 01 19 31 4b 8c 9a f1 52 b6 29 21 63 9e 9c 7c 6a d4 a2 3b 83 a6 ...
+--- client -> serveur : 83 octets ---
+17 03 03 00 4e a1 93 89 5d c0 f9 59 8f 74 9a 37 76 e2 65 28 d3 40 6a ab ...
