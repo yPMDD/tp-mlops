@@ -1,0 +1,3 @@
+.gitignore:1:.venv/	.venv/
+.gitignore:3:mlruns/	mlruns/
+git ls-files -- .venv mlruns : aucune sortie

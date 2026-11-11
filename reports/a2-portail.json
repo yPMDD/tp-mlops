@@ -1,0 +1,10 @@
+{
+  "fiche": "https://data.gov.ma/data/fr/dataset/referentiel-des-medicaments",
+  "api": "https://data.gov.ma/data/api/3/action/package_show?id=referentiel-des-medicaments",
+  "producteur": "CNOPS",
+  "licence": "Open Data Commons Open Database License (ODbL)",
+  "jeu_derniere_modification_utc": "2021-12-13T16:26:23.570455",
+  "ressource_derniere_modification_utc": "2017-12-18T20:26:48.974232",
+  "ressource_url": "https://data.gov.ma/data/dataset/2cdfd9f4-289d-4e9a-8998-50bd03f8e874/resource/094733f5-5434-4163-b837-df0e7b665127/download/ref-des-medicaments-cnops-2014.xlsx",
+  "ressource_taille_octets_portail": 530243
+}

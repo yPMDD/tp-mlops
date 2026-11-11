@@ -1,0 +1,9 @@
+A2  Taille (octets) : 530243
+A2  MD5 : 68a57c72d5eeb4c5256fba3322393d32
+A3  Lignes : 5917 | Colonnes : 12
+A3  Non remboursees : 1977 (33.41%)
+A4  Dosages vides : 181 | Non convertibles, vides inclus : 946
+A4  Exemple : 1 / 125 (G / MG), 37 lignes
+A4  Exemple : 100 / 12.5 (MG / MG), 23 lignes
+A4  Exemple : 500 / 62.5 (MG / MG), 22 lignes
+A5  DCI la plus frequente : AMOXICILLINE (157 presentations)
