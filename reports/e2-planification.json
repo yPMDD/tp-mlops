@@ -1,0 +1,24 @@
+{
+  "deployment_id": "88d09ea7-040a-4a54-8097-2ca8eabd1264",
+  "nom": "mensuel",
+  "schedules": [
+    {
+      "id": "2f90d369-81de-4883-8076-ae1ffbeab208",
+      "created": "2026-11-11T03:57:49.047738Z",
+      "updated": "2026-11-11T03:57:49.047738Z",
+      "deployment_id": "88d09ea7-040a-4a54-8097-2ca8eabd1264",
+      "schedule": {
+        "cron": "15 3 1 * *",
+        "timezone": "Africa/Casablanca",
+        "day_or": true
+      },
+      "active": true,
+      "max_scheduled_runs": null,
+      "parameters": {},
+      "slug": null
+    }
+  ],
+  "prochaine_execution": "2026-12-01T03:15:00+00:00",
+  "prochain_run_id": "01a1c8c1-3b67-7b22-b291-e88233a0ef60",
+  "prochain_etat": "Scheduled"
+}
