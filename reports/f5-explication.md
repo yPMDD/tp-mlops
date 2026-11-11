@@ -1,0 +1,1 @@
+Le modèle estime à 66,2 % la probabilité que cette présentation ne soit pas remboursée. Le nombre de présentations de la même molécule, le statut princeps et le prix hospitalier sont les principaux éléments qui font monter cette estimation et justifient d'examiner le dossier.
