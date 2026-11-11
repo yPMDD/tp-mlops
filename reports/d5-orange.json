@@ -1,0 +1,56 @@
+{
+  "source": "data/brut/ref-des-medicaments-cnops-2014.xlsx",
+  "n_train": 4437,
+  "n_test": 1480,
+  "classe_1_test": 495,
+  "scores": [
+    {
+      "apprenant": "Forêt aléatoire",
+      "auc": 0.9240096395426344,
+      "f1": 0.7699018538713195,
+      "matrice_reel_lignes_predit_colonnes": [
+        [
+          916,
+          69
+        ],
+        [
+          142,
+          353
+        ]
+      ],
+      "non_rembourses_manques": 142
+    },
+    {
+      "apprenant": "Régression logistique",
+      "auc": 0.8038106957903912,
+      "f1": 0.5304136253041363,
+      "matrice_reel_lignes_predit_colonnes": [
+        [
+          876,
+          109
+        ],
+        [
+          277,
+          218
+        ]
+      ],
+      "non_rembourses_manques": 277
+    },
+    {
+      "apprenant": "Naive Bayes",
+      "auc": 0.799920012305799,
+      "f1": 0.6047966631908238,
+      "matrice_reel_lignes_predit_colonnes": [
+        [
+          811,
+          174
+        ],
+        [
+          205,
+          290
+        ]
+      ],
+      "non_rembourses_manques": 205
+    }
+  ]
+}
