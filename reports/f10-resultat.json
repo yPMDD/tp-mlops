@@ -1,0 +1,9 @@
+{
+  "f1_foret": 0.7699018538713195,
+  "f1_logistique": 0.5124378109452736,
+  "f1_arbre": 0.38968481375358166,
+  "coef_generique_standardise": -0.17990295782613938,
+  "rapport_cotes_par_ecart_type": 0.835351271781422,
+  "rapport_cotes_de_0_a_1": 0.6977244161879667,
+  "regles_arbre": "|--- nb_meme_dci <= 12.50\n|   |--- dosage <= 0.19\n|   |   |--- class: 1\n|   |--- dosage >  0.19\n|   |   |--- class: 0\n|--- nb_meme_dci >  12.50\n|   |--- nb_meme_dci <= 40.00\n|   |   |--- class: 0\n|   |--- nb_meme_dci >  40.00\n|   |   |--- class: 0\n"
+}
