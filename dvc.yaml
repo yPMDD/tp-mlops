@@ -1,10 +1,13 @@
 stages:
   preparer:
-    cmd: python src/preparer_pipeline.py
+    cmd:
+      - python src/valider.py
+      - python src/preparer_pipeline.py
     deps:
       - src/configuration.py
       - src/preparer.py
       - src/preparer_pipeline.py
+      - src/valider.py
       - ${donnees.source}
     params:
       - donnees

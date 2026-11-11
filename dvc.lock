@@ -1,7 +1,9 @@
 schema: '2.0'
 stages:
   preparer:
-    cmd: python src/preparer_pipeline.py
+    cmd:
+    - python src/valider.py
+    - python src/preparer_pipeline.py
     deps:
     - path: data/versions/ref-des-medicaments-cnops-2014-v2.xlsx
       hash: md5
@@ -9,16 +11,20 @@ stages:
       size: 433848
     - path: src/configuration.py
       hash: md5
-      md5: fea87f1b9476dffdc88bc85ec23a86c6
-      size: 212
+      md5: 93aee540263c0fec8d2fb7a4d47b8fe4
+      size: 211
     - path: src/preparer.py
       hash: md5
       md5: 714fd0b5f1a408d4cb25e6e4f0f20e73
       size: 1518
     - path: src/preparer_pipeline.py
       hash: md5
-      md5: 379e3b59bb141ee830832580c17eb854
-      size: 743
+      md5: 9a2073e78c6cc0989c15bd6ae46c4342
+      size: 742
+    - path: src/valider.py
+      hash: md5
+      md5: f3c76ba021b8c5ba3483c77eb098739c
+      size: 1656
     params:
       params.yaml:
         donnees:
@@ -46,12 +52,12 @@ stages:
       size: 160292
     - path: src/configuration.py
       hash: md5
-      md5: fea87f1b9476dffdc88bc85ec23a86c6
-      size: 212
+      md5: 93aee540263c0fec8d2fb7a4d47b8fe4
+      size: 211
     - path: src/entrainer.py
       hash: md5
-      md5: b8387ab02bc226f058d1dbe1e53bebd2
-      size: 975
+      md5: 6f82cda8a06beac36c27b090d0d81a4d
+      size: 974
     - path: src/preparer.py
       hash: md5
       md5: 714fd0b5f1a408d4cb25e6e4f0f20e73
@@ -82,12 +88,12 @@ stages:
       size: 11126249
     - path: src/configuration.py
       hash: md5
-      md5: fea87f1b9476dffdc88bc85ec23a86c6
-      size: 212
+      md5: 93aee540263c0fec8d2fb7a4d47b8fe4
+      size: 211
     - path: src/evaluer.py
       hash: md5
-      md5: 63d28ff9045de60e3e77b5a893183de8
-      size: 1306
+      md5: 8966d7a7516eb6f661c3d6850e9477f5
+      size: 1305
     - path: src/preparer.py
       hash: md5
       md5: 714fd0b5f1a408d4cb25e6e4f0f20e73
