@@ -1,0 +1,14 @@
+{
+  "algorithme": "lgbm",
+  "budget_secondes": 60,
+  "duree_secondes": 60.321433699999034,
+  "modele_uri": "models:/m-4ebb64fba5a84869af13b860e1100ebe",
+  "f1": 0.8893401015228426,
+  "precision": 0.8938775510204081,
+  "rappel": 0.8848484848484849,
+  "outil": "flaml",
+  "run_id": "dd42ec422a8c450f846bfdd8f0ac8a67",
+  "version_donnees": "v1",
+  "n_train": 4437,
+  "n_test": 1480
+}

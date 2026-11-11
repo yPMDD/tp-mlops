@@ -23,3 +23,16 @@ suivi:
   sources:
     v1: data/brut/ref-des-medicaments-cnops-2014.xlsx
     v2: data/versions/ref-des-medicaments-cnops-2014-v2.xlsx
+
+automl:
+  version_donnees: v1
+  budgets_flaml: [60, 120]
+  max_modeles_h2o: 10
+  classement_h2o: AUC
+  algos_exclus_h2o: [DeepLearning, StackedEnsemble]
+  threads: 4
+  port_h2o: 54321
+  memoire_h2o: 2G
+  modele_registre: remboursement-automl
+  port_service: 8100
+  requetes_latence: 50

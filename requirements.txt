@@ -8,3 +8,5 @@ PyYAML==6.0.3
 mlflow==3.17.1
 skops==0.16.0
 matplotlib==3.11.2
+flaml[automl]==2.7.0
+h2o==3.46.0.11
