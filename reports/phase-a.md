@@ -23,3 +23,12 @@ Le classeur comporte **5 917 présentations** et **12 colonnes**, hors en-tête.
 ## A5 — Présentations par DCI
 
 **AMOXICILLINE** est la DCI la plus fréquente avec **157 présentations**. Le nombre de présentations d'une même DCI peut refléter la variété de dosages, de formes ou de produits disponibles pour une molécule. Cette information pourrait être liée à sa couverture et doit être évaluée sur le jeu de test.
+
+## A6 — Découpage stratifié
+
+La graine G, obtenue à partir des quatre derniers chiffres du matricule, vaut 64. La stratification conserve la proportion globale de classe 1 dans le jeu de test, à l'arrondi près. Le médicament est sélectionné au rang G modulo 1977 dans le classeur brut, parmi les présentations non remboursées.
+
+A6  Entrainement : 4437 | Test : 1480
+A6  Classe 1 dans le test : 495 (33.45%)
+A6  Variables : ppv, ph, prix_br, ecart_br, dosage, generique, nb_meme_dci, injectable, comprime
+Medicament personnel, rang 64 : SOLIAN 100 MG/ML (CODE 6118010120312)
