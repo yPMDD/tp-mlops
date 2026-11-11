@@ -1,0 +1,18 @@
+{
+  "algorithme": "lgbm",
+  "budget_secondes": 120,
+  "duree_secondes": 120.89426129999993,
+  "modele_uri": "models:/m-b4d0e345a04149b88b336ccc2ed4fea1",
+  "f1": 0.8904665314401623,
+  "precision": 0.8940936863543788,
+  "rappel": 0.8868686868686869,
+  "outil": "flaml",
+  "run_id": "87a1f805ebf648c6a4d882b67217cd10",
+  "version_donnees": "v1",
+  "n_train": 4437,
+  "n_test": 1480,
+  "modele_registre": "remboursement-automl",
+  "version": "1",
+  "alias": "production",
+  "uri": "models:/remboursement-automl@production"
+}
