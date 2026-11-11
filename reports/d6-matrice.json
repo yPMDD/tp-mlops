@@ -1,0 +1,16 @@
+{
+  "apprenant": "Forêt aléatoire",
+  "auc": 0.9240096395426344,
+  "f1": 0.7699018538713195,
+  "matrice_reel_lignes_predit_colonnes": [
+    [
+      916,
+      69
+    ],
+    [
+      142,
+      353
+    ]
+  ],
+  "non_rembourses_manques": 142
+}
