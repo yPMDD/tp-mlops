@@ -1,0 +1,106 @@
+schema: '2.0'
+stages:
+  preparer:
+    cmd: python src/preparer_pipeline.py
+    deps:
+    - path: data/versions/ref-des-medicaments-cnops-2014-v2.xlsx
+      hash: md5
+      md5: 87e03b1539078b6fe91c268739a85e11
+      size: 433848
+    - path: src/configuration.py
+      hash: md5
+      md5: fea87f1b9476dffdc88bc85ec23a86c6
+      size: 212
+    - path: src/preparer.py
+      hash: md5
+      md5: 714fd0b5f1a408d4cb25e6e4f0f20e73
+      size: 1518
+    - path: src/preparer_pipeline.py
+      hash: md5
+      md5: 379e3b59bb141ee830832580c17eb854
+      size: 743
+    params:
+      params.yaml:
+        donnees:
+          version: v2
+          source: data/versions/ref-des-medicaments-cnops-2014-v2.xlsx
+          graine: 64
+          part_test: 0.25
+        sorties.test: data/prepare/test.csv
+        sorties.train: data/prepare/train.csv
+    outs:
+    - path: data/prepare/test.csv
+      hash: md5
+      md5: 730ffac608c3ba63bcece86c7072f496
+      size: 53499
+    - path: data/prepare/train.csv
+      hash: md5
+      md5: 46d4fc2dba4d84db5dab1f775ed6ce5b
+      size: 160292
+  entrainer:
+    cmd: python src/entrainer.py
+    deps:
+    - path: data/prepare/train.csv
+      hash: md5
+      md5: 46d4fc2dba4d84db5dab1f775ed6ce5b
+      size: 160292
+    - path: src/configuration.py
+      hash: md5
+      md5: fea87f1b9476dffdc88bc85ec23a86c6
+      size: 212
+    - path: src/entrainer.py
+      hash: md5
+      md5: b8387ab02bc226f058d1dbe1e53bebd2
+      size: 975
+    - path: src/preparer.py
+      hash: md5
+      md5: 714fd0b5f1a408d4cb25e6e4f0f20e73
+      size: 1518
+    params:
+      params.yaml:
+        donnees.graine: 64
+        foret:
+          arbres: 200
+          profondeur: 12
+        sorties.modele: models/remboursement-rf.pkl
+        sorties.train: data/prepare/train.csv
+    outs:
+    - path: models/remboursement-rf.pkl
+      hash: md5
+      md5: e1f4be72a8c662aa24431b67602efbcb
+      size: 11126249
+  evaluer:
+    cmd: python src/evaluer.py
+    deps:
+    - path: data/prepare/test.csv
+      hash: md5
+      md5: 730ffac608c3ba63bcece86c7072f496
+      size: 53499
+    - path: models/remboursement-rf.pkl
+      hash: md5
+      md5: e1f4be72a8c662aa24431b67602efbcb
+      size: 11126249
+    - path: src/configuration.py
+      hash: md5
+      md5: fea87f1b9476dffdc88bc85ec23a86c6
+      size: 212
+    - path: src/evaluer.py
+      hash: md5
+      md5: 63d28ff9045de60e3e77b5a893183de8
+      size: 1306
+    - path: src/preparer.py
+      hash: md5
+      md5: 714fd0b5f1a408d4cb25e6e4f0f20e73
+      size: 1518
+    params:
+      params.yaml:
+        qualite:
+          f1_min: 0.65
+        sorties.metriques: reports/metriques.json
+        sorties.modele: models/remboursement-rf.pkl
+        sorties.test: data/prepare/test.csv
+    outs:
+    - path: reports/metriques.json
+      hash: md5
+      md5: 4961174abd9701411456cedb570bdc7c
+      size: 103
