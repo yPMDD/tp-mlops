@@ -1,0 +1,11 @@
+{
+  "run_production": "d440954283754b47b6ca82cd3882eb28",
+  "version": "1",
+  "artefacts": [
+    "audit-explicabilite/MODEL_CARD.md",
+    "audit-explicabilite/f1-importances.png",
+    "audit-explicabilite/f11-comparaison.png",
+    "audit-explicabilite/f2-pdp-ice.png",
+    "audit-explicabilite/f4-shap.png"
+  ]
+}
