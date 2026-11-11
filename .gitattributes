@@ -9,3 +9,6 @@
 # These are auxiliary Windows/shell helpers; Python is the primary codebase.
 *.ps1 linguist-detectable=false
 *.sh linguist-detectable=false
+
+# Preserve PDF bytes on checkout.
+*.pdf binary
