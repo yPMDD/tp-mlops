@@ -1,0 +1,8 @@
+Orange3==3.41.0
+Orange3-Explain==0.6.11
+PyQt5==5.15.11
+openpyxl==3.1.5
+pandas==3.1.1
+numpy==2.4.6
+scikit-learn==1.9.1
+PyYAML==6.0.3

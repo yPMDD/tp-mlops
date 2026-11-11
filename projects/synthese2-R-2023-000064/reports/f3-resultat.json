@@ -1,0 +1,20 @@
+{
+  "rang": 64,
+  "nom": "SOLIAN 100 MG/ML",
+  "CODE": "6118010120312",
+  "dci": "AMISULPRIDE",
+  "entrees": {
+    "ppv": 367.4,
+    "ph": 243.0,
+    "prix_br": 367.4,
+    "ecart_br": 0.0,
+    "dosage": 100.0,
+    "generique": 0,
+    "nb_meme_dci": 11,
+    "injectable": 0,
+    "comprime": 0
+  },
+  "probabilite": 0.6618054425454372,
+  "classe_predite": 1,
+  "classe_reelle": 1
+}

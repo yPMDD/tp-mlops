@@ -1,0 +1,111 @@
+{
+  "run_id": "a91254d502da4f5fb402e52613a3c44d",
+  "modele_uri": "models:/m-088d10aecaf548ffa6b2850b38e625d1",
+  "nombre_entrees": 9,
+  "signature": [
+    {
+      "type": "double",
+      "name": "ppv",
+      "required": true
+    },
+    {
+      "type": "double",
+      "name": "ph",
+      "required": true
+    },
+    {
+      "type": "double",
+      "name": "prix_br",
+      "required": true
+    },
+    {
+      "type": "double",
+      "name": "ecart_br",
+      "required": true
+    },
+    {
+      "type": "double",
+      "name": "dosage",
+      "required": true
+    },
+    {
+      "type": "long",
+      "name": "generique",
+      "required": true
+    },
+    {
+      "type": "long",
+      "name": "nb_meme_dci",
+      "required": true
+    },
+    {
+      "type": "long",
+      "name": "injectable",
+      "required": true
+    },
+    {
+      "type": "long",
+      "name": "comprime",
+      "required": true
+    }
+  ],
+  "sortie": [
+    {
+      "type": "tensor",
+      "tensor-spec": {
+        "dtype": "int64",
+        "shape": [
+          -1
+        ]
+      }
+    }
+  ],
+  "exemple_enregistre": {
+    "columns": [
+      "ppv",
+      "ph",
+      "prix_br",
+      "ecart_br",
+      "dosage",
+      "generique",
+      "nb_meme_dci",
+      "injectable",
+      "comprime"
+    ],
+    "data": [
+      [
+        43.55,
+        28.8,
+        43.55,
+        0.0,
+        4.0,
+        1,
+        14,
+        0,
+        1
+      ],
+      [
+        39.5,
+        0.0,
+        39.5,
+        0.0,
+        5000.0,
+        0,
+        2,
+        0,
+        0
+      ],
+      [
+        110.0,
+        0.0,
+        110.0,
+        0.0,
+        1.5,
+        0,
+        1,
+        0,
+        0
+      ]
+    ]
+  }
+}

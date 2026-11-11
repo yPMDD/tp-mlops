@@ -1,0 +1,13 @@
+A2  Taille (octets) : 530243
+A2  MD5 : 68a57c72d5eeb4c5256fba3322393d32
+A3  Lignes : 5917 | Colonnes : 12
+A3  Non remboursees : 1977 (33.41%)
+A4  Dosages vides : 181 | Non convertibles, vides inclus : 946
+A4  Exemple : 1 / 125 (G / MG), 37 lignes
+A4  Exemple : 100 / 12.5 (MG / MG), 23 lignes
+A4  Exemple : 500 / 62.5 (MG / MG), 22 lignes
+A5  DCI la plus frequente : AMOXICILLINE (157 presentations)
+A6  Entrainement : 4437 | Test : 1480
+A6  Classe 1 dans le test : 495 (33.45%)
+A6  Variables : ppv, ph, prix_br, ecart_br, dosage, generique, nb_meme_dci, injectable, comprime
+Medicament personnel, rang 64 : SOLIAN 100 MG/ML (CODE 6118010120312)

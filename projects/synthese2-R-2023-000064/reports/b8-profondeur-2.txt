@@ -1,0 +1,26 @@
+B8 — dvc exp run --temp --force -n profondeur-2 -S foret.profondeur=2
+Reproducing experiment 'profondeur-2'
+Verifying data sources in stage: 'data\versions\ref-des-medicaments-cnops-2014-v2.xlsx.dvc'
+
+Running stage 'preparer':
+> python src/valider.py
+Validation des donnees brutes : OK.
+> python src/preparer_pipeline.py
+v2 : 4281 lignes train, 1428 lignes test.
+Updating lock file 'dvc.lock'
+
+Running stage 'entrainer':
+> python src/entrainer.py
+Foret entrainee : 200 arbres, profondeur 2.
+Updating lock file 'dvc.lock'
+
+Running stage 'evaluer':
+> python src/evaluer.py
+Classe 1 : {'f1': 0.34494773519163763, 'precision': 0.8319327731092437, 'rappel': 0.2175824175824176}
+Registre : modele non admissible (seuil lu dans params.yaml : 0.65).
+Updating lock file 'dvc.lock'
+
+Ran experiment(s): profondeur-2
+To apply the results of an experiment to your workspace run:
+
+	dvc exp apply <exp>

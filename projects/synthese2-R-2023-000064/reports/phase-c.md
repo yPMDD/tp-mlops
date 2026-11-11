@@ -1,0 +1,45 @@
+# Phase C — Suivi, registre et service
+
+## C1 — Exécutions sur les données V2
+
+| Modèle | F1 classe 1 | Précision | Rappel |
+|---|---:|---:|---:|
+| Forêt, profondeur 8 | 0,696855 | 0,814706 | 0,608791 |
+| Forêt, profondeur 12 | 0,768683 | 0,835052 | 0,712088 |
+| Forêt, profondeur 16 | 0,783217 | 0,833747 | 0,738462 |
+| Régression logistique | 0,500692 | 0,675373 | 0,397802 |
+
+Les quatre exécutions réussies partagent le même jeu de test et journalisent leurs paramètres, leurs métriques et leur modèle. Le premier essai de sérialisation de la forêt a échoué. Les quatre résultats du tableau proviennent des exécutions terminées après avoir déclaré explicitement le type scikit-learn des arbres formés localement. [Identifiants et métriques](c1-metriques.csv)
+
+## C2 — Comparer les réglages
+
+Dans la vue de comparaison MLflow, le **graphique à coordonnées parallèles** peut relier le paramètre `profondeur` à la métrique `f1`. On sélectionne les trois forêts en conservant la graine, les données et les 200 arbres identiques. C'est la profondeur qui varie entre ces essais. Le F1 augmente de 0,0864 de 8 à 16, surtout parce que le rappel monte de 0,6088 à 0,7385. La régression logistique est un comparatif de famille de modèles et ne possède pas de profondeur. [Guide MLflow et graphique](https://mlflow.org/blog/tune-and-benchmark-with-mlflow/)
+
+L'accès de l'assistant au navigateur local a été refusé. La preuve jointe est un graphique calculé à partir des quatre exécutions journalisées. [Graphique F1 et profondeur](c2-f1-profondeur.png)
+
+![F1 des trois profondeurs et de la régression logistique, à partir des exécutions MLflow](c2-f1-profondeur.png)
+
+## C3 — Signature du modèle de référence
+
+La signature du modèle V2 à profondeur 12 comporte **neuf entrées obligatoires**. `ppv` est de type **double** et `generique` de type **long**. Le service applique ce schéma avant la prédiction, ce qui permet de rejeter une entrée manquante ou incompatible. L'exemple d'entrée est enregistré avec le modèle. [Signature et exemple issus de MLflow](c3-signature.json)
+
+## C4 — Enregistrement, alias et probabilité
+
+La forêt de référence V1 obtient un F1 de 0.769902. La V2 de référence obtient 0,768683. Les deux dépassent 0,65. MLflow a enregistré la V1 en version 1 et la V2 en version 2. Les alias après promotion sont production → 2 et staging → 1.
+Le modèle chargé par l'alias production attribue à **SOLIAN 100 MG/ML** (CODE 6118010120312) une probabilité de **0.792146** pour la classe 1. [Preuve du registre](c4-promotion.json) · [Exécution V1](c4-execution-v1.json)
+
+## C5 — Retour arrière
+
+L'alias `production` est revenu de la version 2 (données V2) à la version 1 (données V1). L'application conserve l'URI `models:/remboursement-rf@production`. Un nouveau chargement résout l'alias à nouveau. Un processus ayant déjà chargé le modèle doit le recharger ou redémarrer pour appliquer le changement. [Preuve du retour arrière](c5-retour-arriere.json)
+
+## C6 — Service du modèle V1 sur le port 8000
+
+La requête complète envoyée à `/invocations` pour le médicament personnel renvoie HTTP 200 avec `{"predictions":[1]}`. La requête privée de `dosage` renvoie HTTP 400 avec une erreur de schéma indiquant la colonne manquante. [Requêtes et réponses JSON](c6-reponses-http.json)
+
+## C7 — Préparer les données brutes au moment de servir
+
+Le service actuel demande les neuf variables déjà calculées. Une application qui ne dispose que du référentiel devrait sinon reproduire le calcul et risquer un écart avec l'entraînement. On peut servir un composant qui reçoit les colonnes brutes nécessaires et applique la même préparation de variables, sans exiger le taux de remboursement, qui sert à construire la cible. Le composant associe à chaque version du modèle les fréquences de DCI calculées sur son classeur de référence. Une DCI absente de ce référentiel reçoit un compte de **0**. Pour une DCI connue, le compte est celui du référentiel associé à la version du modèle. [Préparation commune](../src/preparer.py) · [Préparation de la requête personnelle](../src/medicament_personnel.py)
+
+## C8 — Exécution avec MLproject
+
+`mlflow run .` lit le point d'entrée, valide les paramètres déclarés, lance la commande et associe l'exécution au suivi MLflow. `python_env.yaml` décrit la version de Python et les dépendances. La démonstration locale utilise l'environnement déjà installé avec `--env-manager local`. Une exécution directe lance le script avec les arguments choisis par l'utilisateur et peut aussi journaliser des résultats, grâce aux appels MLflow de ce projet. Elle ne passe pas par les paramètres et l'environnement déclarés du projet. [Sortie de la commande](c8-mlflow-run.txt) · [Point d'entrée](../MLproject)

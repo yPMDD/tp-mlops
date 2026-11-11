@@ -1,0 +1,261 @@
+{
+  "flow_run_id": "57406b42-5644-4258-b244-9d4023b06204",
+  "etat": "Failed",
+  "message": "Flow run encountered an exception: ValueError: Modele refuse : F1 0.344948 < seuil 0.65.",
+  "resultat": "Modele refuse : F1 0.344948 < seuil 0.65.",
+  "graphe_prefect": {
+    "start_time": "2026-11-11T03:53:01.309163Z",
+    "end_time": "2026-11-11T03:53:04.606250Z",
+    "root_node_ids": [
+      "01a1c8bc-d6af-77b5-b67a-0e15e0709211"
+    ],
+    "nodes": [
+      [
+        "01a1c8bc-d6af-77b5-b67a-0e15e0709211",
+        {
+          "kind": "task-run",
+          "id": "01a1c8bc-d6af-77b5-b67a-0e15e0709211",
+          "label": "lire-donnees-3dc",
+          "state_type": "COMPLETED",
+          "start_time": "2026-11-11T03:53:01.584967Z",
+          "end_time": "2026-11-11T03:53:03.197474Z",
+          "parents": [],
+          "children": [
+            {
+              "id": "01a1c8bc-dde2-74be-92fd-b4c9897c6995"
+            }
+          ],
+          "encapsulating": [],
+          "artifacts": []
+        }
+      ],
+      [
+        "01a1c8bc-dde2-74be-92fd-b4c9897c6995",
+        {
+          "kind": "task-run",
+          "id": "01a1c8bc-dde2-74be-92fd-b4c9897c6995",
+          "label": "preparer-10c",
+          "state_type": "COMPLETED",
+          "start_time": "2026-11-11T03:53:03.210426Z",
+          "end_time": "2026-11-11T03:53:03.287210Z",
+          "parents": [
+            {
+              "id": "01a1c8bc-d6af-77b5-b67a-0e15e0709211"
+            }
+          ],
+          "children": [
+            {
+              "id": "01a1c8bc-dde2-7a97-8931-969ceef9c358"
+            },
+            {
+              "id": "01a1c8bc-dde8-7a7b-9a9d-2335ca6f2dc2"
+            },
+            {
+              "id": "01a1c8bc-dde2-7a97-8931-969ceef9c358"
+            },
+            {
+              "id": "01a1c8bc-dde8-7a7b-9a9d-2335ca6f2dc2"
+            }
+          ],
+          "encapsulating": [],
+          "artifacts": []
+        }
+      ],
+      [
+        "01a1c8bc-dde2-7a97-8931-969ceef9c358",
+        {
+          "kind": "task-run",
+          "id": "01a1c8bc-dde2-7a97-8931-969ceef9c358",
+          "label": "entrainer-84c",
+          "state_type": "COMPLETED",
+          "start_time": "2026-11-11T03:53:03.290780Z",
+          "end_time": "2026-11-11T03:53:03.681839Z",
+          "parents": [
+            {
+              "id": "01a1c8bc-dde2-74be-92fd-b4c9897c6995"
+            },
+            {
+              "id": "01a1c8bc-dde2-74be-92fd-b4c9897c6995"
+            }
+          ],
+          "children": [
+            {
+              "id": "01a1c8bc-dde8-7a7b-9a9d-2335ca6f2dc2"
+            },
+            {
+              "id": "01a1c8bc-dde8-7a7b-9a9d-2335ca6f2dc2"
+            }
+          ],
+          "encapsulating": [],
+          "artifacts": []
+        }
+      ],
+      [
+        "01a1c8bc-dde8-7a7b-9a9d-2335ca6f2dc2",
+        {
+          "kind": "task-run",
+          "id": "01a1c8bc-dde8-7a7b-9a9d-2335ca6f2dc2",
+          "label": "evaluer-e8d",
+          "state_type": "COMPLETED",
+          "start_time": "2026-11-11T03:53:03.685412Z",
+          "end_time": "2026-11-11T03:53:03.735632Z",
+          "parents": [
+            {
+              "id": "01a1c8bc-dde2-74be-92fd-b4c9897c6995"
+            },
+            {
+              "id": "01a1c8bc-dde2-74be-92fd-b4c9897c6995"
+            },
+            {
+              "id": "01a1c8bc-dde2-7a97-8931-969ceef9c358"
+            },
+            {
+              "id": "01a1c8bc-dde2-7a97-8931-969ceef9c358"
+            }
+          ],
+          "children": [
+            {
+              "id": "01a1c8bc-ddee-7003-81ca-fd10ce3c8934"
+            },
+            {
+              "id": "01a1c8bc-ddee-7003-81ca-fd10ce3c8934"
+            },
+            {
+              "id": "01a1c8bc-ddee-7003-81ca-fd10ce3c8934"
+            }
+          ],
+          "encapsulating": [
+            {
+              "id": "01a1c8bc-dde2-74be-92fd-b4c9897c6995"
+            }
+          ],
+          "artifacts": []
+        }
+      ],
+      [
+        "01a1c8bc-ddee-7003-81ca-fd10ce3c8934",
+        {
+          "kind": "task-run",
+          "id": "01a1c8bc-ddee-7003-81ca-fd10ce3c8934",
+          "label": "controler-qualite-122",
+          "state_type": "FAILED",
+          "start_time": "2026-11-11T03:53:03.739212Z",
+          "end_time": "2026-11-11T03:53:03.745529Z",
+          "parents": [
+            {
+              "id": "01a1c8bc-dde8-7a7b-9a9d-2335ca6f2dc2"
+            },
+            {
+              "id": "01a1c8bc-dde8-7a7b-9a9d-2335ca6f2dc2"
+            },
+            {
+              "id": "01a1c8bc-dde8-7a7b-9a9d-2335ca6f2dc2"
+            }
+          ],
+          "children": [],
+          "encapsulating": [],
+          "artifacts": []
+        }
+      ]
+    ],
+    "artifacts": [],
+    "states": [
+      {
+        "id": "01a1c8bc-d664-716a-9e86-1c5b5a4d5ab1",
+        "timestamp": "2026-11-11T03:53:01.284747Z",
+        "type": "PENDING",
+        "name": "Pending"
+      },
+      {
+        "id": "01a1c8bc-d67d-7581-b036-e3585f1b79c9",
+        "timestamp": "2026-11-11T03:53:01.309163Z",
+        "type": "RUNNING",
+        "name": "Running"
+      },
+      {
+        "id": "01a1c8bc-e35e-7c0e-9d61-3992cda967a8",
+        "timestamp": "2026-11-11T03:53:04.606250Z",
+        "type": "FAILED",
+        "name": "Failed"
+      }
+    ]
+  },
+  "taches": [
+    {
+      "nom": "controler-qualite-122",
+      "etat": "Failed",
+      "message": "Task run encountered an exception ValueError: Modele refuse : F1 0.344948 < seuil 0.65.",
+      "tentatives": 1
+    },
+    {
+      "nom": "evaluer-e8d",
+      "etat": "Completed",
+      "message": "",
+      "tentatives": 1
+    },
+    {
+      "nom": "entrainer-84c",
+      "etat": "Completed",
+      "message": "",
+      "tentatives": 1
+    },
+    {
+      "nom": "preparer-10c",
+      "etat": "Completed",
+      "message": "",
+      "tentatives": 1
+    },
+    {
+      "nom": "lire-donnees-3dc",
+      "etat": "Completed",
+      "message": "",
+      "tentatives": 1
+    }
+  ],
+  "logs": [
+    {
+      "niveau": 20,
+      "message": "Beginning flow run 'mahogany-cockle' for flow 'reentrainement-medicaments'"
+    },
+    {
+      "niveau": 20,
+      "message": "Lecture de data/versions/ref-des-medicaments-cnops-2014-v2.xlsx"
+    },
+    {
+      "niveau": 20,
+      "message": "Finished in state Completed()"
+    },
+    {
+      "niveau": 20,
+      "message": "Finished in state Completed()"
+    },
+    {
+      "niveau": 20,
+      "message": "Finished in state Completed()"
+    },
+    {
+      "niveau": 20,
+      "message": "F1 de classe 1 : 0.344948"
+    },
+    {
+      "niveau": 20,
+      "message": "Finished in state Completed()"
+    },
+    {
+      "niveau": 40,
+      "message": "Task run failed with exception: ValueError('Modele refuse : F1 0.344948 < seuil 0.65.')\nTraceback (most recent call last):\n  File \"C:\\Users\\S44D\\Documents\\5iir\\MLOps\\synthese2-R-2023-000064\\.venv\\Lib\\site-packages\\prefect\\task_engine.py\", line 1030, in run_context\n    yield self\n  File \"C:\\Users\\S44D\\Documents\\5iir\\MLOps\\synthese2-R-2023-000064\\.venv\\Lib\\site-packages\\prefect\\task_engine.py\", line 1699, in run_task_sync\n    engine.call_task_fn(txn)\n  File \"C:\\Users\\S44D\\Documents\\5iir\\MLOps\\synthese2-R-2023-000064\\.venv\\Lib\\site-packages\\prefect\\task_engine.py\", line 1047, in call_task_fn\n    result = call_with_parameters(self.task.fn, parameters)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\S44D\\Documents\\5iir\\MLOps\\synthese2-R-2023-000064\\.venv\\Lib\\site-packages\\prefect\\utilities\\callables\\__init__.py\", line 404, in call_with_parameters\n    return fn(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\S44D\\Documents\\5iir\\MLOps\\synthese2-R-2023-000064\\flows\\reentrainement.py\", line 52, in controler\n    raise ValueError(f\"Modele refuse : F1 {scores['f1']:.6f} < seuil {seuil:.2f}.\")\nValueError: Modele refuse : F1 0.344948 < seuil 0.65."
+    },
+    {
+      "niveau": 40,
+      "message": "Finished in state Failed('Task run encountered an exception ValueError: Modele refuse : F1 0.344948 < seuil 0.65.')"
+    },
+    {
+      "niveau": 40,
+      "message": "Encountered exception during execution: ValueError('Modele refuse : F1 0.344948 < seuil 0.65.')\nTraceback (most recent call last):\n  File \"C:\\Users\\S44D\\Documents\\5iir\\MLOps\\synthese2-R-2023-000064\\.venv\\Lib\\site-packages\\prefect\\flow_engine.py\", line 1330, in run_context\n    yield self\n  File \"C:\\Users\\S44D\\Documents\\5iir\\MLOps\\synthese2-R-2023-000064\\.venv\\Lib\\site-packages\\prefect\\flow_engine.py\", line 2111, in run_flow_sync\n    engine.call_flow_fn()\n  File \"C:\\Users\\S44D\\Documents\\5iir\\MLOps\\synthese2-R-2023-000064\\.venv\\Lib\\site-packages\\prefect\\flow_engine.py\", line 1350, in call_flow_fn\n    result = call_with_parameters(self.flow.fn, self.parameters)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\S44D\\Documents\\5iir\\MLOps\\synthese2-R-2023-000064\\.venv\\Lib\\site-packages\\prefect\\utilities\\callables\\__init__.py\", line 404, in call_with_parameters\n    return fn(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\S44D\\Documents\\5iir\\MLOps\\synthese2-R-2023-000064\\flows\\reentrainement.py\", line 94, in reentrainement\n    valides.result()\n  File \"C:\\Users\\S44D\\Documents\\5iir\\MLOps\\synthese2-R-2023-000064\\.venv\\Lib\\site-packages\\prefect\\futures.py\", line 277, in result\n    _result = self._final_state.result(\n              ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\S44D\\Documents\\5iir\\MLOps\\synthese2-R-2023-000064\\.venv\\Lib\\site-packages\\prefect\\_internal\\compatibility\\async_dispatch.py\", line 94, in wrapper\n    return fn(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\S44D\\Documents\\5iir\\MLOps\\synthese2-R-2023-000064\\.venv\\Lib\\site-packages\\prefect\\client\\schemas\\objects.py\", line 394, in result\n    return run_coro_as_sync(\n           ^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\S44D\\Documents\\5iir\\MLOps\\synthese2-R-2023-000064\\.venv\\Lib\\site-packages\\prefect\\utilities\\asyncutils\\__init__.py\", line 207, in run_coro_as_sync\n    return call.result()\n           ^^^^^^^^^^^^^\n  File \"C:\\Users\\S44D\\Documents\\5iir\\MLOps\\synthese2-R-2023-000064\\.venv\\Lib\\site-packages\\prefect\\_internal\\concurrency\\calls.py\", line 365, in result\n    return self.future.result(timeout=timeout)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\S44D\\Documents\\5iir\\MLOps\\synthese2-R-2023-000064\\.venv\\Lib\\site-packages\\prefect\\_internal\\concurrency\\calls.py\", line 192, in result\n    return self.__get_result()\n           ^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Program Files\\Python311\\Lib\\concurrent\\futures\\_base.py\", line 401, in __get_result\n    raise self._exception\n  File \"C:\\Users\\S44D\\Documents\\5iir\\MLOps\\synthese2-R-2023-000064\\.venv\\Lib\\site-packages\\prefect\\_internal\\concurrency\\calls.py\", line 441, in _run_async\n    result = await coro\n             ^^^^^^^^^^\n  File \"C:\\Users\\S44D\\Documents\\5iir\\MLOps\\synthese2-R-2023-000064\\.venv\\Lib\\site-packages\\prefect\\utilities\\asyncutils\\__init__.py\", line 188, in coroutine_wrapper\n    return await task\n           ^^^^^^^^^^\n  File \"C:\\Users\\S44D\\Documents\\5iir\\MLOps\\synthese2-R-2023-000064\\.venv\\Lib\\site-packages\\prefect\\states.py\", line 89, in get_state_result\n    return await _get_state_result(\n           ^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\S44D\\Documents\\5iir\\MLOps\\synthese2-R-2023-000064\\.venv\\Lib\\site-packages\\prefect\\states.py\", line 161, in _get_state_result\n    raise await aget_state_exception(state)\n  File \"C:\\Users\\S44D\\Documents\\5iir\\MLOps\\synthese2-R-2023-000064\\.venv\\Lib\\site-packages\\prefect\\task_engine.py\", line 1030, in run_context\n    yield self\n  File \"C:\\Users\\S44D\\Documents\\5iir\\MLOps\\synthese2-R-2023-000064\\.venv\\Lib\\site-packages\\prefect\\task_engine.py\", line 1699, in run_task_sync\n    engine.call_task_fn(txn)\n  File \"C:\\Users\\S44D\\Documents\\5iir\\MLOps\\synthese2-R-2023-000064\\.venv\\Lib\\site-packages\\prefect\\task_engine.py\", line 1047, in call_task_fn\n    result = call_with_parameters(self.task.fn, parameters)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\S44D\\Documents\\5iir\\MLOps\\synthese2-R-2023-000064\\.venv\\Lib\\site-packages\\prefect\\utilities\\callables\\__init__.py\", line 404, in call_with_parameters\n    return fn(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\S44D\\Documents\\5iir\\MLOps\\synthese2-R-2023-000064\\flows\\reentrainement.py\", line 52, in controler\n    raise ValueError(f\"Modele refuse : F1 {scores['f1']:.6f} < seuil {seuil:.2f}.\")\nValueError: Modele refuse : F1 0.344948 < seuil 0.65."
+    },
+    {
+      "niveau": 20,
+      "message": "Finished in state Failed('Flow run encountered an exception: ValueError: Modele refuse : F1 0.344948 < seuil 0.65.')"
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+51f24b5 Assembler le compte rendu et les outils de remise de la synthese 2
+949e1af F13 : rejeter une fuite de cible avant la promotion staging
+2142cd1 F12 : ajouter la fiche modele et les graphiques au run de production
+9be5688 F11 : comparer Orange Explain Prediction et SHAP Python
+99cc8e2 F10 : enregistrer la mesure et la preuve d audit
+26eaab9 F9 : enregistrer la mesure et la preuve d audit
+658524f F8 : enregistrer la mesure et la preuve d audit
+a5823ee F7 : enregistrer la mesure et la preuve d audit
+0184901 F6 : enregistrer la mesure et la preuve d audit
+d112d43 F5 : enregistrer la mesure et la preuve d audit
+4fe8545 F4 : enregistrer la mesure et la preuve d audit
+ed391f2 F3 : enregistrer la mesure et la preuve d audit
+7518cde F2 : enregistrer la mesure et la preuve d audit
+e0b5ce3 F1 : mesurer et comparer les importances par permutation et MDI
+2956547 E4 : documenter les etats les reessais et les alertes
+acdf2d2 E4 : exporter Node-RED et prouver la surveillance du service
+bd4667a E3 : verifier deux reessais et restaurer le classeur
+34dbb75 E2 : planifier le premier du mois a 03 h 15
+3b77a49 E1 : executer le flux Prefect et prouver le controle qualite
+d618881 D7 : comparer performance reproductibilite et tracabilite
+2f812e2 D6 : mesurer les faux negatifs du meilleur apprenant Orange
+0535a47 D5 : comparer trois apprenants avec le workflow Orange execute
+f6ba880 D4 : servir le meilleur AutoML et comparer 50 requetes par service
+9919380 D3 : mesurer H2O AutoML et conserver le classement
+9856b35 D2 : mesurer FLAML au budget impose
+9758d6d D1 : mesurer FLAML au budget impose
+a193694 C8 : conserver le journal Git du point de controle
+97a54fb C8 : actualiser la preuve historique apres verification DVC
+667b540 B5 : stabiliser les empreintes DVC entre checkouts Git
+fd32410 C8 : archiver l historique Git des phases A a C
+baeb720 C8 : declarer le MLproject et prouver son execution locale
+ab5d6e7 C7 : expliquer la preparation des entrees brutes et des DCI inconnues
+aaa51b9 C6 : servir la production et relever les deux reponses HTTP
+fb55eb8 C5 : remettre la version 1 en production par alias
+d394ad8 C4 : enregistrer V1 et V2 promouvoir les alias et predire le medicament personnel
+c945702 C3 : verifier la signature a neuf entrees et son exemple MLflow
+03f0d0a C2 : comparer les reglages et tracer le F1 selon la profondeur
+0065391 C1 : journaliser les quatre entrainements MLflow sur la v2
+8a3128a B8 : executer tout le pipeline a profondeur 2 et relever la decision qualite
+987a452 B7 : valider les donnees brutes et prouver le refus sans PPV
+e72954c B6 : comparer les profondeurs 8 12 et 16 avec les experiences DVC
+86a49f4 B5 : observer le cache et les etapes relancees apres un changement de profondeur
+b67e900 B4 : decrire le pipeline preparer entrainer evaluer
+5e1fb78 B3 : prouver la restauration byte pour byte de la v1
+6689c33 B3 : creer la version sans PPV nul et la versionner
+d42daf3 B2 : configurer le stockage DVC local et pousser le classeur
+fe0848f B1 : suivre le classeur brut avec DVC et verifier son MD5
+933656d A6 : mesurer le découpage stratifié avec la graine personnelle
+ba1844b A1-A5 : initialiser le projet et auditer le classeur CNOPS

@@ -1,0 +1,9 @@
+name: remboursement
+python_env: python_env.yaml
+
+entry_points:
+  main:
+    parameters:
+      version: {type: string, default: reference}
+      algorithme: {type: string, default: foret}
+    command: "python src/journaliser.py --version {version} --algorithme {algorithme}"

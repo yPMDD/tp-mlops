@@ -1,0 +1,18 @@
+{
+  "algorithme": "gbm",
+  "modele_h2o": "GBM_4_AutoML_1_20261111_44049",
+  "projet_h2o": "medicaments-R-2023-000064-automl",
+  "classement": "AUC",
+  "score_classement": 0.9309571599178864,
+  "max_modeles": 10,
+  "duree_secondes": 25.304178200000024,
+  "modele_uri": "models:/m-1b9047966ea64d9abf540651e58a3b3b",
+  "f1": 0.8459958932238193,
+  "precision": 0.860125260960334,
+  "rappel": 0.8323232323232324,
+  "outil": "h2o",
+  "run_id": "5dd65113646b47e39b9a1ecaf079f19d",
+  "version_donnees": "v1",
+  "n_train": 4437,
+  "n_test": 1480
+}

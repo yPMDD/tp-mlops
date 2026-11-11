@@ -1,0 +1,59 @@
+donnees:
+  version: v2
+  source: data/versions/ref-des-medicaments-cnops-2014-v2.xlsx
+  graine: 64
+  part_test: 0.25
+foret:
+  arbres: 200
+  profondeur: 12
+qualite:
+  f1_min: 0.65
+sorties:
+  train: data/prepare/train.csv
+  test: data/prepare/test.csv
+  modele: models/remboursement-rf.pkl
+  metriques: reports/metriques.json
+
+suivi:
+  uri: http://127.0.0.1:5000
+  port_service: 8000
+  experience: medicaments-R-2023-000064
+  modele_rf: remboursement-rf
+  max_iter_logistique: 1000
+  sources:
+    v1: data/brut/ref-des-medicaments-cnops-2014.xlsx
+    v2: data/versions/ref-des-medicaments-cnops-2014-v2.xlsx
+
+automl:
+  version_donnees: v1
+  budgets_flaml: [60, 120]
+  max_modeles_h2o: 10
+  classement_h2o: AUC
+  algos_exclus_h2o: [DeepLearning, StackedEnsemble]
+  threads: 4
+  port_h2o: 54321
+  memoire_h2o: 2G
+  modele_registre: remboursement-automl
+  port_service: 8100
+  requetes_latence: 50
+
+orchestration:
+  version_donnees: v2
+  prefect_api: http://127.0.0.1:4200/api
+  reessais: 2
+  delai_reessai: 2
+  profondeur_echec: 2
+  cron: "15 3 1 * *"
+  fuseau: Africa/Casablanca
+  deploiement: mensuel
+  periode_nodered: 60
+
+audit:
+  repetitions_permutation: 10
+  ice_exemples: 60
+  points_pdp: 30
+  essais_lime: 5
+  voisins_lime: 5000
+  variation_ppv: 0.10
+  seuil_prediction: 0.5
+  taux_fuite_inverse: 0.03

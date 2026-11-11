@@ -1,0 +1,72 @@
+dvc repro — première exécution
+'data\versions\ref-des-medicaments-cnops-2014-v2.xlsx.dvc' didn't change, skipping
+Running stage 'preparer':
+> python src/preparer_pipeline.py
+v2 : 4281 lignes train, 1428 lignes test.
+Generating lock file 'dvc.lock'
+Updating lock file 'dvc.lock'
+
+Running stage 'entrainer':
+> python src/entrainer.py
+Foret entrainee : 200 arbres, profondeur 12.
+Updating lock file 'dvc.lock'
+
+Running stage 'evaluer':
+> python src/evaluer.py
+Classe 1 : {'f1': 0.7686832740213523, 'precision': 0.8350515463917526, 'rappel': 0.7120879120879121}
+Registre : modele admissible (seuil lu dans params.yaml : 0.65).
+Updating lock file 'dvc.lock'
+
+To track the changes with git, run:
+
+	git add 'data\prepare\.gitignore' 'reports\.gitignore' 'models\.gitignore' dvc.lock
+
+To enable auto staging, run:
+
+	dvc config core.autostage true
+Use `dvc push` to send your updates to remote storage.
+dvc repro — deuxième exécution, mêmes entrées
+'data\versions\ref-des-medicaments-cnops-2014-v2.xlsx.dvc' didn't change, skipping
+Stage 'preparer' didn't change, skipping
+Stage 'entrainer' didn't change, skipping
+Stage 'evaluer' didn't change, skipping
+Data and pipelines are up to date.
+dvc repro — seule la profondeur passe de 12 à 16
+'data\versions\ref-des-medicaments-cnops-2014-v2.xlsx.dvc' didn't change, skipping
+Stage 'preparer' didn't change, skipping
+Running stage 'entrainer':
+> python src/entrainer.py
+Foret entrainee : 200 arbres, profondeur 16.
+Updating lock file 'dvc.lock'
+
+Running stage 'evaluer':
+> python src/evaluer.py
+Classe 1 : {'f1': 0.7832167832167832, 'precision': 0.8337468982630273, 'rappel': 0.7384615384615385}
+Registre : modele admissible (seuil lu dans params.yaml : 0.65).
+Updating lock file 'dvc.lock'
+
+To track the changes with git, run:
+
+	git add dvc.lock
+
+To enable auto staging, run:
+
+	dvc config core.autostage true
+Use `dvc push` to send your updates to remote storage.
+dvc repro — retour à la configuration de référence
+'data\versions\ref-des-medicaments-cnops-2014-v2.xlsx.dvc' didn't change, skipping
+Stage 'preparer' didn't change, skipping
+Stage 'entrainer' is cached - skipping run, checking out outputs
+Updating lock file 'dvc.lock'
+
+Stage 'evaluer' is cached - skipping run, checking out outputs
+Updating lock file 'dvc.lock'
+
+To track the changes with git, run:
+
+	git add dvc.lock
+
+To enable auto staging, run:
+
+	dvc config core.autostage true
+Use `dvc push` to send your updates to remote storage.

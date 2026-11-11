@@ -1,0 +1,55 @@
+{
+  "uri": "http://127.0.0.1:8000/invocations",
+  "production": "1",
+  "medicament": {
+    "rang": 64,
+    "nom": "SOLIAN 100 MG/ML",
+    "CODE": "6118010120312"
+  },
+  "valide": {
+    "requete": {
+      "dataframe_records": [
+        {
+          "ppv": 367.4,
+          "ph": 243.0,
+          "prix_br": 367.4,
+          "ecart_br": 0.0,
+          "dosage": 100.0,
+          "generique": 0,
+          "nb_meme_dci": 11,
+          "injectable": 0,
+          "comprime": 0
+        }
+      ]
+    },
+    "code_http": 200,
+    "reponse": {
+      "predictions": [
+        1
+      ]
+    }
+  },
+  "sans_dosage": {
+    "requete": {
+      "dataframe_records": [
+        {
+          "ppv": 367.4,
+          "ph": 243.0,
+          "prix_br": 367.4,
+          "ecart_br": 0.0,
+          "generique": 0,
+          "nb_meme_dci": 11,
+          "injectable": 0,
+          "comprime": 0
+        }
+      ]
+    },
+    "code_http": 400,
+    "reponse": {
+      "error_code": "INVALID_PARAMETER_VALUE",
+      "message": "Failed to predict data '     ppv     ph  prix_br  ...  nb_meme_dci  injectable  comprime\n0  367.4  243.0    367.4  ...           11           0         0\n\n[1 rows x 8 columns]'. \nError: Failed to enforce schema of data '     ppv     ph  prix_br  ...  nb_meme_dci  injectable  comprime\n0  367.4  243.0    367.4  ...           11           0         0\n\n[1 rows x 8 columns]' with schema '['ppv': double (required), 'ph': double (required), 'prix_br': double (required), 'ecart_br': double (required), 'dosage': double (required), 'generique': long (required), 'nb_meme_dci': long (required), 'injectable': long (required), 'comprime': long (required)]'. Error: Model is missing inputs ['dosage'].",
+      "sqlstate": "KAM01",
+      "error_class": "SCHEMA_ENFORCEMENT_FAILED"
+    }
+  }
+}

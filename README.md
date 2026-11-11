@@ -21,3 +21,7 @@ This repository is the single project workspace for the course. Keep the fraud-d
 ## Progress and evidence
 
 See [docs/PROJECT_MAP.md](docs/PROJECT_MAP.md) for the TP-by-TP relationship, current evidence, and outstanding checks.
+
+## Synthèse 2 — CNOPS reimbursement
+
+The [Synthèse 2 project](projects/synthese2-R-2023-000064) contains the code, reports, Orange workflow, Prefect flow, and Node-RED export. The [standalone submission ZIP](submissions/synthese2-R-2023-000064.zip) includes the project Git history and DVC tags.

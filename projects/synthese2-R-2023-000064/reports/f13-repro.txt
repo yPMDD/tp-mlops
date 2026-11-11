@@ -1,0 +1,21 @@
+'data\versions\ref-des-medicaments-cnops-2014-v2.xlsx.dvc' didn't change, skipping
+Stage 'preparer' didn't change, skipping
+Running stage 'entrainer':
+> python src/entrainer.py
+Foret entrainee : 200 arbres, profondeur 12.
+Updating lock file 'dvc.lock'
+
+Running stage 'evaluer':
+> python src/evaluer.py
+Classe 1 : {'f1': 0.7686832740213523, 'precision': 0.8350515463917526, 'rappel': 0.7120879120879121}
+Registre : modele admissible (seuil lu dans params.yaml : 0.65).
+Updating lock file 'dvc.lock'
+
+To track the changes with git, run:
+
+	git add dvc.lock
+
+To enable auto staging, run:
+
+	dvc config core.autostage true
+Use `dvc push` to send your updates to remote storage.

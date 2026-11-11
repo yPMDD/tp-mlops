@@ -1,0 +1,69 @@
+B6 — Expériences DVC en répertoires temporaires
+dvc exp run --temp -n profondeur-8 -S foret.profondeur=8
+Reproducing experiment 'profondeur-8'
+'data\versions\ref-des-medicaments-cnops-2014-v2.xlsx.dvc' didn't change, skipping
+Running stage 'preparer':
+> python src/preparer_pipeline.py
+v2 : 4281 lignes train, 1428 lignes test.
+Updating lock file 'dvc.lock'
+
+Running stage 'entrainer':
+> python src/entrainer.py
+Foret entrainee : 200 arbres, profondeur 8.
+Updating lock file 'dvc.lock'
+
+Running stage 'evaluer':
+> python src/evaluer.py
+Classe 1 : {'f1': 0.6968553459119496, 'precision': 0.8147058823529412, 'rappel': 0.6087912087912087}
+Registre : modele admissible (seuil lu dans params.yaml : 0.65).
+Updating lock file 'dvc.lock'
+
+Ran experiment(s): profondeur-8
+To apply the results of an experiment to your workspace run:
+
+	dvc exp apply <exp>
+dvc exp run --temp -n profondeur-12 -S foret.profondeur=12
+Reproducing experiment 'profondeur-12'
+'data\versions\ref-des-medicaments-cnops-2014-v2.xlsx.dvc' didn't change, skipping
+Running stage 'preparer':
+> python src/preparer_pipeline.py
+v2 : 4281 lignes train, 1428 lignes test.
+Updating lock file 'dvc.lock'
+
+Running stage 'entrainer':
+> python src/entrainer.py
+Foret entrainee : 200 arbres, profondeur 12.
+Updating lock file 'dvc.lock'
+
+Running stage 'evaluer':
+> python src/evaluer.py
+Classe 1 : {'f1': 0.7686832740213523, 'precision': 0.8350515463917526, 'rappel': 0.7120879120879121}
+Registre : modele admissible (seuil lu dans params.yaml : 0.65).
+Updating lock file 'dvc.lock'
+
+Ran experiment(s): profondeur-12
+To apply the results of an experiment to your workspace run:
+
+	dvc exp apply <exp>
+dvc exp run --temp -n profondeur-16 -S foret.profondeur=16
+Reproducing experiment 'profondeur-16'
+'data\versions\ref-des-medicaments-cnops-2014-v2.xlsx.dvc' didn't change, skipping
+Stage 'preparer' is cached - skipping run, checking out outputs
+Updating lock file 'dvc.lock'
+
+Running stage 'entrainer':
+> python src/entrainer.py
+Foret entrainee : 200 arbres, profondeur 16.
+Updating lock file 'dvc.lock'
+
+Running stage 'evaluer':
+> python src/evaluer.py
+Classe 1 : {'f1': 0.7832167832167832, 'precision': 0.8337468982630273, 'rappel': 0.7384615384615385}
+Registre : modele admissible (seuil lu dans params.yaml : 0.65).
+Updating lock file 'dvc.lock'
+
+Ran experiment(s): profondeur-16
+To apply the results of an experiment to your workspace run:
+
+	dvc exp apply <exp>
+Valeurs de params.yaml identiques au commit de reference apres les trois experiences.

@@ -1,0 +1,6 @@
+{
+  "flow_run_id": "57406b42-5644-4258-b244-9d4023b06204",
+  "etat": "Failed",
+  "message": "Flow run encountered an exception: ValueError: Modele refuse : F1 0.344948 < seuil 0.65.",
+  "resultat": "Modele refuse : F1 0.344948 < seuil 0.65."
+}

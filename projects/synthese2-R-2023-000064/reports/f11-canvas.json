@@ -1,0 +1,73 @@
+{
+  "widgets": [
+    "File",
+    "Préparer CNOPS",
+    "Entraînement 75 %",
+    "Test 25 %",
+    "Forêt Orange (graine G)",
+    "Logistic Regression",
+    "Naive Bayes",
+    "Test and Score",
+    "Confusion Matrix",
+    "Médicament personnel",
+    "Explain Prediction"
+  ],
+  "liens": 14,
+  "auc": [
+    0.9240096395426344,
+    0.8038106957903912,
+    0.799920012305799
+  ],
+  "f1_classe_1": [
+    0.7699018538713195,
+    0.5304136253041363,
+    0.6047966631908238
+  ],
+  "matrices": [
+    [
+      [
+        916,
+        69
+      ],
+      [
+        142,
+        353
+      ]
+    ],
+    [
+      [
+        876,
+        109
+      ],
+      [
+        277,
+        218
+      ]
+    ],
+    [
+      [
+        811,
+        174
+      ],
+      [
+        205,
+        290
+      ]
+    ]
+  ],
+  "explain_classe_1": {
+    "probabilite": 0.6618054425454372,
+    "base": 0.3289076370799624,
+    "contributions": {
+      "ppv": -0.00908007905828299,
+      "ph": 0.08582858118430409,
+      "prix_br": -3.091937256840538e-06,
+      "ecart_br": 0.03351666674833268,
+      "dosage": -0.0240197603309889,
+      "generique": 0.0707793602859624,
+      "nb_meme_dci": 0.15858732601493217,
+      "injectable": 0.0038955395972880068,
+      "comprime": 0.013391494915209705
+    }
+  }
+}

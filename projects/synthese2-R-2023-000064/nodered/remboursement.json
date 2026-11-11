@@ -1,0 +1,119 @@
+[
+  {
+    "id": "e400",
+    "type": "tab",
+    "label": "medicaments-R-2023-000064",
+    "disabled": false
+  },
+  {
+    "id": "e401",
+    "type": "inject",
+    "z": "e400",
+    "name": "Toutes les minutes",
+    "props": [
+      {
+        "p": "payload"
+      },
+      {
+        "p": "headers",
+        "v": "{\"Content-Type\":\"application/json\"}",
+        "vt": "json"
+      }
+    ],
+    "payload": "{\"dataframe_records\": [{\"ppv\": 367.4, \"ph\": 243.0, \"prix_br\": 367.4, \"ecart_br\": 0.0, \"dosage\": 100.0, \"generique\": 0, \"nb_meme_dci\": 11, \"injectable\": 0, \"comprime\": 0}]}",
+    "payloadType": "json",
+    "repeat": "60",
+    "crontab": "",
+    "once": true,
+    "onceDelay": 0.5,
+    "x": 150,
+    "y": 100,
+    "wires": [
+      [
+        "e402"
+      ]
+    ]
+  },
+  {
+    "id": "e402",
+    "type": "http request",
+    "z": "e400",
+    "name": "Service forêt",
+    "method": "POST",
+    "ret": "obj",
+    "paytoqs": "ignore",
+    "url": "http://127.0.0.1:8000/invocations",
+    "persist": false,
+    "authType": "",
+    "headers": [],
+    "x": 350,
+    "y": 100,
+    "wires": [
+      [
+        "e403"
+      ]
+    ]
+  },
+  {
+    "id": "e403",
+    "type": "switch",
+    "z": "e400",
+    "name": "Classe 1 ?",
+    "property": "payload.predictions[0]",
+    "propertyType": "msg",
+    "rules": [
+      {
+        "t": "eq",
+        "v": "1",
+        "vt": "num"
+      }
+    ],
+    "checkall": "true",
+    "repair": false,
+    "outputs": 1,
+    "x": 520,
+    "y": 100,
+    "wires": [
+      [
+        "e404"
+      ]
+    ]
+  },
+  {
+    "id": "e404",
+    "type": "change",
+    "z": "e400",
+    "name": "Composer alerte",
+    "rules": [
+      {
+        "t": "set",
+        "p": "payload",
+        "pt": "msg",
+        "to": "ALERTE classe 1 : SOLIAN 100 MG/ML (6118010120312)",
+        "tot": "str"
+      }
+    ],
+    "x": 690,
+    "y": 100,
+    "wires": [
+      [
+        "e405"
+      ]
+    ]
+  },
+  {
+    "id": "e405",
+    "type": "debug",
+    "z": "e400",
+    "name": "Alerte remboursement",
+    "active": true,
+    "tosidebar": true,
+    "console": true,
+    "tostatus": false,
+    "complete": "payload",
+    "targetType": "msg",
+    "x": 880,
+    "y": 100,
+    "wires": []
+  }
+]

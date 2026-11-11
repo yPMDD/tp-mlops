@@ -1,0 +1,6 @@
+1 file pushed
+[core]
+    remote = local
+['remote "local"']
+    url = ../../stockage-dvc
+Objet relatif : files\md5\68\a57c72d5eeb4c5256fba3322393d32

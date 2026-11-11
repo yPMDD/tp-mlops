@@ -1,0 +1,15 @@
+B1 — Fichiers suivis après dvc add
+.dvc/.gitignore
+.dvc/config
+.dvcignore
+data/brut/.gitignore
+data/brut/ref-des-medicaments-cnops-2014.xlsx.dvc
+
+outs:
+- md5: 68a57c72d5eeb4c5256fba3322393d32
+  size: 530243
+  hash: md5
+  path: ref-des-medicaments-cnops-2014.xlsx
+
+MD5 du fichier brut (A2) : 68a57c72d5eeb4c5256fba3322393d32
+git check-ignore -v : data/brut/.gitignore:1:/ref-des-medicaments-cnops-2014.xlsx	data/brut/ref-des-medicaments-cnops-2014.xlsx
