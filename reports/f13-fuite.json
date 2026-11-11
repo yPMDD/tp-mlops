@@ -1,0 +1,6 @@
+{
+  "flow_run_id": "825c61a9-2074-4222-bbc7-099071b89139",
+  "etat": "Failed",
+  "message": "Flow run encountered an exception: ValueError: Variables hors liste autorisee : decision_cnops. F1 0.956000.",
+  "resultat": "Variables hors liste autorisee : decision_cnops. F1 0.956000."
+}

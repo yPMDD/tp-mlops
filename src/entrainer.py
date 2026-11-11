@@ -10,14 +10,14 @@ from configuration import charger_configuration
 from preparer import CIBLE, VARIABLES
 
 
-def entrainer_foret(train: pd.DataFrame, config: dict) -> RandomForestClassifier:
+def entrainer_foret(train: pd.DataFrame, config: dict, variables=VARIABLES) -> RandomForestClassifier:
     foret = config["foret"]
     modele = RandomForestClassifier(
         n_estimators=foret["arbres"],
         max_depth=foret["profondeur"],
         random_state=config["donnees"]["graine"],
     )
-    return modele.fit(train[list(VARIABLES)], train[CIBLE])
+    return modele.fit(train[list(variables)], train[CIBLE])
 
 
 def main():

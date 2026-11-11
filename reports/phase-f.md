@@ -88,3 +88,13 @@ Le coefficient standardisé de `generique` est **−0,179903**. Le rapport de co
 Orange Explain Prediction donne **0,661805** pour la classe 1. Les deux premières contributions absolues sont **nb_meme_dci +0,158587** et **ph +0,085829**. SHAP en Python place **nb_meme_dci** en tête et **generique** en deuxième. Orange utilise un ensemble de référence issu du jeu d'entraînement, ce qui change la valeur de base (0,328908 au lieu de 0,333632). Les méthodes de traitement des variables dépendantes ou les valeurs retenues pour le fond de l'explainer peuvent aussi redistribuer les contributions entre prix et statut sans changer la prédiction. [Sortie Explain](f11-orange-explain.json) · [Rejeu du widget Canvas](f11-canvas.json)
 
 ![Attributions pour la classe 1, Python et Orange](f11-comparaison.png)
+
+## F12 — Journalisation et fiche modèle
+
+Les graphiques d'importance, de PDP/ICE, de SHAP et de comparaison Orange, ainsi que `MODEL_CARD.md`, sont journalisés dans le run MLflow de la V1 de production sous `audit-explicabilite/`. La rubrique la plus délicate est la disponibilité des variables à la date de décision. Le référentiel donne le prix de base, mais il ne décrit pas le moment où cette valeur devient accessible pour chaque dossier. La fiche distingue donc les conditions de l'exercice et celles d'un usage en amont. [Liste des artefacts MLflow](f12-artefacts.json) · [Fiche modèle](../MODEL_CARD.md)
+
+## F13 — Refus d'un modèle avec fuite
+
+Dans l'essai V1, `decision_cnops` copie la cible et **178 valeurs sur 5 917** sont inversées à graine G, soit 3 % à l'arrondi près. Le modèle ainsi entraîné obtient un **F1 de 0,956000** et franchit le seuil de qualité. Le contrôle d'explicabilité calcule les importances par permutation et compare le schéma du modèle à la liste des neuf entrées permises. `decision_cnops` est hors liste et arrive en tête, avec une baisse de F1 de **0,571147** après permutation.
+
+La tâche `controler-explicabilite` et le flux terminent **Failed**. L'enregistrement est bloqué et `staging` conserve la version **3**. Une reproduction DVC du pipeline de référence redonne le F1 V2 **0,768683**. [Graphe, journal et état du flux](f13-preuve.json) · [Alias avant et après](f13-registre.txt) · [Reproduction](f13-repro.txt)

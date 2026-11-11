@@ -1,0 +1,376 @@
+{
+  "flow_run_id": "825c61a9-2074-4222-bbc7-099071b89139",
+  "etat": "Failed",
+  "message": "Flow run encountered an exception: ValueError: Variables hors liste autorisee : decision_cnops. F1 0.956000.",
+  "resultat": "Variables hors liste autorisee : decision_cnops. F1 0.956000.",
+  "graphe_prefect": {
+    "start_time": "2026-11-11T12:22:29.866759Z",
+    "end_time": "2026-11-11T12:22:36.281351Z",
+    "root_node_ids": [
+      "01a1ca8f-4724-7ae1-92ad-355031ed5465"
+    ],
+    "nodes": [
+      [
+        "01a1ca8f-4724-7ae1-92ad-355031ed5465",
+        {
+          "kind": "task-run",
+          "id": "01a1ca8f-4724-7ae1-92ad-355031ed5465",
+          "label": "lire-donnees-729",
+          "state_type": "COMPLETED",
+          "start_time": "2026-11-11T12:22:30.126624Z",
+          "end_time": "2026-11-11T12:22:31.100200Z",
+          "parents": [],
+          "children": [
+            {
+              "id": "01a1ca8f-4bc0-709e-a47f-523ea149c367"
+            }
+          ],
+          "encapsulating": [],
+          "artifacts": []
+        }
+      ],
+      [
+        "01a1ca8f-4bc0-709e-a47f-523ea149c367",
+        {
+          "kind": "task-run",
+          "id": "01a1ca8f-4bc0-709e-a47f-523ea149c367",
+          "label": "preparer-29b",
+          "state_type": "COMPLETED",
+          "start_time": "2026-11-11T12:22:31.109067Z",
+          "end_time": "2026-11-11T12:22:31.673357Z",
+          "parents": [
+            {
+              "id": "01a1ca8f-4724-7ae1-92ad-355031ed5465"
+            }
+          ],
+          "children": [
+            {
+              "id": "01a1ca8f-4bc0-792c-a155-0f0f54abd5ab"
+            },
+            {
+              "id": "01a1ca8f-4bc0-792c-a155-0f0f54abd5ab"
+            },
+            {
+              "id": "01a1ca8f-4bc0-792c-a155-0f0f54abd5ab"
+            },
+            {
+              "id": "01a1ca8f-4bc0-792c-a155-0f0f54abd5ab"
+            },
+            {
+              "id": "01a1ca8f-4bc4-76c7-b791-d9cef4067fba"
+            },
+            {
+              "id": "01a1ca8f-4bc4-76c7-b791-d9cef4067fba"
+            },
+            {
+              "id": "01a1ca8f-4bc4-76c7-b791-d9cef4067fba"
+            },
+            {
+              "id": "01a1ca8f-4bc4-76c7-b791-d9cef4067fba"
+            },
+            {
+              "id": "01a1ca8f-5127-7677-9a1a-bf580a260c96"
+            },
+            {
+              "id": "01a1ca8f-5127-7677-9a1a-bf580a260c96"
+            },
+            {
+              "id": "01a1ca8f-5127-7677-9a1a-bf580a260c96"
+            },
+            {
+              "id": "01a1ca8f-5127-7677-9a1a-bf580a260c96"
+            }
+          ],
+          "encapsulating": [],
+          "artifacts": []
+        }
+      ],
+      [
+        "01a1ca8f-4bc0-792c-a155-0f0f54abd5ab",
+        {
+          "kind": "task-run",
+          "id": "01a1ca8f-4bc0-792c-a155-0f0f54abd5ab",
+          "label": "entrainer-45e",
+          "state_type": "COMPLETED",
+          "start_time": "2026-11-11T12:22:31.676980Z",
+          "end_time": "2026-11-11T12:22:32.404097Z",
+          "parents": [
+            {
+              "id": "01a1ca8f-4bc0-709e-a47f-523ea149c367"
+            },
+            {
+              "id": "01a1ca8f-4bc0-709e-a47f-523ea149c367"
+            },
+            {
+              "id": "01a1ca8f-4bc0-709e-a47f-523ea149c367"
+            },
+            {
+              "id": "01a1ca8f-4bc0-709e-a47f-523ea149c367"
+            }
+          ],
+          "children": [
+            {
+              "id": "01a1ca8f-4bc4-76c7-b791-d9cef4067fba"
+            },
+            {
+              "id": "01a1ca8f-4bc4-76c7-b791-d9cef4067fba"
+            },
+            {
+              "id": "01a1ca8f-4bc4-76c7-b791-d9cef4067fba"
+            },
+            {
+              "id": "01a1ca8f-5127-7677-9a1a-bf580a260c96"
+            },
+            {
+              "id": "01a1ca8f-5127-7677-9a1a-bf580a260c96"
+            },
+            {
+              "id": "01a1ca8f-5127-7677-9a1a-bf580a260c96"
+            }
+          ],
+          "encapsulating": [],
+          "artifacts": []
+        }
+      ],
+      [
+        "01a1ca8f-4bc4-76c7-b791-d9cef4067fba",
+        {
+          "kind": "task-run",
+          "id": "01a1ca8f-4bc4-76c7-b791-d9cef4067fba",
+          "label": "evaluer-a1d",
+          "state_type": "COMPLETED",
+          "start_time": "2026-11-11T12:22:32.408284Z",
+          "end_time": "2026-11-11T12:22:32.478372Z",
+          "parents": [
+            {
+              "id": "01a1ca8f-4bc0-792c-a155-0f0f54abd5ab"
+            },
+            {
+              "id": "01a1ca8f-4bc0-792c-a155-0f0f54abd5ab"
+            },
+            {
+              "id": "01a1ca8f-4bc0-792c-a155-0f0f54abd5ab"
+            },
+            {
+              "id": "01a1ca8f-4bc0-709e-a47f-523ea149c367"
+            },
+            {
+              "id": "01a1ca8f-4bc0-709e-a47f-523ea149c367"
+            },
+            {
+              "id": "01a1ca8f-4bc0-709e-a47f-523ea149c367"
+            },
+            {
+              "id": "01a1ca8f-4bc0-709e-a47f-523ea149c367"
+            }
+          ],
+          "children": [
+            {
+              "id": "01a1ca8f-4bc6-7ea4-a8c6-1ee130b57071"
+            },
+            {
+              "id": "01a1ca8f-4bc6-7ea4-a8c6-1ee130b57071"
+            },
+            {
+              "id": "01a1ca8f-4bc6-7ea4-a8c6-1ee130b57071"
+            }
+          ],
+          "encapsulating": [],
+          "artifacts": []
+        }
+      ],
+      [
+        "01a1ca8f-4bc6-7ea4-a8c6-1ee130b57071",
+        {
+          "kind": "task-run",
+          "id": "01a1ca8f-4bc6-7ea4-a8c6-1ee130b57071",
+          "label": "controler-qualite-f39",
+          "state_type": "COMPLETED",
+          "start_time": "2026-11-11T12:22:32.481454Z",
+          "end_time": "2026-11-11T12:22:32.484103Z",
+          "parents": [
+            {
+              "id": "01a1ca8f-4bc4-76c7-b791-d9cef4067fba"
+            },
+            {
+              "id": "01a1ca8f-4bc4-76c7-b791-d9cef4067fba"
+            },
+            {
+              "id": "01a1ca8f-4bc4-76c7-b791-d9cef4067fba"
+            }
+          ],
+          "children": [
+            {
+              "id": "01a1ca8f-5127-7677-9a1a-bf580a260c96"
+            },
+            {
+              "id": "01a1ca8f-5127-7677-9a1a-bf580a260c96"
+            }
+          ],
+          "encapsulating": [],
+          "artifacts": []
+        }
+      ],
+      [
+        "01a1ca8f-5127-7677-9a1a-bf580a260c96",
+        {
+          "kind": "task-run",
+          "id": "01a1ca8f-5127-7677-9a1a-bf580a260c96",
+          "label": "controler-explicabilite-725",
+          "state_type": "FAILED",
+          "start_time": "2026-11-11T12:22:32.491858Z",
+          "end_time": "2026-11-11T12:22:36.127938Z",
+          "parents": [
+            {
+              "id": "01a1ca8f-4bc0-792c-a155-0f0f54abd5ab"
+            },
+            {
+              "id": "01a1ca8f-4bc0-792c-a155-0f0f54abd5ab"
+            },
+            {
+              "id": "01a1ca8f-4bc0-792c-a155-0f0f54abd5ab"
+            },
+            {
+              "id": "01a1ca8f-4bc0-709e-a47f-523ea149c367"
+            },
+            {
+              "id": "01a1ca8f-4bc0-709e-a47f-523ea149c367"
+            },
+            {
+              "id": "01a1ca8f-4bc0-709e-a47f-523ea149c367"
+            },
+            {
+              "id": "01a1ca8f-4bc0-709e-a47f-523ea149c367"
+            },
+            {
+              "id": "01a1ca8f-4bc6-7ea4-a8c6-1ee130b57071"
+            },
+            {
+              "id": "01a1ca8f-4bc6-7ea4-a8c6-1ee130b57071"
+            }
+          ],
+          "children": [],
+          "encapsulating": [],
+          "artifacts": []
+        }
+      ]
+    ],
+    "artifacts": [],
+    "states": [
+      {
+        "id": "01a1ca8f-46c6-7eb4-bcec-fb8fdbbda99c",
+        "timestamp": "2026-11-11T12:22:29.830984Z",
+        "type": "PENDING",
+        "name": "Pending"
+      },
+      {
+        "id": "01a1ca8f-46ea-7c9f-96d5-471266bce842",
+        "timestamp": "2026-11-11T12:22:29.866759Z",
+        "type": "RUNNING",
+        "name": "Running"
+      },
+      {
+        "id": "01a1ca8f-5ff9-7ecb-a514-4e4d45e80991",
+        "timestamp": "2026-11-11T12:22:36.281351Z",
+        "type": "FAILED",
+        "name": "Failed"
+      }
+    ]
+  },
+  "taches": [
+    {
+      "nom": "controler-explicabilite-725",
+      "etat": "Failed",
+      "message": "Task run encountered an exception ValueError: Variables hors liste autorisee : decision_cnops. F1 0.956000.",
+      "tentatives": 1
+    },
+    {
+      "nom": "controler-qualite-f39",
+      "etat": "Completed",
+      "message": "",
+      "tentatives": 1
+    },
+    {
+      "nom": "evaluer-a1d",
+      "etat": "Completed",
+      "message": "",
+      "tentatives": 1
+    },
+    {
+      "nom": "entrainer-45e",
+      "etat": "Completed",
+      "message": "",
+      "tentatives": 1
+    },
+    {
+      "nom": "preparer-29b",
+      "etat": "Completed",
+      "message": "",
+      "tentatives": 1
+    },
+    {
+      "nom": "lire-donnees-729",
+      "etat": "Completed",
+      "message": "",
+      "tentatives": 1
+    }
+  ],
+  "logs": [
+    {
+      "niveau": 20,
+      "message": "Beginning flow run 'bulky-seagull' for flow 'reentrainement-medicaments'"
+    },
+    {
+      "niveau": 20,
+      "message": "Lecture de data/brut/ref-des-medicaments-cnops-2014.xlsx"
+    },
+    {
+      "niveau": 20,
+      "message": "Finished in state Completed()"
+    },
+    {
+      "niveau": 20,
+      "message": "decision_cnops : 178 valeurs inversees sur 5917."
+    },
+    {
+      "niveau": 20,
+      "message": "Finished in state Completed()"
+    },
+    {
+      "niveau": 20,
+      "message": "Finished in state Completed()"
+    },
+    {
+      "niveau": 20,
+      "message": "F1 de classe 1 : 0.956000"
+    },
+    {
+      "niveau": 20,
+      "message": "Finished in state Completed()"
+    },
+    {
+      "niveau": 20,
+      "message": "Finished in state Completed()"
+    },
+    {
+      "niveau": 20,
+      "message": "Importance permutation : [('decision_cnops', 0.571147), ('ecart_br', 0.037876), ('nb_meme_dci', 0.019011), ('ph', 0.0018), ('dosage', 0.001667), ('generique', 0.001372), ('injectable', 0.000809), ('comprime', 0.000409), ('prix_br', 0.000313), ('ppv', 0.000201)]"
+    },
+    {
+      "niveau": 40,
+      "message": "Task run failed with exception: ValueError('Variables hors liste autorisee : decision_cnops. F1 0.956000.')\nTraceback (most recent call last):\n  File \"C:\\Users\\S44D\\Documents\\5iir\\MLOps\\synthese2-R-2023-000064\\.venv\\Lib\\site-packages\\prefect\\task_engine.py\", line 1030, in run_context\n    yield self\n  File \"C:\\Users\\S44D\\Documents\\5iir\\MLOps\\synthese2-R-2023-000064\\.venv\\Lib\\site-packages\\prefect\\task_engine.py\", line 1699, in run_task_sync\n    engine.call_task_fn(txn)\n  File \"C:\\Users\\S44D\\Documents\\5iir\\MLOps\\synthese2-R-2023-000064\\.venv\\Lib\\site-packages\\prefect\\task_engine.py\", line 1047, in call_task_fn\n    result = call_with_parameters(self.task.fn, parameters)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\S44D\\Documents\\5iir\\MLOps\\synthese2-R-2023-000064\\.venv\\Lib\\site-packages\\prefect\\utilities\\callables\\__init__.py\", line 404, in call_with_parameters\n    return fn(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\S44D\\Documents\\5iir\\MLOps\\synthese2-R-2023-000064\\flows\\reentrainement.py\", line 78, in verifier_explication\n    raise ValueError(f\"Variables hors liste autorisee : {', '.join(interdites)}. F1 {scores['f1']:.6f}.\")\nValueError: Variables hors liste autorisee : decision_cnops. F1 0.956000."
+    },
+    {
+      "niveau": 40,
+      "message": "Finished in state Failed('Task run encountered an exception ValueError: Variables hors liste autorisee : decision_cnops. F1 0.956000.')"
+    },
+    {
+      "niveau": 40,
+      "message": "Encountered exception during execution: ValueError('Variables hors liste autorisee : decision_cnops. F1 0.956000.')\nTraceback (most recent call last):\n  File \"C:\\Users\\S44D\\Documents\\5iir\\MLOps\\synthese2-R-2023-000064\\.venv\\Lib\\site-packages\\prefect\\flow_engine.py\", line 1330, in run_context\n    yield self\n  File \"C:\\Users\\S44D\\Documents\\5iir\\MLOps\\synthese2-R-2023-000064\\.venv\\Lib\\site-packages\\prefect\\flow_engine.py\", line 2111, in run_flow_sync\n    engine.call_flow_fn()\n  File \"C:\\Users\\S44D\\Documents\\5iir\\MLOps\\synthese2-R-2023-000064\\.venv\\Lib\\site-packages\\prefect\\flow_engine.py\", line 1350, in call_flow_fn\n    result = call_with_parameters(self.flow.fn, self.parameters)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\S44D\\Documents\\5iir\\MLOps\\synthese2-R-2023-000064\\.venv\\Lib\\site-packages\\prefect\\utilities\\callables\\__init__.py\", line 404, in call_with_parameters\n    return fn(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\S44D\\Documents\\5iir\\MLOps\\synthese2-R-2023-000064\\flows\\reentrainement.py\", line 123, in reentrainement\n    explication.result()\n  File \"C:\\Users\\S44D\\Documents\\5iir\\MLOps\\synthese2-R-2023-000064\\.venv\\Lib\\site-packages\\prefect\\futures.py\", line 277, in result\n    _result = self._final_state.result(\n              ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\S44D\\Documents\\5iir\\MLOps\\synthese2-R-2023-000064\\.venv\\Lib\\site-packages\\prefect\\_internal\\compatibility\\async_dispatch.py\", line 94, in wrapper\n    return fn(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\S44D\\Documents\\5iir\\MLOps\\synthese2-R-2023-000064\\.venv\\Lib\\site-packages\\prefect\\client\\schemas\\objects.py\", line 394, in result\n    return run_coro_as_sync(\n           ^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\S44D\\Documents\\5iir\\MLOps\\synthese2-R-2023-000064\\.venv\\Lib\\site-packages\\prefect\\utilities\\asyncutils\\__init__.py\", line 207, in run_coro_as_sync\n    return call.result()\n           ^^^^^^^^^^^^^\n  File \"C:\\Users\\S44D\\Documents\\5iir\\MLOps\\synthese2-R-2023-000064\\.venv\\Lib\\site-packages\\prefect\\_internal\\concurrency\\calls.py\", line 365, in result\n    return self.future.result(timeout=timeout)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\S44D\\Documents\\5iir\\MLOps\\synthese2-R-2023-000064\\.venv\\Lib\\site-packages\\prefect\\_internal\\concurrency\\calls.py\", line 192, in result\n    return self.__get_result()\n           ^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Program Files\\Python311\\Lib\\concurrent\\futures\\_base.py\", line 401, in __get_result\n    raise self._exception\n  File \"C:\\Users\\S44D\\Documents\\5iir\\MLOps\\synthese2-R-2023-000064\\.venv\\Lib\\site-packages\\prefect\\_internal\\concurrency\\calls.py\", line 441, in _run_async\n    result = await coro\n             ^^^^^^^^^^\n  File \"C:\\Users\\S44D\\Documents\\5iir\\MLOps\\synthese2-R-2023-000064\\.venv\\Lib\\site-packages\\prefect\\utilities\\asyncutils\\__init__.py\", line 188, in coroutine_wrapper\n    return await task\n           ^^^^^^^^^^\n  File \"C:\\Users\\S44D\\Documents\\5iir\\MLOps\\synthese2-R-2023-000064\\.venv\\Lib\\site-packages\\prefect\\states.py\", line 89, in get_state_result\n    return await _get_state_result(\n           ^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\S44D\\Documents\\5iir\\MLOps\\synthese2-R-2023-000064\\.venv\\Lib\\site-packages\\prefect\\states.py\", line 161, in _get_state_result\n    raise await aget_state_exception(state)\n  File \"C:\\Users\\S44D\\Documents\\5iir\\MLOps\\synthese2-R-2023-000064\\.venv\\Lib\\site-packages\\prefect\\task_engine.py\", line 1030, in run_context\n    yield self\n  File \"C:\\Users\\S44D\\Documents\\5iir\\MLOps\\synthese2-R-2023-000064\\.venv\\Lib\\site-packages\\prefect\\task_engine.py\", line 1699, in run_task_sync\n    engine.call_task_fn(txn)\n  File \"C:\\Users\\S44D\\Documents\\5iir\\MLOps\\synthese2-R-2023-000064\\.venv\\Lib\\site-packages\\prefect\\task_engine.py\", line 1047, in call_task_fn\n    result = call_with_parameters(self.task.fn, parameters)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\S44D\\Documents\\5iir\\MLOps\\synthese2-R-2023-000064\\.venv\\Lib\\site-packages\\prefect\\utilities\\callables\\__init__.py\", line 404, in call_with_parameters\n    return fn(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\S44D\\Documents\\5iir\\MLOps\\synthese2-R-2023-000064\\flows\\reentrainement.py\", line 78, in verifier_explication\n    raise ValueError(f\"Variables hors liste autorisee : {', '.join(interdites)}. F1 {scores['f1']:.6f}.\")\nValueError: Variables hors liste autorisee : decision_cnops. F1 0.956000."
+    },
+    {
+      "niveau": 20,
+      "message": "Finished in state Failed('Flow run encountered an exception: ValueError: Variables hors liste autorisee : decision_cnops. F1 0.956000.')"
+    }
+  ]
+}

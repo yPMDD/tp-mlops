@@ -1,0 +1,3 @@
+Alias staging avant : 3
+Alias staging après : 3
+Task run encountered an exception ValueError: Variables hors liste autorisee : decision_cnops. F1 0.956000.

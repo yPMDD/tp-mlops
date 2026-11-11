@@ -11,9 +11,9 @@ from configuration import charger_configuration
 from preparer import CIBLE, VARIABLES
 
 
-def mesurer(modele, test: pd.DataFrame) -> dict[str, float]:
+def mesurer(modele, test: pd.DataFrame, variables=VARIABLES) -> dict[str, float]:
     reel = test[CIBLE]
-    predit = modele.predict(test[list(VARIABLES)])
+    predit = modele.predict(test[list(variables)])
     return {
         "f1": float(f1_score(reel, predit, pos_label=1, zero_division=0)),
         "precision": float(precision_score(reel, predit, pos_label=1, zero_division=0)),
