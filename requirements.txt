@@ -7,3 +7,4 @@ joblib==1.6.0
 PyYAML==6.0.3
 mlflow==3.17.1
 skops==0.16.0
+matplotlib==3.11.2
