@@ -1,0 +1,7 @@
+{
+  "modele": "remboursement-rf",
+  "production_avant": "2",
+  "production_apres": "1",
+  "donnees_apres": "v1",
+  "uri": "models:/remboursement-rf@production"
+}
