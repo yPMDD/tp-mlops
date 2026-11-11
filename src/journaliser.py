@@ -84,14 +84,15 @@ def journaliser(version_donnees: str, algorithme: str, profondeur: int | None) -
 
 if __name__ == "__main__":
     cli = argparse.ArgumentParser(description=__doc__)
-    cli.add_argument("--version", choices=("v1", "v2"), required=True)
+    cli.add_argument("--version", choices=("reference", "v1", "v2"), required=True)
     cli.add_argument("--algorithme", choices=("foret", "logistique"), required=True)
     cli.add_argument("--profondeur", type=int)
     cli.add_argument("--sortie", type=Path)
     args = cli.parse_args()
     if args.algorithme == "logistique" and args.profondeur is not None:
         cli.error("--profondeur est reservee a la foret")
-    resultat = journaliser(args.version, args.algorithme, args.profondeur)
+    version_donnees = charger_configuration()["donnees"]["version"] if args.version == "reference" else args.version
+    resultat = journaliser(version_donnees, args.algorithme, args.profondeur)
     texte = json.dumps(resultat, indent=2, ensure_ascii=False)
     if args.sortie:
         args.sortie.parent.mkdir(parents=True, exist_ok=True)

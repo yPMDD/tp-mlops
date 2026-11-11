@@ -32,8 +32,12 @@ L'alias `production` est revenu de la version 2 (données V2) à la version 1 (d
 
 ## C6 — Service du modèle V1 sur le port 8000
 
-La requête complète envoyée à /invocations pour le médicament personnel renvoie HTTP 200 et $prediction. La requête privée de dosage renvoie HTTP 400 avec une erreur de schéma indiquant la colonne manquante. [Requêtes et réponses JSON](c6-reponses-http.json)
+La requête complète envoyée à `/invocations` pour le médicament personnel renvoie HTTP 200 avec `{"predictions":[1]}`. La requête privée de `dosage` renvoie HTTP 400 avec une erreur de schéma indiquant la colonne manquante. [Requêtes et réponses JSON](c6-reponses-http.json)
 
 ## C7 — Préparer les données brutes au moment de servir
 
 Le service actuel demande les neuf variables déjà calculées. Une application qui ne dispose que du référentiel devrait sinon reproduire le calcul et risquer un écart avec l'entraînement. On peut servir un composant qui reçoit les colonnes brutes nécessaires et applique la même préparation de variables, sans exiger le taux de remboursement, qui sert à construire la cible. Le composant associe à chaque version du modèle les fréquences de DCI calculées sur son classeur de référence. Une DCI absente de ce référentiel reçoit un compte de **0**. Pour une DCI connue, le compte est celui du référentiel associé à la version du modèle. [Préparation commune](../src/preparer.py) · [Préparation de la requête personnelle](../src/medicament_personnel.py)
+
+## C8 — Exécution avec MLproject
+
+`mlflow run .` lit le point d'entrée, valide les paramètres déclarés, lance la commande et associe l'exécution au suivi MLflow. `python_env.yaml` décrit la version de Python et les dépendances. La démonstration locale utilise l'environnement déjà installé avec `--env-manager local`. Une exécution directe lance le script avec les arguments choisis par l'utilisateur et peut aussi journaliser des résultats, grâce aux appels MLflow de ce projet. Elle ne passe pas par les paramètres et l'environnement déclarés du projet. [Sortie de la commande](c8-mlflow-run.txt) · [Point d'entrée](../MLproject)

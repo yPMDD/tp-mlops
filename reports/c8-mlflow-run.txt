@@ -1,0 +1,36 @@
+2026/11/11 03:17:27 INFO mlflow.projects.utils: === Created directory C:\Users\S44D\AppData\Local\Temp\tmpkfhcfn_4 for downloading remote URIs passed to arguments of type 'path' ===
+2026/11/11 03:17:27 INFO mlflow.projects.backend.local: === Running command 'python src/journaliser.py --version reference --algorithme foret' in run with ID 'c52d939ec36f413f92a88d7dd3d2e3c5' === 
+C:\Users\S44D\Documents\5iir\MLOps\synthese2-R-2023-000064\.venv\Lib\site-packages\mlflow\types\utils.py:440: UserWarning: Hint: Inferred schema contains integer column(s). Integer columns in Python cannot represent missing values. If your input data contains missing values at inference time, it will be encoded as floats and will cause a schema enforcement error. The best way to avoid this problem is to infer the model schema based on a realistic data sample (training dataset) that includes missing values. Alternatively, you can declare integer columns as doubles (float64) whenever these columns may have missing values. See `Handling Integers With Missing Values <https://www.mlflow.org/docs/latest/models.html#handling-integers-with-missing-values>`_ for more details.
+  warnings.warn(
+
+Downloading artifacts:   0%|          | 0/7 [00:00<?, ?it/s]
+Downloading artifacts:  14%|█▍        | 1/7 [00:00<?, ?it/s]
+Downloading artifacts:  29%|██▊       | 2/7 [00:00<00:00, 3823.43it/s]
+Downloading artifacts:  43%|████▎     | 3/7 [00:00<00:00, 2830.80it/s]
+Downloading artifacts:  57%|█████▋    | 4/7 [00:00<00:00, 3774.40it/s]
+Downloading artifacts:  71%|███████▏  | 5/7 [00:00<00:00, 2354.23it/s]
+Downloading artifacts:  86%|████████▌ | 6/7 [00:00<00:00, 1888.05it/s]
+Downloading artifacts: 100%|██████████| 7/7 [00:00<00:00, 946.55it/s] 
+Downloading artifacts: 100%|██████████| 7/7 [00:00<00:00, 884.61it/s]
+🏃 View run v2-foret-p12 at: http://127.0.0.1:5000/#/experiments/1/runs/c52d939ec36f413f92a88d7dd3d2e3c5
+🧪 View experiment at: http://127.0.0.1:5000/#/experiments/1
+{
+  "nom": "v2-foret-p12",
+  "run_id": "c52d939ec36f413f92a88d7dd3d2e3c5",
+  "experiment_id": "1",
+  "modele_uri": "models:/m-7db69879155544368840bf7cf0d9dce8",
+  "algorithme": "foret",
+  "version_donnees": "v2",
+  "md5_donnees": "87e03b1539078b6fe91c268739a85e11",
+  "graine": 64,
+  "part_test": 0.25,
+  "f1_min": 0.65,
+  "arbres": 200,
+  "profondeur": 12,
+  "f1": 0.7686832740213523,
+  "precision": 0.8350515463917526,
+  "rappel": 0.7120879120879121
+}
+2026/11/11 03:17:45 INFO mlflow.projects: === Run (ID 'c52d939ec36f413f92a88d7dd3d2e3c5') succeeded ===
+🏃 View run v2-foret-p12 at: http://127.0.0.1:5000/#/experiments/1/runs/c52d939ec36f413f92a88d7dd3d2e3c5
+🧪 View experiment at: http://127.0.0.1:5000/#/experiments/1
