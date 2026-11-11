@@ -1,0 +1,12 @@
+{
+  "flow_run_id": "9e0f8425-d8ed-4201-85cf-c5030492b61f",
+  "etat": "Completed",
+  "message": null,
+  "resultat": {
+    "version_staging": "3",
+    "run_mlflow": "08e040fc9a9540dd9ab21bcf2a634a0e",
+    "f1": 0.7686832740213523,
+    "precision": 0.8350515463917526,
+    "rappel": 0.7120879120879121
+  }
+}

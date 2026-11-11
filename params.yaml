@@ -36,3 +36,24 @@ automl:
   modele_registre: remboursement-automl
   port_service: 8100
   requetes_latence: 50
+
+orchestration:
+  version_donnees: v2
+  prefect_api: http://127.0.0.1:4200/api
+  reessais: 2
+  delai_reessai: 2
+  profondeur_echec: 2
+  cron: "15 3 1 * *"
+  fuseau: Africa/Casablanca
+  deploiement: mensuel
+  periode_nodered: 60
+
+audit:
+  repetitions_permutation: 10
+  ice_exemples: 60
+  points_pdp: 30
+  essais_lime: 5
+  voisins_lime: 5000
+  variation_ppv: 0.10
+  seuil_prediction: 0.5
+  taux_fuite_inverse: 0.03

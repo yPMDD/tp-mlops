@@ -1,0 +1,316 @@
+{
+  "flow_run_id": "9e0f8425-d8ed-4201-85cf-c5030492b61f",
+  "etat": "Completed",
+  "message": null,
+  "resultat": {
+    "version_staging": "3",
+    "run_mlflow": "08e040fc9a9540dd9ab21bcf2a634a0e",
+    "f1": 0.7686832740213523,
+    "precision": 0.8350515463917526,
+    "rappel": 0.7120879120879121
+  },
+  "graphe_prefect": {
+    "start_time": "2026-11-11T03:50:19.890657Z",
+    "end_time": "2026-11-11T03:50:32.825327Z",
+    "root_node_ids": [
+      "01a1c8ba-6028-7101-9b8b-0bf9f06e568e"
+    ],
+    "nodes": [
+      [
+        "01a1c8ba-6028-7101-9b8b-0bf9f06e568e",
+        {
+          "kind": "task-run",
+          "id": "01a1c8ba-6028-7101-9b8b-0bf9f06e568e",
+          "label": "lire-donnees-b58",
+          "state_type": "COMPLETED",
+          "start_time": "2026-11-11T03:50:20.127055Z",
+          "end_time": "2026-11-11T03:50:21.521427Z",
+          "parents": [],
+          "children": [
+            {
+              "id": "01a1c8ba-6029-768c-8d6f-b567e672778e"
+            }
+          ],
+          "encapsulating": [],
+          "artifacts": []
+        }
+      ],
+      [
+        "01a1c8ba-6029-768c-8d6f-b567e672778e",
+        {
+          "kind": "task-run",
+          "id": "01a1c8ba-6029-768c-8d6f-b567e672778e",
+          "label": "preparer-7f6",
+          "state_type": "COMPLETED",
+          "start_time": "2026-11-11T03:50:21.527682Z",
+          "end_time": "2026-11-11T03:50:21.607981Z",
+          "parents": [
+            {
+              "id": "01a1c8ba-6028-7101-9b8b-0bf9f06e568e"
+            }
+          ],
+          "children": [
+            {
+              "id": "01a1c8ba-602a-7b0b-843a-378d6e9e9758"
+            },
+            {
+              "id": "01a1c8ba-602c-7c04-bf73-a8dfe3db64cc"
+            },
+            {
+              "id": "01a1c8ba-602d-7443-90a3-78efe95ad1d2"
+            },
+            {
+              "id": "01a1c8ba-602a-7b0b-843a-378d6e9e9758"
+            },
+            {
+              "id": "01a1c8ba-602c-7c04-bf73-a8dfe3db64cc"
+            },
+            {
+              "id": "01a1c8ba-602d-7443-90a3-78efe95ad1d2"
+            }
+          ],
+          "encapsulating": [],
+          "artifacts": []
+        }
+      ],
+      [
+        "01a1c8ba-602a-7b0b-843a-378d6e9e9758",
+        {
+          "kind": "task-run",
+          "id": "01a1c8ba-602a-7b0b-843a-378d6e9e9758",
+          "label": "entrainer-786",
+          "state_type": "COMPLETED",
+          "start_time": "2026-11-11T03:50:21.612111Z",
+          "end_time": "2026-11-11T03:50:22.434402Z",
+          "parents": [
+            {
+              "id": "01a1c8ba-6029-768c-8d6f-b567e672778e"
+            },
+            {
+              "id": "01a1c8ba-6029-768c-8d6f-b567e672778e"
+            }
+          ],
+          "children": [
+            {
+              "id": "01a1c8ba-602c-7c04-bf73-a8dfe3db64cc"
+            },
+            {
+              "id": "01a1c8ba-602d-7443-90a3-78efe95ad1d2"
+            },
+            {
+              "id": "01a1c8ba-602c-7c04-bf73-a8dfe3db64cc"
+            },
+            {
+              "id": "01a1c8ba-602d-7443-90a3-78efe95ad1d2"
+            }
+          ],
+          "encapsulating": [],
+          "artifacts": []
+        }
+      ],
+      [
+        "01a1c8ba-602c-7c04-bf73-a8dfe3db64cc",
+        {
+          "kind": "task-run",
+          "id": "01a1c8ba-602c-7c04-bf73-a8dfe3db64cc",
+          "label": "evaluer-9ac",
+          "state_type": "COMPLETED",
+          "start_time": "2026-11-11T03:50:22.439061Z",
+          "end_time": "2026-11-11T03:50:22.529761Z",
+          "parents": [
+            {
+              "id": "01a1c8ba-6029-768c-8d6f-b567e672778e"
+            },
+            {
+              "id": "01a1c8ba-6029-768c-8d6f-b567e672778e"
+            },
+            {
+              "id": "01a1c8ba-602a-7b0b-843a-378d6e9e9758"
+            },
+            {
+              "id": "01a1c8ba-602a-7b0b-843a-378d6e9e9758"
+            }
+          ],
+          "children": [
+            {
+              "id": "01a1c8ba-602c-77a7-b58c-263a7112b30a"
+            },
+            {
+              "id": "01a1c8ba-602c-77a7-b58c-263a7112b30a"
+            }
+          ],
+          "encapsulating": [],
+          "artifacts": []
+        }
+      ],
+      [
+        "01a1c8ba-602c-77a7-b58c-263a7112b30a",
+        {
+          "kind": "task-run",
+          "id": "01a1c8ba-602c-77a7-b58c-263a7112b30a",
+          "label": "controler-qualite-31e",
+          "state_type": "COMPLETED",
+          "start_time": "2026-11-11T03:50:22.532364Z",
+          "end_time": "2026-11-11T03:50:22.534962Z",
+          "parents": [
+            {
+              "id": "01a1c8ba-602c-7c04-bf73-a8dfe3db64cc"
+            },
+            {
+              "id": "01a1c8ba-602c-7c04-bf73-a8dfe3db64cc"
+            }
+          ],
+          "children": [
+            {
+              "id": "01a1c8ba-602d-7443-90a3-78efe95ad1d2"
+            },
+            {
+              "id": "01a1c8ba-602d-7443-90a3-78efe95ad1d2"
+            }
+          ],
+          "encapsulating": [],
+          "artifacts": []
+        }
+      ],
+      [
+        "01a1c8ba-602d-7443-90a3-78efe95ad1d2",
+        {
+          "kind": "task-run",
+          "id": "01a1c8ba-602d-7443-90a3-78efe95ad1d2",
+          "label": "enregistrer-staging-bf9",
+          "state_type": "COMPLETED",
+          "start_time": "2026-11-11T03:50:22.538079Z",
+          "end_time": "2026-11-11T03:50:32.793843Z",
+          "parents": [
+            {
+              "id": "01a1c8ba-6029-768c-8d6f-b567e672778e"
+            },
+            {
+              "id": "01a1c8ba-6029-768c-8d6f-b567e672778e"
+            },
+            {
+              "id": "01a1c8ba-602a-7b0b-843a-378d6e9e9758"
+            },
+            {
+              "id": "01a1c8ba-602a-7b0b-843a-378d6e9e9758"
+            },
+            {
+              "id": "01a1c8ba-602c-77a7-b58c-263a7112b30a"
+            },
+            {
+              "id": "01a1c8ba-602c-77a7-b58c-263a7112b30a"
+            }
+          ],
+          "children": [],
+          "encapsulating": [],
+          "artifacts": []
+        }
+      ]
+    ],
+    "artifacts": [],
+    "states": [
+      {
+        "id": "01a1c8ba-5fd6-755c-88c3-1b034d79f844",
+        "timestamp": "2026-11-11T03:50:19.862343Z",
+        "type": "PENDING",
+        "name": "Pending"
+      },
+      {
+        "id": "01a1c8ba-5ff2-748c-ace9-0e119d539f4c",
+        "timestamp": "2026-11-11T03:50:19.890657Z",
+        "type": "RUNNING",
+        "name": "Running"
+      },
+      {
+        "id": "01a1c8ba-9279-7036-9c17-a1b457fc31d2",
+        "timestamp": "2026-11-11T03:50:32.825327Z",
+        "type": "COMPLETED",
+        "name": "Completed"
+      }
+    ]
+  },
+  "taches": [
+    {
+      "nom": "enregistrer-staging-bf9",
+      "etat": "Completed",
+      "message": "",
+      "tentatives": 1
+    },
+    {
+      "nom": "evaluer-9ac",
+      "etat": "Completed",
+      "message": "",
+      "tentatives": 1
+    },
+    {
+      "nom": "controler-qualite-31e",
+      "etat": "Completed",
+      "message": "",
+      "tentatives": 1
+    },
+    {
+      "nom": "entrainer-786",
+      "etat": "Completed",
+      "message": "",
+      "tentatives": 1
+    },
+    {
+      "nom": "preparer-7f6",
+      "etat": "Completed",
+      "message": "",
+      "tentatives": 1
+    },
+    {
+      "nom": "lire-donnees-b58",
+      "etat": "Completed",
+      "message": "",
+      "tentatives": 1
+    }
+  ],
+  "logs": [
+    {
+      "niveau": 20,
+      "message": "Beginning flow run 'expensive-mustang' for flow 'reentrainement-medicaments'"
+    },
+    {
+      "niveau": 20,
+      "message": "Lecture de data/versions/ref-des-medicaments-cnops-2014-v2.xlsx"
+    },
+    {
+      "niveau": 20,
+      "message": "Finished in state Completed()"
+    },
+    {
+      "niveau": 20,
+      "message": "Finished in state Completed()"
+    },
+    {
+      "niveau": 20,
+      "message": "Finished in state Completed()"
+    },
+    {
+      "niveau": 20,
+      "message": "F1 de classe 1 : 0.768683"
+    },
+    {
+      "niveau": 20,
+      "message": "Finished in state Completed()"
+    },
+    {
+      "niveau": 20,
+      "message": "Finished in state Completed()"
+    },
+    {
+      "niveau": 20,
+      "message": "Staging pointe vers la version 3."
+    },
+    {
+      "niveau": 20,
+      "message": "Finished in state Completed()"
+    },
+    {
+      "niveau": 20,
+      "message": "Finished in state Completed()"
+    }
+  ]
+}
