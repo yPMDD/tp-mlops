@@ -1,0 +1,10 @@
+Etape 1 - SHA-256 du modele TP3 et de sa copie : 0c49249e678e4c7829992124d70fe2ef1d5d283b94900bdb2c4c7b0d61c4b06e
+Image fraude-api:securisee : utilisateur app, aucune variable API_KEY enregistree.
+GET /health -> 200 {"statut":"ok","modele_charge":true}
+POST /v1/predict sans cle -> 401 {"detail":"cle d'API absente ou invalide"}
+GET /v1/model-info avec cle -> 200 {"version_modele":"1.0.0","variables":["montant","anciennete","freq_24h","nuit"]}
+POST /v1/predict avec cle -> 200 {"fraude":true,"probabilite":0.8899,"version_modele":"1.0.0","id_requete":"cb9e4a38"}
+docker exec <conteneur> whoami -> app
+docker exec <conteneur> sha256sum models/model.pkl -> meme SHA-256 que le modele TP3
+docker exec <conteneur> touch models/modele_pirate.pkl -> touch: cannot touch 'models/modele_pirate.pkl': Permission denied
+Conteneur de verification arrete et supprime.

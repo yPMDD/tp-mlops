@@ -10,7 +10,9 @@ Le port 5000 était déjà occupé. Flask a donc été lancé sur le port 5001. 
 
 | Étape | Résultat constaté | Preuve |
 |---|---|---|
+| 1 | Le client et le dossier de travail sont en place. La copie du modèle a le même SHA-256 que le modèle TP3. | [Client](appel.py), [Empreinte du modèle](captures/verification-publication.txt) |
 | 2 | Les deux services classent Benali comme fraude. Sur `montant=abc`, Flask renvoie 500 et FastAPI 422. | [Capture](captures/etape-02-flask-fastapi.png) |
+| 3 | L’API charge le modèle au démarrage, valide les entrées et les sorties, expose trois routes et journalise les métadonnées de prédiction. | [Code de l’API](api/main.py), [Journal de prédiction](captures/etape-04-http.txt) |
 | 4 | Les trois routes répondent. Un montant négatif ou un champ supplémentaire donne 422, la mauvaise méthode 405 et l’ancienne route 404. Swagger UI renvoie 422 pour un montant de zéro. | [Échanges HTTP](captures/etape-04-http.txt), [Swagger UI](captures/etape-04-swagger.png) |
 | 5 | Les cinq tests du sujet passent. | [Pytest](captures/etape-05-tests.txt) |
 | 6–7 | Le rechargement du modèle augmente la latence. Deux processus augmentent le débit mesuré. | [Chargement](captures/etape-06-chargement.txt), [Processus](captures/etape-07-processus.txt) |
@@ -18,7 +20,7 @@ Le port 5000 était déjà occupé. Flask a donc été lancé sur le port 5001. 
 | 11–14 | La clé de démonstration est visible dans l’image `mauvais`. Les six entrées piégées sont refusées par le schéma sécurisé. La requête 61 déclenche la limite et la désactivation du mode debug masque la trace côté client. | [Images](captures/etape-11-secrets.txt), [Validation](captures/etape-12-validation.txt), [Débit](captures/etape-13-debit.txt), [Erreurs](captures/etape-14-erreurs.txt) |
 | 15–16 | Le conteneur `root` peut créer le faux modèle. Dans le conteneur sécurisé, l’utilisateur `app` reçoit `Permission denied`. Les logs sécurisés contiennent les métadonnées de prédiction et les codes HTTP. | [Privilèges](captures/etape-15-privileges.png), [Journaux](captures/etape-16-journal.txt) |
 
-Les quatre captures de terminal sont des images générées à partir des sorties obtenues pendant l’exercice. Les transcriptions correspondantes figurent dans le même dossier. Les mesures et les huit comparaisons sont reprises dans le [bilan](bilan-tp10.md).
+Les quatre captures de terminal sont des images générées à partir des sorties obtenues pendant l’exercice. Les transcriptions correspondantes figurent dans le même dossier. Les mesures et les huit comparaisons sont reprises dans le [bilan](bilan-tp10.md). Avant publication, les cinq tests ont de nouveau réussi et un nouveau conteneur a confirmé la prédiction de Benali, le refus d’un appel sans clé et les permissions de l’utilisateur `app`. [Vérification avant publication](captures/verification-publication.txt)
 
 ## Réponses aux neuf questions
 
