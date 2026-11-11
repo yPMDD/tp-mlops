@@ -1,3 +1,4 @@
+97a54fb C8 : actualiser la preuve historique apres verification DVC
 667b540 B5 : stabiliser les empreintes DVC entre checkouts Git
 fd32410 C8 : archiver l historique Git des phases A a C
 baeb720 C8 : declarer le MLproject et prouver son execution locale
