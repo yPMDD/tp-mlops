@@ -1,0 +1,16 @@
+{
+  "modele": "remboursement-rf",
+  "versions": {
+    "v1": "1",
+    "v2": "2"
+  },
+  "production": "2",
+  "staging": "1",
+  "uri": "models:/remboursement-rf@production",
+  "medicament": {
+    "rang": 64,
+    "nom": "SOLIAN 100 MG/ML",
+    "CODE": "6118010120312"
+  },
+  "probabilite_classe_1": 0.79214612022429
+}

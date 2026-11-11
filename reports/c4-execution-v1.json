@@ -1,0 +1,17 @@
+{
+  "nom": "v1-foret-p12",
+  "run_id": "d440954283754b47b6ca82cd3882eb28",
+  "experiment_id": "1",
+  "modele_uri": "models:/m-c0cc4251e1e14679a152fd439634e161",
+  "algorithme": "foret",
+  "version_donnees": "v1",
+  "md5_donnees": "68a57c72d5eeb4c5256fba3322393d32",
+  "graine": 64,
+  "part_test": 0.25,
+  "f1_min": 0.65,
+  "arbres": 200,
+  "profondeur": 12,
+  "f1": 0.7699018538713195,
+  "precision": 0.8364928909952607,
+  "rappel": 0.7131313131313132
+}

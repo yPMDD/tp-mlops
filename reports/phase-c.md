@@ -20,3 +20,8 @@ L'accès de l'assistant au navigateur local a été refusé. La preuve jointe es
 ## C3 — Signature du modèle de référence
 
 La signature du modèle V2 à profondeur 12 comporte **neuf entrées obligatoires**. `ppv` est de type **double** et `generique` de type **long**. Le service applique ce schéma avant la prédiction, ce qui permet de rejeter une entrée manquante ou incompatible. L'exemple d'entrée est enregistré avec le modèle. [Signature et exemple issus de MLflow](c3-signature.json)
+
+## C4 — Enregistrement, alias et probabilité
+
+La forêt de référence V1 obtient un F1 de 0.769902. La V2 de référence obtient 0,768683. Les deux dépassent 0,65. MLflow a enregistré la V1 en version 1 et la V2 en version 2. Les alias après promotion sont production → 2 et staging → 1.
+Le modèle chargé par l'alias production attribue à **SOLIAN 100 MG/ML** (CODE 6118010120312) une probabilité de **0.792146** pour la classe 1. [Preuve du registre](c4-promotion.json) · [Exécution V1](c4-execution-v1.json)
