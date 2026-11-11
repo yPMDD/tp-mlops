@@ -29,3 +29,7 @@ Le modèle chargé par l'alias production attribue à **SOLIAN 100 MG/ML** (CODE
 ## C5 — Retour arrière
 
 L'alias `production` est revenu de la version 2 (données V2) à la version 1 (données V1). L'application conserve l'URI `models:/remboursement-rf@production`. Un nouveau chargement résout l'alias à nouveau. Un processus ayant déjà chargé le modèle doit le recharger ou redémarrer pour appliquer le changement. [Preuve du retour arrière](c5-retour-arriere.json)
+
+## C6 — Service du modèle V1 sur le port 8000
+
+La requête complète envoyée à /invocations pour le médicament personnel renvoie HTTP 200 et $prediction. La requête privée de dosage renvoie HTTP 400 avec une erreur de schéma indiquant la colonne manquante. [Requêtes et réponses JSON](c6-reponses-http.json)
