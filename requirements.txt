@@ -5,3 +5,5 @@ scikit-learn==1.9.1
 dvc==3.67.1
 joblib==1.6.0
 PyYAML==6.0.3
+mlflow==3.17.1
+skops==0.16.0

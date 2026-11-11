@@ -13,3 +13,13 @@ sorties:
   test: data/prepare/test.csv
   modele: models/remboursement-rf.pkl
   metriques: reports/metriques.json
+
+suivi:
+  uri: http://127.0.0.1:5000
+  port_service: 8000
+  experience: medicaments-R-2023-000064
+  modele_rf: remboursement-rf
+  max_iter_logistique: 1000
+  sources:
+    v1: data/brut/ref-des-medicaments-cnops-2014.xlsx
+    v2: data/versions/ref-des-medicaments-cnops-2014-v2.xlsx
