@@ -1,0 +1,19 @@
+baeb720 C8 : declarer le MLproject et prouver son execution locale
+ab5d6e7 C7 : expliquer la preparation des entrees brutes et des DCI inconnues
+aaa51b9 C6 : servir la production et relever les deux reponses HTTP
+fb55eb8 C5 : remettre la version 1 en production par alias
+d394ad8 C4 : enregistrer V1 et V2 promouvoir les alias et predire le medicament personnel
+c945702 C3 : verifier la signature a neuf entrees et son exemple MLflow
+03f0d0a C2 : comparer les reglages et tracer le F1 selon la profondeur
+0065391 C1 : journaliser les quatre entrainements MLflow sur la v2
+8a3128a B8 : executer tout le pipeline a profondeur 2 et relever la decision qualite
+987a452 B7 : valider les donnees brutes et prouver le refus sans PPV
+e72954c B6 : comparer les profondeurs 8 12 et 16 avec les experiences DVC
+86a49f4 B5 : observer le cache et les etapes relancees apres un changement de profondeur
+b67e900 B4 : decrire le pipeline preparer entrainer evaluer
+5e1fb78 B3 : prouver la restauration byte pour byte de la v1
+6689c33 B3 : creer la version sans PPV nul et la versionner
+d42daf3 B2 : configurer le stockage DVC local et pousser le classeur
+fe0848f B1 : suivre le classeur brut avec DVC et verifier son MD5
+933656d A6 : mesurer le découpage stratifié avec la graine personnelle
+ba1844b A1-A5 : initialiser le projet et auditer le classeur CNOPS
