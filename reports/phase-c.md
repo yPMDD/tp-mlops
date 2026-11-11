@@ -17,6 +17,8 @@ Dans la vue de comparaison MLflow, le **graphique à coordonnées parallèles** 
 
 L'accès de l'assistant au navigateur local a été refusé. La preuve jointe est un graphique calculé à partir des quatre exécutions journalisées. [Graphique F1 et profondeur](c2-f1-profondeur.png)
 
+![F1 des trois profondeurs et de la régression logistique, à partir des exécutions MLflow](c2-f1-profondeur.png)
+
 ## C3 — Signature du modèle de référence
 
 La signature du modèle V2 à profondeur 12 comporte **neuf entrées obligatoires**. `ppv` est de type **double** et `generique` de type **long**. Le service applique ce schéma avant la prédiction, ce qui permet de rejeter une entrée manquante ou incompatible. L'exemple d'entrée est enregistré avec le modèle. [Signature et exemple issus de MLflow](c3-signature.json)

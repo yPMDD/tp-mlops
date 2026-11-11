@@ -18,4 +18,4 @@ Le classeur V2 a été déplacé temporairement. Le journal montre **trois lectu
 
 ## E4 — Surveillance Node-RED
 
-Les nœuds suivent cet ordre. **Inject** envoie la requête toutes les 60 s. **HTTP Request** envoie un POST à `127.0.0.1:8000/invocations`. **Switch** teste si la première prédiction vaut 1. **Change** construit l'alerte et **Debug** l'affiche dans le panneau et dans le journal. Le service a bien déclenché une alerte pour le médicament personnel. [Flux exporté](../nodered/remboursement.json) · [Journal du service](e4-alerte.txt)
+Les nœuds suivent cet ordre. **Inject** envoie la requête toutes les 60 s. **HTTP Request** envoie un POST à `127.0.0.1:8000/invocations`. **Switch** teste si la première prédiction vaut 1. **Change** construit l'alerte et **Debug** l'affiche dans le panneau et dans le journal. Le service a déclenché deux alertes à une minute d'intervalle pour le médicament personnel. [Flux exporté](../nodered/remboursement.json) · [Journal du service](e4-alerte.txt)
