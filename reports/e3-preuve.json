@@ -1,0 +1,101 @@
+{
+  "flow_run_id": "da3ea9e5-530f-42a0-b059-e7307033a4b5",
+  "etat": "Failed",
+  "message": "Flow run encountered an exception: FileNotFoundError: Classeur introuvable : data/versions/ref-des-medicaments-cnops-2014-v2.xlsx",
+  "resultat": "Classeur introuvable : data/versions/ref-des-medicaments-cnops-2014-v2.xlsx",
+  "graphe_prefect": {
+    "start_time": "2026-11-11T03:57:55.804703Z",
+    "end_time": "2026-11-11T03:58:01.092070Z",
+    "root_node_ids": [
+      "01a1c8c1-5510-7868-9be0-961bab3d1228"
+    ],
+    "nodes": [
+      [
+        "01a1c8c1-5510-7868-9be0-961bab3d1228",
+        {
+          "kind": "task-run",
+          "id": "01a1c8c1-5510-7868-9be0-961bab3d1228",
+          "label": "lire-donnees-381",
+          "state_type": "FAILED",
+          "start_time": "2026-11-11T03:57:56.054986Z",
+          "end_time": "2026-11-11T03:58:00.072660Z",
+          "parents": [],
+          "children": [],
+          "encapsulating": [],
+          "artifacts": []
+        }
+      ]
+    ],
+    "artifacts": [],
+    "states": [
+      {
+        "id": "01a1c8c1-54c3-733d-b40f-ae7412ff1545",
+        "timestamp": "2026-11-11T03:57:55.779845Z",
+        "type": "PENDING",
+        "name": "Pending"
+      },
+      {
+        "id": "01a1c8c1-54dc-7ea0-b3cc-602543eaa4eb",
+        "timestamp": "2026-11-11T03:57:55.804703Z",
+        "type": "RUNNING",
+        "name": "Running"
+      },
+      {
+        "id": "01a1c8c1-6984-7f8b-96d4-9e19a79d90b5",
+        "timestamp": "2026-11-11T03:58:01.092070Z",
+        "type": "FAILED",
+        "name": "Failed"
+      }
+    ]
+  },
+  "taches": [
+    {
+      "nom": "lire-donnees-381",
+      "etat": "Failed",
+      "message": "Task run encountered an exception FileNotFoundError: Classeur introuvable : data/versions/ref-des-medicaments-cnops-2014-v2.xlsx",
+      "tentatives": 3
+    }
+  ],
+  "logs": [
+    {
+      "niveau": 20,
+      "message": "Beginning flow run 'annoying-chimpanzee' for flow 'reentrainement-medicaments'"
+    },
+    {
+      "niveau": 20,
+      "message": "Lecture de data/versions/ref-des-medicaments-cnops-2014-v2.xlsx"
+    },
+    {
+      "niveau": 20,
+      "message": "Task run failed with exception: FileNotFoundError('Classeur introuvable : data/versions/ref-des-medicaments-cnops-2014-v2.xlsx') - Retry 1/2 will start 2 second(s) from now"
+    },
+    {
+      "niveau": 20,
+      "message": "Lecture de data/versions/ref-des-medicaments-cnops-2014-v2.xlsx"
+    },
+    {
+      "niveau": 20,
+      "message": "Task run failed with exception: FileNotFoundError('Classeur introuvable : data/versions/ref-des-medicaments-cnops-2014-v2.xlsx') - Retry 2/2 will start 2 second(s) from now"
+    },
+    {
+      "niveau": 20,
+      "message": "Lecture de data/versions/ref-des-medicaments-cnops-2014-v2.xlsx"
+    },
+    {
+      "niveau": 40,
+      "message": "Task run failed with exception: FileNotFoundError('Classeur introuvable : data/versions/ref-des-medicaments-cnops-2014-v2.xlsx') - Retries are exhausted\nTraceback (most recent call last):\n  File \"C:\\Users\\S44D\\Documents\\5iir\\MLOps\\synthese2-R-2023-000064\\.venv\\Lib\\site-packages\\prefect\\task_engine.py\", line 1030, in run_context\n    yield self\n  File \"C:\\Users\\S44D\\Documents\\5iir\\MLOps\\synthese2-R-2023-000064\\.venv\\Lib\\site-packages\\prefect\\task_engine.py\", line 1699, in run_task_sync\n    engine.call_task_fn(txn)\n  File \"C:\\Users\\S44D\\Documents\\5iir\\MLOps\\synthese2-R-2023-000064\\.venv\\Lib\\site-packages\\prefect\\task_engine.py\", line 1047, in call_task_fn\n    result = call_with_parameters(self.task.fn, parameters)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\S44D\\Documents\\5iir\\MLOps\\synthese2-R-2023-000064\\.venv\\Lib\\site-packages\\prefect\\utilities\\callables\\__init__.py\", line 404, in call_with_parameters\n    return fn(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\S44D\\Documents\\5iir\\MLOps\\synthese2-R-2023-000064\\flows\\reentrainement.py\", line 29, in lire\n    raise FileNotFoundError(f\"Classeur introuvable : {source}\")\nFileNotFoundError: Classeur introuvable : data/versions/ref-des-medicaments-cnops-2014-v2.xlsx"
+    },
+    {
+      "niveau": 40,
+      "message": "Finished in state Failed('Task run encountered an exception FileNotFoundError: Classeur introuvable : data/versions/ref-des-medicaments-cnops-2014-v2.xlsx')"
+    },
+    {
+      "niveau": 40,
+      "message": "Encountered exception during execution: FileNotFoundError('Classeur introuvable : data/versions/ref-des-medicaments-cnops-2014-v2.xlsx')\nTraceback (most recent call last):\n  File \"C:\\Users\\S44D\\Documents\\5iir\\MLOps\\synthese2-R-2023-000064\\.venv\\Lib\\site-packages\\prefect\\flow_engine.py\", line 1330, in run_context\n    yield self\n  File \"C:\\Users\\S44D\\Documents\\5iir\\MLOps\\synthese2-R-2023-000064\\.venv\\Lib\\site-packages\\prefect\\flow_engine.py\", line 2111, in run_flow_sync\n    engine.call_flow_fn()\n  File \"C:\\Users\\S44D\\Documents\\5iir\\MLOps\\synthese2-R-2023-000064\\.venv\\Lib\\site-packages\\prefect\\flow_engine.py\", line 1350, in call_flow_fn\n    result = call_with_parameters(self.flow.fn, self.parameters)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\S44D\\Documents\\5iir\\MLOps\\synthese2-R-2023-000064\\.venv\\Lib\\site-packages\\prefect\\utilities\\callables\\__init__.py\", line 404, in call_with_parameters\n    return fn(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\S44D\\Documents\\5iir\\MLOps\\synthese2-R-2023-000064\\flows\\reentrainement.py\", line 115, in reentrainement\n    brut.result()\n  File \"C:\\Users\\S44D\\Documents\\5iir\\MLOps\\synthese2-R-2023-000064\\.venv\\Lib\\site-packages\\prefect\\futures.py\", line 277, in result\n    _result = self._final_state.result(\n              ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\S44D\\Documents\\5iir\\MLOps\\synthese2-R-2023-000064\\.venv\\Lib\\site-packages\\prefect\\_internal\\compatibility\\async_dispatch.py\", line 94, in wrapper\n    return fn(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\S44D\\Documents\\5iir\\MLOps\\synthese2-R-2023-000064\\.venv\\Lib\\site-packages\\prefect\\client\\schemas\\objects.py\", line 394, in result\n    return run_coro_as_sync(\n           ^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\S44D\\Documents\\5iir\\MLOps\\synthese2-R-2023-000064\\.venv\\Lib\\site-packages\\prefect\\utilities\\asyncutils\\__init__.py\", line 207, in run_coro_as_sync\n    return call.result()\n           ^^^^^^^^^^^^^\n  File \"C:\\Users\\S44D\\Documents\\5iir\\MLOps\\synthese2-R-2023-000064\\.venv\\Lib\\site-packages\\prefect\\_internal\\concurrency\\calls.py\", line 365, in result\n    return self.future.result(timeout=timeout)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\S44D\\Documents\\5iir\\MLOps\\synthese2-R-2023-000064\\.venv\\Lib\\site-packages\\prefect\\_internal\\concurrency\\calls.py\", line 192, in result\n    return self.__get_result()\n           ^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Program Files\\Python311\\Lib\\concurrent\\futures\\_base.py\", line 401, in __get_result\n    raise self._exception\n  File \"C:\\Users\\S44D\\Documents\\5iir\\MLOps\\synthese2-R-2023-000064\\.venv\\Lib\\site-packages\\prefect\\_internal\\concurrency\\calls.py\", line 441, in _run_async\n    result = await coro\n             ^^^^^^^^^^\n  File \"C:\\Users\\S44D\\Documents\\5iir\\MLOps\\synthese2-R-2023-000064\\.venv\\Lib\\site-packages\\prefect\\utilities\\asyncutils\\__init__.py\", line 188, in coroutine_wrapper\n    return await task\n           ^^^^^^^^^^\n  File \"C:\\Users\\S44D\\Documents\\5iir\\MLOps\\synthese2-R-2023-000064\\.venv\\Lib\\site-packages\\prefect\\states.py\", line 89, in get_state_result\n    return await _get_state_result(\n           ^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\S44D\\Documents\\5iir\\MLOps\\synthese2-R-2023-000064\\.venv\\Lib\\site-packages\\prefect\\states.py\", line 161, in _get_state_result\n    raise await aget_state_exception(state)\n  File \"C:\\Users\\S44D\\Documents\\5iir\\MLOps\\synthese2-R-2023-000064\\.venv\\Lib\\site-packages\\prefect\\task_engine.py\", line 1030, in run_context\n    yield self\n  File \"C:\\Users\\S44D\\Documents\\5iir\\MLOps\\synthese2-R-2023-000064\\.venv\\Lib\\site-packages\\prefect\\task_engine.py\", line 1699, in run_task_sync\n    engine.call_task_fn(txn)\n  File \"C:\\Users\\S44D\\Documents\\5iir\\MLOps\\synthese2-R-2023-000064\\.venv\\Lib\\site-packages\\prefect\\task_engine.py\", line 1047, in call_task_fn\n    result = call_with_parameters(self.task.fn, parameters)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\S44D\\Documents\\5iir\\MLOps\\synthese2-R-2023-000064\\.venv\\Lib\\site-packages\\prefect\\utilities\\callables\\__init__.py\", line 404, in call_with_parameters\n    return fn(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\S44D\\Documents\\5iir\\MLOps\\synthese2-R-2023-000064\\flows\\reentrainement.py\", line 29, in lire\n    raise FileNotFoundError(f\"Classeur introuvable : {source}\")\nFileNotFoundError: Classeur introuvable : data/versions/ref-des-medicaments-cnops-2014-v2.xlsx"
+    },
+    {
+      "niveau": 20,
+      "message": "Finished in state Failed('Flow run encountered an exception: FileNotFoundError: Classeur introuvable : data/versions/ref-des-medicaments-cnops-2014-v2.xlsx')"
+    }
+  ]
+}
